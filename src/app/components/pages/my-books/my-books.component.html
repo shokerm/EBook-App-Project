@@ -1,0 +1,18 @@
+<mat-drawer-container backdropClick class="example-container" [hasBackdrop]="false">
+    <mat-drawer  #drawer [mode]="'push'">
+        <div class="drawer-header">My Books</div>
+       <div class="my-books-list">
+        <button  class="single-book" mat-raised-button><mat-icon>auto_stories</mat-icon>C#</button>
+        <button  class="single-book" mat-raised-button><mat-icon>auto_stories</mat-icon>JavaScript</button>
+        <button  class="single-book" mat-raised-button><mat-icon>auto_stories</mat-icon>Python</button>
+        <button  class="single-book" mat-raised-button><mat-icon>auto_stories</mat-icon>Asp.NET</button>
+        <button  class="single-book" mat-raised-button><mat-icon>auto_stories</mat-icon>ReactJS</button>
+    </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        here can be content
+      <button mat-raised-button (click)="drawer.toggle()">My Books</button>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
+  

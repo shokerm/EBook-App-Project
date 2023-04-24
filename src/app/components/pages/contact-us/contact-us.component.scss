@@ -1,0 +1,45 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+[class="alert alert-danger"]{
+    color: var(--mdc-theme-error, #f44336);
+    font-size: 12px;
+
+}
+.form-feilds{
+    margin-bottom:30px ;
+}
+
+.mat-form-field{
+    width: 500px;
+}
+
+
+
+  table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-style: italic;
+  }
+
+  td.header{
+    font-weight: bold;
+    font-style: normal;
+ 
+    
+  }
