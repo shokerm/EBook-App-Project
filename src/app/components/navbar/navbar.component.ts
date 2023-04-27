@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: DataService) { }
 
   ngOnInit(): void {
   }
+
+  changMode() {
+    this.service.isDarkMode = !this.service.isDarkMode;
+  }
+
+
+
 
 }
