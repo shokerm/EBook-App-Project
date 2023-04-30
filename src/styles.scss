@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @use '@angular/material' as mat;
-@import '~@angular/material/theming';
+@import '@angular/material/theming';
 @include mat-core();
 $ProductBoard-primary: mat-palette($mat-indigo,700);
 $ProductBoard-accent : mat-palette($mat-green,A200,A100,A700);
@@ -11,6 +11,9 @@ $ProductBoard-dark-theme :mat-dark-theme($ProductBoard-primary,$ProductBoard-acc
 
 .dark-theme{
     @include angular-material-theme($ProductBoard-dark-theme);
+    mat-label{
+        color: white;
+    }
 
 }
 

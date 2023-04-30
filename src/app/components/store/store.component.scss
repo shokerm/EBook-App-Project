@@ -79,7 +79,7 @@ blockquote {
 }
 
 .example-header-image {
-  background-image: url('../../../../assets/Images/books1.jpg');
+  background-image: url('../../../assets//Images/books1.jpg');
   background-size: cover;
 }
 
@@ -92,7 +92,7 @@ blockquote {
 
   /* cards scss */
   .example-card {
-    max-width: 200px;
+    max-width: 250px;
     margin: 30px;
   }
   
@@ -101,5 +101,10 @@ blockquote {
     justify-content: center;
     flex-wrap: wrap;
     
+
+    mat-card-actions{
+      display: flex;
+      justify-content: start;
+    }
   }
     /* * */
