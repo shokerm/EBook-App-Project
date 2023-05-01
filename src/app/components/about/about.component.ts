@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AboutDatasService } from 'src/app/services/about-data.service';
-import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-about',

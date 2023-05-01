@@ -1,0 +1,38 @@
+.sub-nav-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #2a303c;
+    color: white;
+  }
+
+  blockquote {
+    position: relative;
+      font-family: "Georgia", serif;
+      font-size: 3.2rem;
+    quotes: "\201C""\201D""\2018""\2019";
+  
+    &::before,
+    &::after {
+      color: #c6c6c6;
+      font-size: 1.0em;
+      font-weight: 400;
+      line-height: 0.1em;
+    }
+    &::before {
+          position: relative;
+      content: open-quote;
+      margin-right: 0.15em;
+      vertical-align: 0.35em;
+    }
+    &::after {
+      content: close-quote;
+      vertical-align: -1.1em;
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }

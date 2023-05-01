@@ -24,6 +24,7 @@ import { ContactUsPageComponent } from '../components/pages/contact-us-page/cont
 import { StorePageComponent } from '../components/pages/store-page/store-page.component';
 import { AboutDatasService } from '../services/about-data.service';
 import { StoredataService } from '../services/store-data.service';
+import { SubNavComponent } from '../components/sub-nav/sub-nav.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { StoredataService } from '../services/store-data.service';
     CartPageComponent,
     MyBooksPageComponent,
     ContactUsPageComponent,
-    StorePageComponent
+    StorePageComponent,
+    SubNavComponent
   ],
   imports: [
     BrowserModule,
