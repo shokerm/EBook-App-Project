@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
+import { StoredataService } from 'src/app/services/store-data.service';
 
 @Component({
   selector: 'app-store',
@@ -8,7 +9,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class StoreComponent implements OnInit {
 
-  constructor(public service: DataService) { }
+  constructor(public service: StoredataService) { }
 
   ngOnInit(): void {
   }
