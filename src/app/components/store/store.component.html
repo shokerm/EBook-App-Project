@@ -20,8 +20,8 @@
       </h3>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-icon-button (click)="likeToggle(book)"><mat-icon>{{book.likeToggleStatus}}</mat-icon></button>
-      <button mat-raised-button>ADD TO CART</button>
+      <button mat-icon-button matTooltip="Like" (click)="likeToggle(book)"><mat-icon>{{book.likeToggleStatus}}</mat-icon></button>
+      <button matTooltip="Add To Cart" mat-raised-button>ADD TO CART</button>
     </mat-card-actions>
   </mat-card>
 </div>
