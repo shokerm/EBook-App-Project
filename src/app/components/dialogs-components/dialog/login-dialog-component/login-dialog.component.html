@@ -5,9 +5,9 @@
     <div class="form-feilds" [hidden]="submitted">
       <form (ngSubmit)="onSubmit()" #contactFOrm="ngForm">
         <div class="form-group">
-          <mat-form-field >
+          <mat-form-field>
           <mat-label>Email</mat-label>
-          <input matInput type="email" class="form-control" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          <input matInput  type="email" class="form-control" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                  required
                  [(ngModel)]="loginUserForm.Email" name="Email"
                  #Email="ngModel" placeholder="Ex. pat@example.com">

@@ -13,6 +13,4 @@ export class CartPageComponent implements OnInit {
   }
 
 
-  temp = ["moshe", "shoker", "moshe shoker"];
-
 }

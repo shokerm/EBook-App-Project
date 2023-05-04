@@ -17,14 +17,12 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changMode() {
+  changMode():void{
     this.service.isDarkMode = !this.service.isDarkMode;
   }
 
-  openDialog() {
-
-    this.dialog.open(LoginDialogComponent);
-
+  openDialog():void{
+    this.dialog.open(LoginDialogComponent,{autoFocus:false});
   }
 
 

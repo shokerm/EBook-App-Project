@@ -8,8 +8,8 @@ import { DataService } from './services/data.service';
 })
 export class AppComponent {
   constructor(public service: DataService) { }
-  title = 'app';
-  isDarkTheme = this.service.isDarkMode;
+  
+  isDarkTheme :boolean = this.service.isDarkMode;
 
 
 

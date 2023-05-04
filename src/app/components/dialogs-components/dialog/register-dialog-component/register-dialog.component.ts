@@ -12,29 +12,20 @@ export class RegisterDialogComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
 
+  registerUserForm:registerUserForm = new registerUserForm('', '', '', '');
+  submitted:boolean = false;
+  afterSubmit:boolean = true;
+
   ngOnInit(): void {
   }
 
-  closeDialog() {
+  closeDialog():void{
     this.dialog.ngOnDestroy();
   }
 
-  registerUserForm = new registerUserForm('', '', '', '');
-
-  submitted = false;
-
-  afterSubmit = true;
-
-
-
-
-
-  onSubmit() {
-
+  onSubmit():void {
     this.submitted = true;
     this.afterSubmit = false;
-
-
   }
 
 }

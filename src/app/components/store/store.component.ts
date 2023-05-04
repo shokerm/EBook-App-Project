@@ -15,7 +15,7 @@ export class StoreComponent implements OnInit {
   }
 
   likeToggle(card: any) {
-    card.likeToggleStatus === "favorite_border" ?
+      card.likeToggleStatus === "favorite_border" ?
       card.likeToggleStatus = "favorite" :
       card.likeToggleStatus = "favorite_border";
   }

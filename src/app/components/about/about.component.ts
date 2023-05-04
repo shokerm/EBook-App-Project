@@ -14,8 +14,8 @@ export class AboutComponent implements OnInit {
   }
 
 
-  likeToggle(card: any) {
-    card.likeToggleStatus === "favorite_border" ?
+  likeToggle(card: any):void{
+      card.likeToggleStatus === "favorite_border" ?
       card.likeToggleStatus = "favorite" :
       card.likeToggleStatus = "favorite_border";
   }

@@ -10,8 +10,12 @@ import { RegisterDialogComponent } from '../register-dialog-component/register-d
   styleUrls: ['./login-dialog.component.scss']
 })
 export class LoginDialogComponent implements OnInit {
-
   constructor(public dialog: MatDialog) { }
+
+  loginUserForm:loginUserForm = new loginUserForm('', '');
+  submitted:boolean = false;
+  afterSubmit:boolean = true;
+  isLoginDialogDisplay: boolean = true;
 
   ngOnInit(): void {
   }
@@ -20,21 +24,9 @@ export class LoginDialogComponent implements OnInit {
     this.isLoginDialogDisplay = false;
   }
 
-  loginUserForm = new loginUserForm('', '');
-
-  submitted = false;
-
-  afterSubmit = true;
-
-  isLoginDialogDisplay: boolean = true;
-
-
-
-  onSubmit() {
-
+  onSubmit():void{
     this.submitted = true;
     this.afterSubmit = false;
-
 
   }
 

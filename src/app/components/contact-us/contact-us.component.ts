@@ -11,22 +11,16 @@ import { UserContactDeatail } from 'src/app/models.ts/userContactDeatails';
 })
 export class ContactUsComponent implements OnInit {
 
-  userContactDetails = new UserContactDeatail('', '', '', '');
-
-  submitted = false;
-
-  afterSubmit = true;
-
-
+  userContactDetails:UserContactDeatail = new UserContactDeatail('', '', '', '');
+  submitted:boolean = false;
+  afterSubmit:boolean = true;
 
   ngOnInit(): void {
   }
 
-  onSubmit() {
-
+  onSubmit():void {
     this.submitted = true;
     this.afterSubmit = false;
-
 
   }
 
