@@ -1,4 +1,4 @@
-export class ContactUsUSerForm {
+export class ContactUsUserForm {
     constructor(
         public firstName: string,
         public LastName: string,
