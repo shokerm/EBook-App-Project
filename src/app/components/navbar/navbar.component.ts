@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DataService } from 'src/app/services/data.service';
-import { DialogComponent } from '../dialogs-components/dialog/dialog.component';
+import { LoginDialogComponent } from '../dialogs-components/dialog/login-dialog-component/login-dialog.component';
+
 
 
 @Component({
@@ -22,7 +23,7 @@ export class NavbarComponent implements OnInit {
 
   openDialog() {
 
-    this.dialog.open(DialogComponent);
+    this.dialog.open(LoginDialogComponent);
 
   }
 

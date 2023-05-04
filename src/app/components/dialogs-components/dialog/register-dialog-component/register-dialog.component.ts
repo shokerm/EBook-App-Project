@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { UserContactDeatail } from 'src/app/models.ts/userContactDeatails';
+import { registerUserForm } from 'src/app/models.ts/userContactDeatails';
 
 
 @Component({
-  selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.scss']
+  selector: 'app-register-dialog',
+  templateUrl: './register-dialog.component.html',
+  styleUrls: ['./register-dialog.component.scss']
 })
-export class DialogComponent implements OnInit {
+export class RegisterDialogComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
 
@@ -19,7 +19,7 @@ export class DialogComponent implements OnInit {
     this.dialog.ngOnDestroy();
   }
 
-  userContactDetails = new UserContactDeatail('', '', '', '');
+  registerUserForm = new registerUserForm('', '', '', '');
 
   submitted = false;
 

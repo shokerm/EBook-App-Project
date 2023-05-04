@@ -24,7 +24,7 @@ subNavParagraph="We are always here for you"
           <mat-label>Last Name</mat-label>
           <input matInput type="text" class="form-control" id="lastName"
                required
-               [(ngModel)]="userContactDetails.lastName" name="lastName"
+               [(ngModel)]="userContactDetails.LastName" name="lastName"
                #lastName="ngModel">
         </mat-form-field>
         <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
@@ -55,7 +55,7 @@ subNavParagraph="We are always here for you"
           <mat-label>Content</mat-label>
         <textarea matInput class="form-control"  name="" id="Content" cols="30" rows="10"
         required
-               [(ngModel)]="userContactDetails.content" name="Content"
+               [(ngModel)]="userContactDetails.Content" name="Content"
                #Content="ngModel"
         
         ></textarea>
@@ -85,7 +85,7 @@ subNavParagraph="We are always here for you"
     </tr>
     <tr>
       <td class="header" mat-header-cell>Last Name:</td>
-      <td>{{userContactDetails.lastName}}</td>
+      <td>{{userContactDetails.LastName}}</td>
     </tr>
     <tr>
       <td class="header" mat-header-cell>Email:</td>
@@ -93,7 +93,7 @@ subNavParagraph="We are always here for you"
     </tr>
     <tr>
       <td class="header" mat-header-cell>Content:</td>
-      <td>{{userContactDetails.content}}</td>
+      <td>{{userContactDetails.Content}}</td>
     </tr>
  
 </table>
