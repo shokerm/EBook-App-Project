@@ -25,6 +25,7 @@ import { StorePageComponent } from '../components/pages/store-page/store-page.co
 import { AboutDatasService } from '../services/about-data.service';
 import { StoredataService } from '../services/store-data.service';
 import { SubNavComponent } from '../components/sub-nav/sub-nav.component';
+import { DialogComponent } from '../components/dialogs-components/dialog/dialog.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { SubNavComponent } from '../components/sub-nav/sub-nav.component';
     MyBooksPageComponent,
     ContactUsPageComponent,
     StorePageComponent,
-    SubNavComponent
+    SubNavComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ import { SubNavComponent } from '../components/sub-nav/sub-nav.component';
     MaterialModule,
     FormsModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
 
   ],
   providers: [DataService, AboutDatasService, StoredataService],
