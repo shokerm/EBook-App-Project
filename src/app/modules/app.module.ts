@@ -25,8 +25,8 @@ import { StorePageComponent } from '../components/pages/store-page/store-page.co
 import { AboutDatasService } from '../services/about-data.service';
 import { StoredataService } from '../services/store-data.service';
 import { SubNavComponent } from '../components/sub-nav/sub-nav.component';
-import { LoginDialogComponent } from '../components/dialogs-components/dialog/login-dialog-component/login-dialog.component';
-import { RegisterDialogComponent } from '../components/dialogs-components/dialog/register-dialog-component/register-dialog.component';
+import { LoginDialogComponent } from '../components/dialogs-components/login-dialog-component/login-dialog.component';
+import { RegisterDialogComponent } from '../components/dialogs-components/register-dialog-component/register-dialog.component';
 
 
 @NgModule({

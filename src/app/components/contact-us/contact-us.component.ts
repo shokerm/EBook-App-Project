@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserContactDeatail } from 'src/app/models.ts/userContactDeatails';
+import { ContactUsUSerForm } from 'src/app/models.ts/userContactDeatails';
 
 
 
@@ -11,7 +11,7 @@ import { UserContactDeatail } from 'src/app/models.ts/userContactDeatails';
 })
 export class ContactUsComponent implements OnInit {
 
-  userContactDetails:UserContactDeatail = new UserContactDeatail('', '', '', '');
+  userContactDetails:ContactUsUSerForm = new ContactUsUSerForm('', '', '', '');
   submitted:boolean = false;
   afterSubmit:boolean = true;
 

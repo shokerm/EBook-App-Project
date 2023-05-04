@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { registerUserForm } from 'src/app/models.ts/userContactDeatails';
+import { RegisterUserForm } from 'src/app/models.ts/registerUserForm';
 
 
 @Component({
@@ -12,7 +12,7 @@ export class RegisterDialogComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
 
-  registerUserForm:registerUserForm = new registerUserForm('', '', '', '');
+  registerUserForm:RegisterUserForm = new RegisterUserForm('', '', '', '');
   submitted:boolean = false;
   afterSubmit:boolean = true;
 

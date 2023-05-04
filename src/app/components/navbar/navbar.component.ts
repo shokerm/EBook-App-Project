@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DataService } from 'src/app/services/data.service';
-import { LoginDialogComponent } from '../dialogs-components/dialog/login-dialog-component/login-dialog.component';
+import { LoginDialogComponent } from '../dialogs-components/login-dialog-component/login-dialog.component';
 
 
 

@@ -1,4 +1,4 @@
-export class UserContactDeatail {
+export class ContactUsUSerForm {
     constructor(
         public firstName: string,
         public LastName: string,
@@ -8,21 +8,5 @@ export class UserContactDeatail {
     ) { }
 }
 
-export class loginUserForm {
-    constructor(
-        public Email: string,
-        public Password: string
 
-    ) { }
-}
-
-export class registerUserForm {
-    constructor(
-        public FirstName: string,
-        public LastName: string,
-        public Email: string,
-        public Password: string
-
-    ) { }
-}
 

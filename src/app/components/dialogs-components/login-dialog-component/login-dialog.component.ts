@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { loginUserForm } from 'src/app/models.ts/userContactDeatails';
-import { RegisterDialogComponent } from '../register-dialog-component/register-dialog.component';
+import { LoginUserForm } from 'src/app/models.ts/loginUserForm';
 
 
 @Component({
@@ -12,7 +11,7 @@ import { RegisterDialogComponent } from '../register-dialog-component/register-d
 export class LoginDialogComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
-  loginUserForm:loginUserForm = new loginUserForm('', '');
+  loginUserForm:LoginUserForm = new LoginUserForm('', '');
   submitted:boolean = false;
   afterSubmit:boolean = true;
   isLoginDialogDisplay: boolean = true;
@@ -21,6 +20,10 @@ export class LoginDialogComponent implements OnInit {
   }
 
   closeDialog() {
+    this.dialog.closeAll();
+  }
+
+  moveToRegisterDialog(): void {
     this.isLoginDialogDisplay = false;
   }
 
