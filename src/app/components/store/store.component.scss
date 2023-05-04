@@ -79,7 +79,7 @@ blockquote {
 }
 
 .example-header-image {
-  background-image: url('../../../assets//Images/books1.jpg');
+  background-image: url('../../../assets/favicon/android-chrome-512x512.png');
   background-size: cover;
 }
 
@@ -107,4 +107,8 @@ blockquote {
       justify-content: flex-start;
     }
   }
+
+  .mat-card-avatar{
+    border-radius: 0;
+}
     /* * */
