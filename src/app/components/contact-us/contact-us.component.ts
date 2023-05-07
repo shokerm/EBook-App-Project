@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactUsUserForm } from 'src/app/models.ts/ContactUsUserForm';
+import { ContactUsUserForm } from 'src/app/models.ts/fileContactUsUserForm';
 
 
 
