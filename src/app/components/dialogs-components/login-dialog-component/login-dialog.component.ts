@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { LoginUserForm } from 'src/app/models.ts/LoginUserForm';
+import { LoginUserForm } from 'src/app/models.ts/loginUserForm';
 
 
 @Component({
