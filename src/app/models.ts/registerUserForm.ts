@@ -4,6 +4,5 @@ export class RegisterUserForm {
         public LastName: string,
         public Email: string,
         public Password: string
-        
     ) { }
 }
