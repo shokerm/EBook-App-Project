@@ -12,14 +12,14 @@ subNavParagraph="We invite you enjoy our products"
       <mat-card-title>EBook</mat-card-title>
       <mat-card-subtitle>Notes For Professionals</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="book.imageUrl" [alt]="book.imageAlt">
+    <img mat-card-image [src]="book.ImageUrl" [alt]="book.ImageAlt">
     <mat-card-content>
       <h3>
-   {{book.cardContent}}
+   {{book.ItemContent}}
       </h3>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-icon-button matTooltip="Like" (click)="likeToggle(book)"><mat-icon>{{book.likeToggleStatus}}</mat-icon></button>
+      <button mat-icon-button matTooltip="Like" (click)="changeLikeToggle(book)"><mat-icon>{{book.LikeToggleStatus}}</mat-icon></button>
       <button matTooltip="Add To Cart" mat-raised-button>ADD TO CART</button>
     </mat-card-actions>
   </mat-card>

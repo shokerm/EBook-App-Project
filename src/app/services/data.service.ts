@@ -7,13 +7,6 @@ export class DataService {
 
   constructor() { }
 
-
-
-
-
-
-
   isDarkMode: boolean = false;
-
 
 }

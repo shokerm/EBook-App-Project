@@ -14,10 +14,8 @@ export class StoreComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  likeToggle(card: any) {
-      card.likeToggleStatus === "favorite_border" ?
-      card.likeToggleStatus = "favorite" :
-      card.likeToggleStatus = "favorite_border";
+  changeLikeToggle(card: any) {
+   this.service.changeLikeToggleService(card);
   }
 
 }
