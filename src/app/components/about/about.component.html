@@ -11,14 +11,14 @@
       <mat-card-title>EBook</mat-card-title>
       <mat-card-subtitle>Online Books Store</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="card.imageUrl" [alt]="card.imageAlt">
+    <img mat-card-image [src]="card.ImageUrl" [alt]="card.ImageAlt">
     <mat-card-content>
       <h3>
-   {{card.cardContent}}
+   {{card.ItemContent}}
       </h3>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-icon-button matTooltip="Like" (click)="likeToggle(card)"><mat-icon>{{card.likeToggleStatus}}</mat-icon></button>
+      <button mat-icon-button matTooltip="Like" (click)="changeLikeToggle(card)"><mat-icon>{{card.LikeToggleStatus}}</mat-icon></button>
       <button mat-button matTooltip="Share">SHARE</button>
     </mat-card-actions>
   </mat-card>

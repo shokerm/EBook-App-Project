@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from 'src/app/models.ts/Item';
 import { AboutDatasService } from 'src/app/services/about-data.service';
 
 @Component({
@@ -14,10 +15,8 @@ export class AboutComponent implements OnInit {
   }
 
 
-  likeToggle(card: any):void{
-      card.likeToggleStatus === "favorite_border" ?
-      card.likeToggleStatus = "favorite" :
-      card.likeToggleStatus = "favorite_border";
+  changeLikeToggle(card: Item):void{
+      this.service.changeLikeToggleService(card);
   }
 
 }

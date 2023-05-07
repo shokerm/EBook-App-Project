@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Item } from '../models.ts/Item';
 
 @Injectable({
   providedIn: 'root'
@@ -7,26 +8,32 @@ export class AboutDatasService {
 
   constructor() { }
 
-  cards = [
+  cards :Item[] = [
     {
-      imageUrl: "../../../../assets//Images/books1.jpg",
-      imageAlt: "image-1",
-      cardContent: "Buy now our latest books for learning online!",
-      likeToggleStatus: "favorite_border"
+      ImageUrl: "../../../../assets//Images/books1.jpg",
+      ImageAlt: "image-1",
+      ItemContent: "Buy now our latest books for learning online!",
+      LikeToggleStatus: "favorite_border"
     },
     {
-      imageUrl: "../../../../assets//Images/codingbooks.jpg",
-      imageAlt: "image-2",
-      cardContent: "Replace all your books with digital book!",
-      likeToggleStatus: "favorite_border"
+      ImageUrl: "../../../../assets//Images/codingbooks.jpg",
+      ImageAlt: "image-2",
+      ItemContent: "Replace all your books with digital book!",
+      LikeToggleStatus: "favorite_border"
     },
     {
-      imageUrl: "../../../../assets//Images/learn-programming.jpeg",
-      imageAlt: "image-3",
-      cardContent: "Save all your work study with you.",
-      likeToggleStatus: "favorite_border"
+      ImageUrl: "../../../../assets//Images/learn-programming.jpeg",
+      ImageAlt: "image-3",
+      ItemContent: "Save all your work study with you.",
+      LikeToggleStatus: "favorite_border"
     }
   ];
+
+  changeLikeToggleService(card: Item):void{
+    card.LikeToggleStatus === "favorite_border" ?
+    card.LikeToggleStatus = "favorite" :
+    card.LikeToggleStatus = "favorite_border";
+  }
 
 
 
