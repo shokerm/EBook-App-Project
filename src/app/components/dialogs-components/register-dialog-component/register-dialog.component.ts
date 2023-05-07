@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { RegisterUserForm } from 'src/app/models.ts/RegisterUserForm';
+import { RegisterUserForm } from 'src/app/models.ts/registerUserForm';
 
 
 @Component({
