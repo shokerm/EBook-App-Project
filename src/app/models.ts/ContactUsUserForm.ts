@@ -4,7 +4,6 @@ export class ContactUsUserForm {
         public LastName: string,
         public Content: string,
         public Email: string,
-
     ) { }
 }
 
