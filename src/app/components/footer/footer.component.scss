@@ -23,14 +23,33 @@ div{
     display: flex;
     ul{
         display: flex;
+        align-items: center;
         li{
             list-style-type: none;
             margin: 3px;
+        }
+        .li-div{
+            
+         font: {
+        size: 14px;
+        weight: lighter;
+         }
+            li{
+                margin: -8px 9px -4px;
+            }
+           
+            border-left: 1px solid rgba(255, 255, 255, 0.556);
+            
         }
     }
     img{
         width: 40%;
     }
+    
+   
+
 }
+
+
 
 
