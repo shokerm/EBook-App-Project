@@ -6,7 +6,3 @@ export class LoginUserForm {
 
     ) { }
 }
-
-class frddf{
-
-}
