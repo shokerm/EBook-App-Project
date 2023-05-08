@@ -31,29 +31,39 @@ import { LoginDialogComponent } from '../components/dialogs-components/login-dia
 import { RegisterDialogComponent } from '../components/dialogs-components/register-dialog-component/register-dialog.component';
 import { SearchBarComponent } from '../components/search-bar/search-bar.component';
 
+const COMPONENTS = [ 
+  AppComponent,
+  NavbarComponent,
+  FooterComponent,
+  AboutComponent,
+  CartComponent,
+  ContactUsComponent,
+  MyBooksComponent,
+  HomeComponent,
+  StoreComponent,
+  AboutPageComponent,
+  CartPageComponent,
+  MyBooksPageComponent,
+  ContactUsPageComponent,
+  StorePageComponent,
+  SubNavComponent,
+  LoginDialogComponent,
+  RegisterDialogComponent,
+  SearchBarComponent
+  ];
+const SERVICES = [
+  DataService,
+  AboutDatasService,
+  StoredataService
+];
+const PIPES = [
+  FilterPipe
+];
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavbarComponent,
-    FooterComponent,
-    AboutComponent,
-    CartComponent,
-    ContactUsComponent,
-    MyBooksComponent,
-    HomeComponent,
-    StoreComponent,
-    AboutPageComponent,
-    CartPageComponent,
-    MyBooksPageComponent,
-    ContactUsPageComponent,
-    StorePageComponent,
-    SubNavComponent,
-    LoginDialogComponent,
-    RegisterDialogComponent,
-    SearchBarComponent,
-    FilterPipe
-    
+    COMPONENTS,
+    PIPES
   ],
   imports: [
     BrowserModule,
@@ -66,7 +76,7 @@ import { SearchBarComponent } from '../components/search-bar/search-bar.componen
 
 
   ],
-  providers: [DataService, AboutDatasService, StoredataService, FilterPipe],
+  providers: [SERVICES,PIPES],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
