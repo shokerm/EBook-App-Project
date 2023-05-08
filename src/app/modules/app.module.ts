@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { FilterPipe } from '../shared/filter.pipe';
+import { FilterPipe } from '../pipes/filter.pipe';
 
 
 
@@ -29,7 +29,7 @@ import { StoredataService } from '../services/store-data.service';
 import { SubNavComponent } from '../components/sub-nav/sub-nav.component';
 import { LoginDialogComponent } from '../components/dialogs-components/login-dialog-component/login-dialog.component';
 import { RegisterDialogComponent } from '../components/dialogs-components/register-dialog-component/register-dialog.component';
-import { SearchBarComponent } from '../search-bar/search-bar.component';
+import { SearchBarComponent } from '../components/search-bar/search-bar.component';
 
 
 @NgModule({
