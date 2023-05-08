@@ -31,6 +31,9 @@ import { DataService } from '../services/data.service';
 
 import { FilterPipe } from '../pipes/filter.pipe';
 
+import { PdfViewerModule } from 'ng2-pdf-viewer'; // <- import PdfViewerModule
+
+
 const COMPONENTS = [ 
   AppComponent,
   NavbarComponent,
@@ -73,6 +76,7 @@ const PIPES = [
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
+    PdfViewerModule
 
 
   ],

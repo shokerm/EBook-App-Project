@@ -8,10 +8,32 @@
         <button  class="single-book" mat-raised-button><mat-icon>auto_stories</mat-icon>Asp.NET</button>
         <button  class="single-book" mat-raised-button><mat-icon>auto_stories</mat-icon>ReactJS</button>
     </div>
+
     </mat-drawer>
     <mat-drawer-content>
         here can be content
-      <button mat-raised-button (click)="drawer.toggle()">My Books</button>
+        <button mat-raised-button (click)="drawer.toggle()">My Books</button>
+        <button mat-raised-button (click)="PervPage()">Prv</button>
+        <button mat-raised-button (click)="nextPage()">Next</button>
+        {{this.currentPage}} / {{this.totalPages}}
+
+        <pdf-viewer (after-load-complete)="afterLoadComplete($event)"
+        [src]="src"
+        [rotation]="0"
+        [original-size]="false"
+        [show-all]="false"
+        [fit-to-page]="true"
+        [zoom]="1"
+        [zoom-scale]="'page-width'"
+        [render-text]="true"
+        [external-link-target]="'blank'"
+        [autoresize]="false"
+        [show-borders]="false"
+        [page]="this.currentPage"
+        style="width: 90%; height:600px;">
+      </pdf-viewer>
+
+
     </mat-drawer-content>
   </mat-drawer-container>
   

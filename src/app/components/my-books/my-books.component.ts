@@ -11,5 +11,23 @@ export class MyBooksComponent implements OnInit {
 
   ngOnInit(): void {
   }
+   src = '../../assets/Books/temp-pdf.pdf';
+  // src = 'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf';
+  currentPage :number =1;
+  totalPages = 0;
+  nextPage(){
+    this.currentPage >=this.totalPages? this.currentPage = this.totalPages: this.currentPage++;
+
+  }
+
+  PervPage(){
+    this.currentPage <=1? this.currentPage =1: this.currentPage--;
+  }
+
+  afterLoadComplete(pdf: any) { 
+    this.totalPages = pdf.numPages; 
+  }
+
+
 
 }
