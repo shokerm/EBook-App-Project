@@ -1,0 +1,28 @@
+<div class="eaton mat-typography" style="overflow-x:hidden;" fxFlexFill cdkScrollable>
+
+
+
+  <button disabled="true" mat-button>
+    <input class="searchbar search-control"  type="search" aria-label="search" placeholder="Search" [(ngModel)]="searchText" #searchbar>
+    <mat-icon class="search-icon">search</mat-icon>
+  </button>
+
+  
+
+<mat-list class="results" *ngIf="isSerchTextNotEmpty()">
+  
+	<mat-list-item (click)="searchClose()" routerLink="store" *ngFor="let item of list | filter: searchText">
+  <div mat-line >{{item.ItemContent}}</div>
+  <div mat-line>
+    <img class="mini-book-img" [src]="item.ImageUrl" alt="">
+  </div>
+	</mat-list-item>
+  <mat-list-item *ngIf="(list | filter: searchText).length === 0">
+    <div mat-line>0 results</div>
+    <div mat-line>No matching presidents</div>
+  </mat-list-item>
+  <button mat-button mat-icon-button (click)="searchClose()">
+    <mat-icon class="close-icon">close</mat-icon>
+  </button> 
+</mat-list>
+</div>

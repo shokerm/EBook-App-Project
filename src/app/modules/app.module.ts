@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { FilterPipe } from '../shared/filter.pipe';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +29,7 @@ import { StoredataService } from '../services/store-data.service';
 import { SubNavComponent } from '../components/sub-nav/sub-nav.component';
 import { LoginDialogComponent } from '../components/dialogs-components/login-dialog-component/login-dialog.component';
 import { RegisterDialogComponent } from '../components/dialogs-components/register-dialog-component/register-dialog.component';
+import { SearchBarComponent } from '../search-bar/search-bar.component';
 
 
 @NgModule({
@@ -47,7 +50,10 @@ import { RegisterDialogComponent } from '../components/dialogs-components/regist
     StorePageComponent,
     SubNavComponent,
     LoginDialogComponent,
-    RegisterDialogComponent
+    RegisterDialogComponent,
+    SearchBarComponent,
+    FilterPipe
+    
   ],
   imports: [
     BrowserModule,
@@ -60,7 +66,7 @@ import { RegisterDialogComponent } from '../components/dialogs-components/regist
 
 
   ],
-  providers: [DataService, AboutDatasService, StoredataService],
+  providers: [DataService, AboutDatasService, StoredataService, FilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
