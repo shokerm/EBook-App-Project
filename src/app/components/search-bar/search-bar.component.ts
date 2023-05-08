@@ -1,6 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { listData } from '../shared/list';
-import { StoredataService } from '../services/store-data.service';
+import { StoredataService } from '../../services/store-data.service';
 
 @Component({
   selector: 'app-search-bar',
