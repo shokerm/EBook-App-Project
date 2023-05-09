@@ -12,14 +12,6 @@
     width: 10%;
   }
 
- mat-drawer-content {
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  
-  }
-
   .drawer-header{
     margin: 10px;
   }
@@ -32,3 +24,42 @@
     margin: 3px;
     text-align: start;
 }
+
+.mat-drawer-content-pdf-header{
+
+  padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+mat-drawer-container{
+  overflow: scroll;
+
+}
+pdf-viewer {
+  overflow: scroll;
+}
+
+.mat-drawer-content-pdf-header{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: baseline;
+}
+
+
+  .buttons-tools-conatinert{
+    mat-slide-toggle{
+    padding-right: 10px;
+      margin: 3px;
+      border-right: 1px dotted;
+
+    }
+    section{
+      display: inline;
+      border-right: 1px dotted;
+    }
+
+   
+  }
+  
