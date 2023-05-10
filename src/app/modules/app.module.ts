@@ -32,6 +32,7 @@ import { DataService } from '../services/data.service';
 import { FilterPipe } from '../pipes/filter.pipe';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer'; // <- import PdfViewerModule
+import { MyBooksDataService } from '../services/my-books-data.service';
 
 
 const COMPONENTS = [ 
@@ -57,7 +58,8 @@ const COMPONENTS = [
 const SERVICES = [
   DataService,
   AboutDatasService,
-  StoredataService
+  StoredataService,
+  MyBooksDataService
 ];
 const PIPES = [
   FilterPipe

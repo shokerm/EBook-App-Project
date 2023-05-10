@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
 import {PDFDocumentProxy} from 'ng2-pdf-viewer'
+import { MyBooksDataService } from 'src/app/services/my-books-data.service';
 
 @Component({
   selector: 'app-my-books',
@@ -9,12 +10,11 @@ import {PDFDocumentProxy} from 'ng2-pdf-viewer'
 })
 export class MyBooksComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service : MyBooksDataService) { }
 
   ngOnInit(): void {
   }
-   src :string = '../../assets/Books/temp-pdf.pdf';
-  // src = 'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf';
+  src :string = "../../assets/Books/Wellcom-to-EBook.pdf";
   currentPage :number = 1;
   totalPages :number = 0;
   isOrginalSize :boolean = false;
@@ -24,6 +24,12 @@ export class MyBooksComponent implements OnInit {
   isShowBorders :boolean = false;
   rotaionPosition: number = 0;
   zoom :number = 1;
+
+
+  choseBookBtn(book:any){
+    this.src = book.src;
+
+  }
   
 
   backToFirstPage():void{
