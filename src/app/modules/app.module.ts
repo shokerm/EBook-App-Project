@@ -77,6 +77,7 @@ const PIPES = [
     CommonModule,
     ReactiveFormsModule,
     PdfViewerModule
+    
 
 
   ],
