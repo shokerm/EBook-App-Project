@@ -7,6 +7,8 @@
 /bazel-out
 
 # Node
+/srv/assets/Books/*.pdf
+!.Wellcom-to-EBook.pdf
 /node_modules
 npm-debug.log
 yarn-error.log
