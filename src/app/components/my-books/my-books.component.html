@@ -8,11 +8,14 @@
         <button  class="single-book" mat-raised-button><mat-icon>auto_stories</mat-icon>Asp.NET</button>
         <button  class="single-book" mat-raised-button><mat-icon>auto_stories</mat-icon>ReactJS</button>
     </div>
-
     </mat-drawer>
+
     <mat-drawer-content>
       <div class="mat-drawer-content-pdf-header">
         <button mat-raised-button matTooltip="My Books" (click)="drawer.toggle()">My Books</button>
+        <button mat-icon-button matTooltip="Back To First Page" (click)="backToFirstPage()">
+          <mat-icon>first_page</mat-icon>
+        </button>
         <button mat-icon-button matTooltip="Previous" (click)="PrevPage()">
           <mat-icon>arrow_back_ios</mat-icon>
         </button>
@@ -25,11 +28,11 @@
 
       
         <div class="buttons-tools-conatinert">
-         <mat-slide-toggle #mattoggle1 (toggleChange)="toggleChange('orginalSizeToggle')">Orginal Size</mat-slide-toggle>
-         <mat-slide-toggle #mattoggle2 (toggleChange)="toggleChange('showAllPages')">Show All Pages</mat-slide-toggle>
-         <mat-slide-toggle #mattoggle3 (toggleChange)="toggleChange('isFitToPage')">Fit To Page</mat-slide-toggle>
-         <mat-slide-toggle #mattoggle4 (toggleChange)="toggleChange('isRenderTextLayer')">Render Text Layer</mat-slide-toggle>
-         <mat-slide-toggle #mattoggle5  (toggleChange)="toggleChange('isShowBorders')">Show Borders</mat-slide-toggle>
+         <mat-slide-toggle #orginalSizeToggle>Orginal Size</mat-slide-toggle>
+         <mat-slide-toggle #showAllPagesToggle>Show All Pages</mat-slide-toggle>
+         <mat-slide-toggle #fitToPageToggle>Fit To Page</mat-slide-toggle>
+         <mat-slide-toggle #renderTextLayerToggle>Render Text Layer</mat-slide-toggle>
+         <mat-slide-toggle #showBordersToggle>Show Borders</mat-slide-toggle>
    
          <section>
          <button mat-icon-button matTooltip="Rotate Right" (click)="rotationPositionToRight()">
@@ -41,15 +44,16 @@
         </button>
       </section>
     <section>
+      <button mat-icon-button matTooltip="Zoom In" (click)="zoomOut()">
+        <mat-icon>zoom_out</mat-icon>
+      </button>
+        {{this.zoom | number}}
         <button mat-icon-button matTooltip="Zoom In" (click)="zoomIn()">
           <mat-icon>zoom_in</mat-icon>
         </button>
-        {{this.zoom | number}}
-        <button mat-icon-button matTooltip="Zoom In" (click)="zoomOut()">
-          <mat-icon>zoom_out</mat-icon>
-        </button>
+
       </section>
-        <button mat-icon-button matTooltip="Reset Settings" (click)="restSettings(mattoggle1,mattoggle2,mattoggle3,mattoggle4,mattoggle5)">
+        <button mat-icon-button matTooltip="Reset Settings" (click)="restSettings(orginalSizeToggle,showAllPagesToggle,fitToPageToggle,renderTextLayerToggle,showBordersToggle)">
           <mat-icon>refresh</mat-icon>
         </button>
       </div>
@@ -58,17 +62,16 @@
         <pdf-viewer (after-load-complete)="afterLoadComplete($event)"
         [src]="src"
         [rotation]="this.rotaionPosition"
-        [original-size]="false"
-        [show-all]="this.isShowAllPages"
-        [fit-to-page]="this.isFitToPage"
+        [original-size]="orginalSizeToggle.checked"
+        [show-all]="showAllPagesToggle.checked"
+        [fit-to-page]="fitToPageToggle.checked"
         [zoom]="this.zoom"
         [zoom-scale]="'page-width'"
-        [render-text]="this.isRenderTextLayer"
+        [render-text]="renderTextLayerToggle.checked"
         [external-link-target]="'blank'"
         [autoresize]="false"
-        [show-borders]="this.isShowBorders"
+        [show-borders]="showBordersToggle.checked"
         [(page)]="this.currentPage"
-        [original-size]="this.isOrginalSize"
         style="width:100%; height:100%;">
       </pdf-viewer>
 
