@@ -7,7 +7,7 @@
 /bazel-out
 
 # Node
-/srv/assets/Books/*.pdf
+src/assets/Books/*.pdf
 !.Wellcom-to-EBook.pdf
 /node_modules
 npm-debug.log
