@@ -4,5 +4,6 @@ export interface Item{
          ImageAlt:string,
          ItemContent:string,
          LikeToggleStatus: string,
-         ItemPrice:number
+         ItemPrice:number,
+         Quantity :number
 }
