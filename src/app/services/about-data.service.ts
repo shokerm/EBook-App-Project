@@ -15,7 +15,8 @@ export class AboutDatasService {
       ImageAlt: "image-1",
       ItemContent: "Buy now our latest books for learning online!",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 0
+      ItemPrice: 0,
+      Quantity: 1
     },
     {
       Id:2,
@@ -23,7 +24,8 @@ export class AboutDatasService {
       ImageAlt: "image-2",
       ItemContent: "Replace all your books with digital book!",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 0
+      ItemPrice: 0,
+      Quantity: 1
     },
     {
       Id: 3,
@@ -31,7 +33,8 @@ export class AboutDatasService {
       ImageAlt: "image-3",
       ItemContent: "Save all your work study with you.",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 0
+      ItemPrice: 0,
+      Quantity: 1
     }
   ];
 

@@ -15,7 +15,8 @@ export class StoredataService {
       ImageAlt: "javascript-book",
       ItemContent: "JavaScript",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 99.90
+      ItemPrice: 99.90,
+      Quantity: 1
 
 
     },
@@ -25,8 +26,8 @@ export class StoredataService {
       ImageAlt: "entity-framework-book",
       ItemContent: "Entity Framework",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 79.90
-
+      ItemPrice: 79.90,
+      Quantity: 1
     },
     {
       Id:3,
@@ -34,7 +35,8 @@ export class StoredataService {
       ImageAlt: "jQuery",
       ItemContent: "jQuery",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 59.90
+      ItemPrice: 59.90,
+      Quantity: 1
 
     },
     {
@@ -43,7 +45,8 @@ export class StoredataService {
       ImageAlt: "Powershell",
       ItemContent: "Powershell",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 49.90
+      ItemPrice: 49.90,
+      Quantity: 1
 
     },
     {
@@ -52,7 +55,8 @@ export class StoredataService {
       ImageAlt: "ReactJS",
       ItemContent: "ReactJS",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 299.90
+      ItemPrice: 299.90,
+      Quantity: 1
 
     },
     {
@@ -61,7 +65,8 @@ export class StoredataService {
       ImageAlt: "Git",
       ItemContent: "Git",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 99.90
+      ItemPrice: 99.90,
+      Quantity: 1
 
     },
     {
@@ -70,7 +75,8 @@ export class StoredataService {
       ImageAlt: "Ruby on Rails",
       ItemContent: "Ruby on Rails",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 99.90
+      ItemPrice: 99.90,
+      Quantity: 1
 
     },
     {
@@ -79,7 +85,8 @@ export class StoredataService {
       ImageAlt: "Oracle Database",
       ItemContent: "Oracle Database",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 99.90
+      ItemPrice: 99.90,
+      Quantity: 1
 
     },
     {
@@ -88,7 +95,8 @@ export class StoredataService {
       ImageAlt: "image-3",
       ItemContent: "IOS Developer ",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 149.90
+      ItemPrice: 149.90,
+      Quantity: 1
 
     },
     {
@@ -97,7 +105,8 @@ export class StoredataService {
       ImageAlt: "Visual Basic .NET",
       ItemContent: "Visual Basic .NET",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 49.90
+      ItemPrice: 49.90,
+      Quantity: 1
 
     }
   ];
