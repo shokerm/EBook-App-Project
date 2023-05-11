@@ -23,4 +23,15 @@ addToCartService(book:Item):void{
   index > -1 ? alert("this book already in cart!") :this.cart.push(book);
 }
 
+totalPriceForItemsInCart(){
+
+  if(this.cart.length ===0){
+    return 0;
+      }else{
+        let prices = this.cart.map(b=>b.ItemPrice);
+        return prices.reduce((acc,crr)=>acc+crr);
+      }
+    }
+    
+
 }

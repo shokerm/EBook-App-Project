@@ -17,7 +17,7 @@
               <img class="cart-item-image" [src]="book.ImageUrl" height="100">
               <span class="cart-item-title">{{book.ItemContent}}</span>
           </div>
-          <span class="cart-price cart-column">$100</span>
+          <span class="cart-price cart-column">$ {{book.ItemPrice |number}}</span>
           <div class="cart-quantity cart-column">
             <mat-form-field class="example-form-field">
                 <mat-label>QUANTITY</mat-label>
@@ -29,7 +29,7 @@
   </div>
   <div class="cart-total">
       <strong class="cart-total-title">Total</strong>
-      <span class="cart-total-price" >$ 100 </span>
+      <span class="cart-total-price" >$ {{this.service.totalPriceForItemsInCart() | number}} </span>
   </div>
   <div class="parchaseBtn"><button mat-raised-button type="button" >PURCHASE</button>
   </div>

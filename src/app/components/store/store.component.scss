@@ -91,6 +91,13 @@ blockquote {
 }
 
   /* cards scss */
+
+  .mat-card-content{
+    display: flex;
+    justify-content: space-around;
+
+
+  }
   .example-card {
     max-width: 250px;
     margin: 30px;
