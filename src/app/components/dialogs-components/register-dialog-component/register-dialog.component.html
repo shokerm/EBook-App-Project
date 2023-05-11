@@ -7,12 +7,12 @@
         <div class="form-group">
           <mat-form-field>
             <mat-label>First Name</mat-label>
-            <input matInput type="text" class="form-control" id="firstName"
+            <input matInput type="text" id="firstName"
                  required
                  [(ngModel)]="registerUserForm.FirstName" name="firstName"
                  #FirstName="ngModel">
           </mat-form-field>
-          <div [hidden]="FirstName.valid || FirstName.pristine" class="alert alert-danger">
+          <div [hidden]="FirstName.valid || FirstName.pristine" class="my-alert-danger">
             First Name is <strong>required</strong>
           </div>
         </div>
@@ -20,12 +20,12 @@
         <div class="form-group">
           <mat-form-field>
             <mat-label>Last Name</mat-label>
-            <input matInput type="text" class="form-control" id="lastName"
+            <input matInput type="text" id="lastName"
                  required
                  [(ngModel)]="registerUserForm.LastName" name="lastName"
                  #LastName="ngModel">
           </mat-form-field>
-          <div [hidden]="LastName.valid || LastName.pristine" class="alert alert-danger">
+          <div [hidden]="LastName.valid || LastName.pristine" class="my-alert-danger">
             Last Name is <strong>required</strong>
           </div>
         </div>
@@ -33,13 +33,13 @@
         <div class="form-group">
           <mat-form-field >
           <mat-label>Email</mat-label>
-          <input matInput type="email" class="form-control" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          <input matInput type="email" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                  required
                  [(ngModel)]="registerUserForm.Email" name="Email"
                  #Email="ngModel" placeholder="Ex. pat@example.com">
           </mat-form-field>
           <div [hidden]="Email.valid || Email.pristine"
-               class="alert alert-danger">
+               class="my-alert-danger">
                Email is <strong>required</strong> or <strong>invalid!</strong>
           </div>
         </div>
@@ -47,12 +47,12 @@
         <div class="form-group">
           <mat-form-field>
             <mat-label>Password</mat-label>
-            <input matInput type="password" class="form-control" id="password"
+            <input matInput type="password" id="password"
                  required
                  [(ngModel)]="registerUserForm.Password" name="password"
                  #password="ngModel">
           </mat-form-field>
-          <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+          <div [hidden]="password.valid || password.pristine" class="my-alert-danger">
                Password is <strong>required</strong>
           </div>
         </div>

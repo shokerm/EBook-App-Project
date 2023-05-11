@@ -1,6 +1,9 @@
 @mixin dialogFeildWidth {
 width: 250px;;
 } 
+.mat-dialog-content{
+    max-height: 100vh;
+}
 
 mat-form-field-flex{
     @include dialogFeildWidth();
@@ -22,7 +25,7 @@ mat-form-field{
 }
 
 
-[class="alert alert-danger"]{
+[class="my-alert-danger"]{
     color: var(--mdc-theme-error, #f44336);
     font-size: 12px;
 
