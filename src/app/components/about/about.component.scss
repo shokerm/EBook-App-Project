@@ -44,6 +44,9 @@ body {
     width: 100%;
   }
   
+  .row{
+    margin-right: 0;
+  }
   img{
     max-width: 500px;
     height: auto;
@@ -77,6 +80,8 @@ body {
       vertical-align: -1.1em;
     }
   }
+
+  
   
   @media screen and (max-width: 650px) {
     .column {
