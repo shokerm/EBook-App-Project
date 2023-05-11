@@ -12,7 +12,7 @@ export class StoredataService {
     {
       ImageUrl: "../../../../assets//Images/store-images/javascript-book.jpg",
       ImageAlt: "javascript-book",
-      ItemContent: "JavaScript full book",
+      ItemContent: "JavaScript",
       LikeToggleStatus: "favorite_border"
 
 
@@ -20,63 +20,63 @@ export class StoredataService {
     {
       ImageUrl: "../../../../assets//Images/store-images/entity-framework-book.jpg",
       ImageAlt: "entity-framework-book",
-      ItemContent: "Entity Framework full book",
+      ItemContent: "Entity Framework",
       LikeToggleStatus: "favorite_border"
 
     },
     {
       ImageUrl: "../../../../assets//Images/store-images/jquery-book.jpg",
       ImageAlt: "jQuery",
-      ItemContent: "jQuery full book",
+      ItemContent: "jQuery",
       LikeToggleStatus: "favorite_border"
 
     },
     {
       ImageUrl: "../../../../assets//Images/store-images/powershell-book.jpg",
       ImageAlt: "Powershell",
-      ItemContent: "Powershell full book",
+      ItemContent: "Powershell",
       LikeToggleStatus: "favorite_border"
 
     },
     {
       ImageUrl: "../../../../assets//Images/store-images/reactjs-book.jpg",
       ImageAlt: "ReactJS",
-      ItemContent: "ReactJS full book",
+      ItemContent: "ReactJS",
       LikeToggleStatus: "favorite_border"
 
     },
     {
       ImageUrl: "../../../../assets//Images/store-images/git-book.jpg",
       ImageAlt: "Git",
-      ItemContent: "Git full book",
+      ItemContent: "Git",
       LikeToggleStatus: "favorite_border"
 
     },
     {
       ImageUrl: "../../../../assets//Images/store-images/ruby-on-rails-book.jpg",
       ImageAlt: "Ruby on Rails",
-      ItemContent: "Ruby on Rails full book",
+      ItemContent: "Ruby on Rails",
       LikeToggleStatus: "favorite_border"
 
     },
     {
       ImageUrl: "../../../../assets//Images/store-images/oracle-database-book.jpg",
       ImageAlt: "Oracle Database",
-      ItemContent: "Oracle Database full book",
+      ItemContent: "Oracle Database",
       LikeToggleStatus: "favorite_border"
 
     },
     {
       ImageUrl: "../../../../assets//Images/store-images/ios-developer-book.jpg",
       ImageAlt: "image-3",
-      ItemContent: "Save all your work study with you.",
+      ItemContent: "IOS Developer ",
       LikeToggleStatus: "favorite_border",
 
     },
     {
       ImageUrl: "../../../../assets//Images/store-images/visual-basic-dotnet-book.jpg",
       ImageAlt: "Visual Basic .NET",
-      ItemContent: "Visual Basic .NET full book",
+      ItemContent: "Visual Basic .NET",
       LikeToggleStatus: "favorite_border"
 
     }

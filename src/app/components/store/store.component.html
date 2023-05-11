@@ -14,9 +14,9 @@ subNavParagraph="We invite you enjoy our products"
     </mat-card-header>
     <img mat-card-image [src]="book.ImageUrl" [alt]="book.ImageAlt">
     <mat-card-content>
-      <h3>
+      <h5>
    {{book.ItemContent}}
-      </h3>
+      </h5>
     </mat-card-content>
     <mat-card-actions>
       <button mat-icon-button matTooltip="Like" (click)="changeLikeToggle(book)"><mat-icon>{{book.LikeToggleStatus}}</mat-icon></button>
