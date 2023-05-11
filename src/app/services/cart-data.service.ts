@@ -32,6 +32,13 @@ totalPriceForItemsInCart(){
         return prices.reduce((acc,crr)=>acc+crr);
       }
     }
-    
+
+    quantityUpdateService(quantity: string,book:Item){
+
+      let index = this.cart.findIndex(b=>b.Id === book.Id);
+      this.cart[index].Quantity = parseInt(quantity);
+     
+    }
+
 
 }

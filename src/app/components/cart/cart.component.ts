@@ -17,6 +17,11 @@ export class CartComponent implements OnInit {
   this.service.removeItemService(book);
   }
 
+  quantityUpdate(Quantity: string,book:Item){
+    this.service.quantityUpdateService(Quantity,book);
+
+  }
+
 
 
 }
