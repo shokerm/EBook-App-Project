@@ -2,13 +2,12 @@
 .container{
     display: flex;
     justify-content: center;
-    margin: 30px;
     
 }
 
 
 
-[class="alert alert-danger"]{
+[class="my-alert-danger"]{
     color: var(--mdc-theme-error, #f44336);
     font-size: 12px;
 
@@ -18,7 +17,8 @@
 }
 
 .mat-form-field{
-    width: 500px;
+  max-width: 500px;
+  width: 80vw;
 }
 
 
