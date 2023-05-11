@@ -10,6 +10,7 @@ export class StoredataService {
 
   booksStore :Item[]  = [
     {
+      Id:1,
       ImageUrl: "../../../../assets//Images/store-images/javascript-book.jpg",
       ImageAlt: "javascript-book",
       ItemContent: "JavaScript",
@@ -18,6 +19,7 @@ export class StoredataService {
 
     },
     {
+      Id:2,
       ImageUrl: "../../../../assets//Images/store-images/entity-framework-book.jpg",
       ImageAlt: "entity-framework-book",
       ItemContent: "Entity Framework",
@@ -25,6 +27,7 @@ export class StoredataService {
 
     },
     {
+      Id:3,
       ImageUrl: "../../../../assets//Images/store-images/jquery-book.jpg",
       ImageAlt: "jQuery",
       ItemContent: "jQuery",
@@ -32,6 +35,7 @@ export class StoredataService {
 
     },
     {
+      Id: 4,
       ImageUrl: "../../../../assets//Images/store-images/powershell-book.jpg",
       ImageAlt: "Powershell",
       ItemContent: "Powershell",
@@ -39,6 +43,7 @@ export class StoredataService {
 
     },
     {
+      Id: 5,
       ImageUrl: "../../../../assets//Images/store-images/reactjs-book.jpg",
       ImageAlt: "ReactJS",
       ItemContent: "ReactJS",
@@ -46,6 +51,7 @@ export class StoredataService {
 
     },
     {
+      Id: 6,
       ImageUrl: "../../../../assets//Images/store-images/git-book.jpg",
       ImageAlt: "Git",
       ItemContent: "Git",
@@ -53,6 +59,7 @@ export class StoredataService {
 
     },
     {
+      Id:7,
       ImageUrl: "../../../../assets//Images/store-images/ruby-on-rails-book.jpg",
       ImageAlt: "Ruby on Rails",
       ItemContent: "Ruby on Rails",
@@ -60,6 +67,7 @@ export class StoredataService {
 
     },
     {
+      Id:8,
       ImageUrl: "../../../../assets//Images/store-images/oracle-database-book.jpg",
       ImageAlt: "Oracle Database",
       ItemContent: "Oracle Database",
@@ -67,6 +75,7 @@ export class StoredataService {
 
     },
     {
+      Id:9,
       ImageUrl: "../../../../assets//Images/store-images/ios-developer-book.jpg",
       ImageAlt: "image-3",
       ItemContent: "IOS Developer ",
@@ -74,6 +83,7 @@ export class StoredataService {
 
     },
     {
+      Id:10,
       ImageUrl: "../../../../assets//Images/store-images/visual-basic-dotnet-book.jpg",
       ImageAlt: "Visual Basic .NET",
       ItemContent: "Visual Basic .NET",
@@ -81,6 +91,11 @@ export class StoredataService {
 
     }
   ];
+
+ 
+  
+
+
 
 
   changeLikeToggleService(card: Item):void{

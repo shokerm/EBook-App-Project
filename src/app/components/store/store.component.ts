@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
+import { Item } from 'src/app/models.ts/Item';
+import { CartDataService } from 'src/app/services/cart-data.service';
 import { StoredataService } from 'src/app/services/store-data.service';
 
 @Component({
@@ -9,13 +10,17 @@ import { StoredataService } from 'src/app/services/store-data.service';
 })
 export class StoreComponent implements OnInit {
 
-  constructor(public service: StoredataService) { }
+  constructor(public service: StoredataService, public cartService:CartDataService) { }
 
   ngOnInit(): void {
   }
 
-  changeLikeToggle(card: any) {
+  changeLikeToggle(card: Item) {
    this.service.changeLikeToggleService(card);
+  }
+
+  addToCart(book :Item){
+    this.cartService.addToCartService(book);
   }
 
 }

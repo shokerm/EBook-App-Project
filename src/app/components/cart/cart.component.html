@@ -12,10 +12,10 @@
       <span class="cart-quantity cart-header cart-column">QUANTITY</span>
   </div>
   <div class="cart-items">
-      <div class="cart-row">
+      <div class="cart-row" *ngFor="let book of this.service.cart">
           <div class="cart-item cart-column">
-              <img class="cart-item-image" src="../../../assets/Images/store-images/entity-framework-book.jpg" width="100" height="100">
-              <span class="cart-item-title">Entity Framework</span>
+              <img class="cart-item-image" [src]="book.ImageUrl" height="100">
+              <span class="cart-item-title">{{book.ItemContent}}</span>
           </div>
           <span class="cart-price cart-column">$100</span>
           <div class="cart-quantity cart-column">
@@ -23,7 +23,7 @@
                 <mat-label>QUANTITY</mat-label>
                 <input matInput type="number" value="1" min="1">
               </mat-form-field>
-              <button mat-icon-button matTooltip="Remove"><mat-icon>delete</mat-icon></button>
+              <button (click)="removeItem(book)" mat-icon-button matTooltip="Remove"><mat-icon>delete</mat-icon></button>
           </div>
       </div>
   </div>
