@@ -19,10 +19,10 @@
           </div>
           <span class="cart-price cart-column">$ {{book.ItemPrice |number}}</span>
           <div class="cart-quantity cart-column">
-            <mat-form-field class="example-form-field">
                 <mat-label>QUANTITY</mat-label>
-                <input #Quantity matInput type="number" (input)="quantityUpdate(Quantity.value,book)" value="1" min="1">
-              </mat-form-field>
+              <button mat-icon-button (click)="bookQunatityAdd(book)"><mat-icon>add</mat-icon></button>
+              {{book.Quantity}}
+              <button mat-icon-button (click)="bookQunatityRemove(book)"><mat-icon>remove</mat-icon></button>
               <button (click)="removeItem(book)" mat-icon-button matTooltip="Remove"><mat-icon>delete</mat-icon></button>
           </div>
       </div>

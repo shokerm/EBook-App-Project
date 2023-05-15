@@ -28,15 +28,17 @@ totalPriceForItemsInCart(){
   if(this.cart.length ===0){
     return 0;
       }else{
-        let prices = this.cart.map(b=>b.ItemPrice);
+        let prices = this.cart.map(b=>b.ItemPrice*b.Quantity);
         return prices.reduce((acc,crr)=>acc+crr);
       }
     }
 
-    quantityUpdateService(quantity: string,book:Item){
+    bookQunatityAddService(book:any){
+      book.Quantity++;
+    }
 
-      let index = this.cart.findIndex(b=>b.Id === book.Id);
-      this.cart[index].Quantity = parseInt(quantity);
+    bookQunatityRemoveService(book: any){
+      book.Quantity <= 1? book.Quantity = 1 :  book.Quantity--;
      
     }
 
