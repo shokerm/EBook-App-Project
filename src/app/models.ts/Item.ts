@@ -7,3 +7,9 @@ export interface Item{
          ItemPrice:number,
          Quantity :number
 }
+
+export declare type bookType ={
+    bookName: string,
+    src: string
+  }
+  

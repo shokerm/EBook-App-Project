@@ -1,4 +1,9 @@
 import { Injectable } from '@angular/core';
+import { bookType } from '../models.ts/Item';
+
+
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +12,7 @@ export class MyBooksDataService {
 
   constructor() { }
 
-  books = [
+  books :bookType[] = [
     {bookName :"C#", src:"../../assets/Books/CSharp-Notes-For-Profesionals.pdf"},
     {bookName :"JavaScript", src:"../../assets/Books/JavaScript-Notes-For-Profesionals.pdf"},
     {bookName :"Python", src:"../../assets/Books/Python-Notes-For-Profesionals.pdf"},
