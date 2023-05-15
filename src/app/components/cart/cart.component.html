@@ -19,16 +19,15 @@
           </div>
           <span class="cart-price cart-column">$ {{book.ItemPrice |number}}</span>
           <div class="cart-quantity cart-column">
-                <mat-label>QUANTITY</mat-label>
-              <button mat-icon-button (click)="bookQunatityAdd(book)"><mat-icon>add</mat-icon></button>
-              {{book.Quantity}}
-              <button mat-icon-button (click)="bookQunatityRemove(book)"><mat-icon>remove</mat-icon></button>
-              <button (click)="removeItem(book)" mat-icon-button matTooltip="Remove"><mat-icon>delete</mat-icon></button>
+              <button mat-icon-button matTooltip="Add Quantity" (click)="bookQunatityAdd(book)"><mat-icon>add</mat-icon></button>
+            <span class="quantity">{{book.Quantity}}</span>
+              <button mat-icon-button matTooltip="Remove Quantity" (click)="bookQunatityRemove(book)"><mat-icon>remove</mat-icon></button>
+              <button matTooltip="Remove Item" (click)="removeItem(book)" mat-icon-button><mat-icon>delete</mat-icon></button>
           </div>
       </div>
   </div>
   <div class="cart-total">
-      <strong class="cart-total-title">Total</strong>
+      <strong class="cart-total-title">Total: </strong>
       <span class="cart-total-price" >$ {{this.service.totalPriceForItemsInCart() | number}} </span>
   </div>
   <div class="parchaseBtn"><button mat-raised-button type="button" >PURCHASE</button>
