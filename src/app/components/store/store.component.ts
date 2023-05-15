@@ -23,4 +23,11 @@ export class StoreComponent implements OnInit {
     this.cartService.addToCartService(book);
   }
 
+  bookQunatityAdd(book:Item){
+    this.cartService.bookQunatityAddService(book);
+  }
+  bookQunatityRemove(book: Item){
+    this.cartService.bookQunatityRemoveService(book);   
+  }
+
 }

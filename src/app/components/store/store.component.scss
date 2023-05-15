@@ -99,7 +99,7 @@ blockquote {
 
   }
   .example-card {
-    max-width: 250px;
+    max-width: 275px; //250px
     margin: 30px;
   }
   
@@ -112,6 +112,7 @@ blockquote {
     mat-card-actions{
       display: flex;
       justify-content: flex-start;
+      align-items: baseline;
     }
   }
 

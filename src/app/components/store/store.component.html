@@ -22,6 +22,10 @@ subNavParagraph="We invite you enjoy our products"
     <mat-card-actions>
       <button mat-icon-button matTooltip="Like" (click)="changeLikeToggle(book)"><mat-icon>{{book.LikeToggleStatus}}</mat-icon></button>
       <button matTooltip="Add To Cart" mat-raised-button (click)="addToCart(book)">ADD TO CART</button>
+
+      <button mat-icon-button matTooltip="Add Quantity" (click)="bookQunatityAdd(book)"><mat-icon>add</mat-icon></button>
+      <span class="quantity">{{book.Quantity}}</span>
+      <button mat-icon-button matTooltip="Remove Quantity" (click)="bookQunatityRemove(book)"><mat-icon>remove</mat-icon></button>
     </mat-card-actions>
   </mat-card>
 </div>
