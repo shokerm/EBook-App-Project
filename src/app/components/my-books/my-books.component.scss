@@ -25,13 +25,6 @@
     text-align: start;
 }
 
-.mat-drawer-content-pdf-header{
-
-  padding: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
 mat-drawer-container{
   overflow: scroll;
 
@@ -41,14 +34,15 @@ pdf-viewer {
 }
 
 .mat-drawer-content-pdf-header{
+  padding: 12px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content:flex-start;
   align-items: baseline;
 }
 
 
-  .buttons-tools-conatinert{
+  .top-right-buttons-tools{
     mat-slide-toggle{
     padding-right: 10px;
       margin: 3px;
@@ -61,5 +55,17 @@ pdf-viewer {
     }
 
    
+  }
+
+  .top-left-buttons-tools{
+    display: flex;
+    align-items: baseline;
+    margin: 0 0 12px;
+  }
+
+  .input-page{
+    width: 10%;
+    text-align: center;
+
   }
   

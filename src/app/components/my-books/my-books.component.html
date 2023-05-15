@@ -11,55 +11,71 @@
 
   <!-- drawer mat content - controller top bar-->
     <mat-drawer-content>
+
+      
       <div class="mat-drawer-content-pdf-header">
+      <div class="top-left-buttons-tools">
         <button mat-raised-button matTooltip="My Books" (click)="drawer.toggle()">My Books</button>
         <button mat-icon-button matTooltip="Back To First Page" (click)="backToFirstPage()">
           <mat-icon>first_page</mat-icon>
         </button>
-
+        <input class="input-page" #inputPage [value]="this.currentPage" (change)="updatePage(inputPage)">
         <button mat-icon-button matTooltip="Previous" (click)="PrevPage()">
           <mat-icon>arrow_back_ios</mat-icon>
         </button>
-
        <span> {{this.currentPage}} / {{this.totalPages}}</span>
-
         <button mat-icon-button matTooltip="Next" (click)="nextPage()">
           <mat-icon>arrow_forward_ios</mat-icon>
         </button>
+        <section>
+          <button mat-icon-button matTooltip="Rotate Right" (click)="rotationPositionToRight()">
+           <mat-icon>rotate_right</mat-icon>
+         </button>
+         {{this.rotaionPosition}}
+         <button mat-icon-button matTooltip="Rotate Left" (click)="rotationPositionToLeft()">
+           <mat-icon>rotate_left</mat-icon>
+         </button>
+       </section>
+     <section>
+       <button mat-icon-button matTooltip="Zoom In" (click)="zoomOut()">
+         <mat-icon>zoom_out</mat-icon>
+       </button>
+         {{this.zoom | number}}
+         <button mat-icon-button matTooltip="Zoom In" (click)="zoomIn()">
+           <mat-icon>zoom_in</mat-icon>
+         </button>
 
-        <div class="buttons-tools-conatinert">
+         <button mat-icon-button matTooltip="Reset Settings" 
+         (click)="resetSettings(orginalSizeToggle,showAllPagesToggle,fitToPageToggle,renderTextLayerToggle,showBordersToggle)">
+           <mat-icon>refresh</mat-icon>
+         </button>
+         <button #moreSettingsBar mat-button matTooltip="{{moreSettingsButtonName}}" (click)="openMoreSettingsBar(moreSettingsBar)">{{moreSettingsButtonName}}
+        </button>
+ 
+       </section>
+      </div>
+
+        <div [hidden]="this.isSettingsBarIsHidden" class="top-right-buttons-tools">
+
+          <mat-form-field appearance="fill">
+            <mat-label>Page Options:</mat-label>
+            <mat-select [(ngModel)]="pageOptions">
+              <mat-option *ngFor="let pageOption of PageOptionsValues" [value]="pageOption.value">
+                {{pageOption.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
          <mat-slide-toggle #orginalSizeToggle>Orginal Size</mat-slide-toggle>
          <mat-slide-toggle #showAllPagesToggle>Show All Pages</mat-slide-toggle>
          <mat-slide-toggle #fitToPageToggle>Fit To Page</mat-slide-toggle>
          <mat-slide-toggle #renderTextLayerToggle>Render Text Layer</mat-slide-toggle>
          <mat-slide-toggle #showBordersToggle>Show Borders</mat-slide-toggle>
-   
-         <section>
-         <button mat-icon-button matTooltip="Rotate Right" (click)="rotationPositionToRight()">
-          <mat-icon>rotate_right</mat-icon>
-        </button>
-        {{this.rotaionPosition}}
-        <button mat-icon-button matTooltip="Rotate Left" (click)="rotationPositionToLeft()">
-          <mat-icon>rotate_left</mat-icon>
-        </button>
-      </section>
-    <section>
-      <button mat-icon-button matTooltip="Zoom In" (click)="zoomOut()">
-        <mat-icon>zoom_out</mat-icon>
-      </button>
-        {{this.zoom | number}}
-        <button mat-icon-button matTooltip="Zoom In" (click)="zoomIn()">
-          <mat-icon>zoom_in</mat-icon>
-        </button>
 
-      </section>
-        <button mat-icon-button matTooltip="Reset Settings" 
-        (click)="restSettings(orginalSizeToggle,showAllPagesToggle,fitToPageToggle,renderTextLayerToggle,showBordersToggle)">
-          <mat-icon>refresh</mat-icon>
-        </button>
+
       </div>
          
       </div>
+      
 
         <!-- pdf viewer -->
         <pdf-viewer (after-load-complete)="afterLoadComplete($event)"
@@ -69,7 +85,7 @@
         [show-all]="showAllPagesToggle.checked"
         [fit-to-page]="fitToPageToggle.checked"
         [zoom]="this.zoom"
-        [zoom-scale]="'page-width'"
+        [zoom-scale]="this.pageOptions"
         [render-text]="renderTextLayerToggle.checked"
         [external-link-target]="'blank'"
         [autoresize]="false"

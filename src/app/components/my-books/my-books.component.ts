@@ -24,10 +24,19 @@ export class MyBooksComponent implements OnInit {
   isShowBorders :boolean = false;
   rotaionPosition: number = 0;
   zoom :number = 1;
-
+  pageOptions : 'page-height' | 'page-fit' | 'page-width' = 'page-width';
+  selectedValue = '';
+  PageOptionsValues = [
+    {value: 'page-height'},
+    {value: 'page-fit'},
+    {value: 'page-width'}
+  ];
+  isSettingsBarIsHidden :boolean = true;
+  moreSettingsButtonName: string = 'More Settings';
 
   choseBookBtn(book:any){
     this.src = book.src;
+    
 
   }
   
@@ -66,16 +75,28 @@ export class MyBooksComponent implements OnInit {
     this.zoom <= 0.4? this.zoom=0.3 :this.zoom-=0.10;
   }
 
-  restSettings(orginalSizeToggle :MatSlideToggle,showAllPagesToggle :MatSlideToggle,fitToPageToggle :MatSlideToggle,
+  resetSettings(orginalSizeToggle :MatSlideToggle,showAllPagesToggle :MatSlideToggle,fitToPageToggle :MatSlideToggle,
     renderTextLayerToggle :MatSlideToggle,showBordersToggle :MatSlideToggle):void{
 
     this.rotaionPosition= 0;
     this.zoom = 1;
+    this.pageOptions = "page-width";
     orginalSizeToggle.checked = false;
     showAllPagesToggle.checked = false;
     fitToPageToggle.checked = false;
     renderTextLayerToggle.checked = false;
     showBordersToggle.checked = false;
+  }
+
+  updatePage(inputPage:any){
+  inputPage.value >=1 ?this.currentPage = inputPage.value : inputPage.value = 1;
+  }
+
+  openMoreSettingsBar(value:any):void{
+    this.isSettingsBarIsHidden ? this.moreSettingsButtonName = 'Less Settings' : this.moreSettingsButtonName ="More Settings";
+
+    this.isSettingsBarIsHidden = !this.isSettingsBarIsHidden;
+
   }
 
 }
