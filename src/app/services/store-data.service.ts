@@ -13,9 +13,9 @@ export class StoredataService {
       Id:1,
       ImageUrl: "../../../../assets//Images/store-images/javascript-book.jpg",
       ImageAlt: "javascript-book",
-      ItemContent: "JavaScript",
+      Name: "JavaScript",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 99.90,
+      Price: 99.90,
       Quantity: 1
 
 
@@ -24,18 +24,18 @@ export class StoredataService {
       Id:2,
       ImageUrl: "../../../../assets//Images/store-images/entity-framework-book.jpg",
       ImageAlt: "entity-framework-book",
-      ItemContent: "Entity Framework",
+      Name: "Entity Framework",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 79.90,
+      Price: 79.90,
       Quantity: 1
     },
     {
       Id:3,
       ImageUrl: "../../../../assets//Images/store-images/jquery-book.jpg",
       ImageAlt: "jQuery",
-      ItemContent: "jQuery",
+      Name: "jQuery",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 59.90,
+      Price: 59.90,
       Quantity: 1
 
     },
@@ -43,9 +43,9 @@ export class StoredataService {
       Id: 4,
       ImageUrl: "../../../../assets//Images/store-images/powershell-book.jpg",
       ImageAlt: "Powershell",
-      ItemContent: "Powershell",
+      Name: "Powershell",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 49.90,
+      Price: 49.90,
       Quantity: 1
 
     },
@@ -53,9 +53,9 @@ export class StoredataService {
       Id: 5,
       ImageUrl: "../../../../assets//Images/store-images/reactjs-book.jpg",
       ImageAlt: "ReactJS",
-      ItemContent: "ReactJS",
+      Name: "ReactJS",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 299.90,
+      Price: 299.90,
       Quantity: 1
 
     },
@@ -63,9 +63,9 @@ export class StoredataService {
       Id: 6,
       ImageUrl: "../../../../assets//Images/store-images/git-book.jpg",
       ImageAlt: "Git",
-      ItemContent: "Git",
+      Name: "Git",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 99.90,
+      Price: 99.90,
       Quantity: 1
 
     },
@@ -73,9 +73,9 @@ export class StoredataService {
       Id:7,
       ImageUrl: "../../../../assets//Images/store-images/ruby-on-rails-book.jpg",
       ImageAlt: "Ruby on Rails",
-      ItemContent: "Ruby on Rails",
+      Name: "Ruby on Rails",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 99.90,
+      Price: 99.90,
       Quantity: 1
 
     },
@@ -83,9 +83,9 @@ export class StoredataService {
       Id:8,
       ImageUrl: "../../../../assets//Images/store-images/oracle-database-book.jpg",
       ImageAlt: "Oracle Database",
-      ItemContent: "Oracle Database",
+      Name: "Oracle Database",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 99.90,
+      Price: 99.90,
       Quantity: 1
 
     },
@@ -93,9 +93,9 @@ export class StoredataService {
       Id:9,
       ImageUrl: "../../../../assets//Images/store-images/ios-developer-book.jpg",
       ImageAlt: "image-3",
-      ItemContent: "IOS Developer ",
+      Name: "IOS Developer ",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 149.90,
+      Price: 149.90,
       Quantity: 1
 
     },
@@ -103,9 +103,9 @@ export class StoredataService {
       Id:10,
       ImageUrl: "../../../../assets//Images/store-images/visual-basic-dotnet-book.jpg",
       ImageAlt: "Visual Basic .NET",
-      ItemContent: "Visual Basic .NET",
+      Name: "Visual Basic .NET",
       LikeToggleStatus: "favorite_border",
-      ItemPrice: 49.90,
+      Price: 49.90,
       Quantity: 1
 
     }

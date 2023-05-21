@@ -6,6 +6,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
 
+
 import { AppComponent } from '../app.component';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { FooterComponent } from '../components/footer/footer.component';
@@ -34,6 +35,8 @@ import { FilterPipe } from '../pipes/filter.pipe';
 import { PdfViewerModule } from 'ng2-pdf-viewer'; // <- import PdfViewerModule
 import { MyBooksDataService } from '../services/my-books-data.service';
 import { CartDataService } from '../services/cart-data.service';
+import { ItemsApiService } from '../services/items-api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const COMPONENTS = [ 
@@ -61,7 +64,8 @@ const SERVICES = [
   AboutDatasService,
   StoredataService,
   MyBooksDataService,
-  CartDataService
+  CartDataService,
+  ItemsApiService
 ];
 const PIPES = [
   FilterPipe
@@ -80,7 +84,8 @@ const PIPES = [
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    PdfViewerModule
+    PdfViewerModule,
+    HttpClientModule
     
 
 

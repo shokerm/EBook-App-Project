@@ -2,9 +2,9 @@ export interface Item{
          Id: number,
          ImageUrl: string,
          ImageAlt:string,
-         ItemContent:string,
+         Name:string,
          LikeToggleStatus: string,
-         ItemPrice:number,
+         Price:number,
          Quantity :number
 }
 

@@ -28,7 +28,7 @@ totalPriceForItemsInCart(){
   if(this.cart.length ===0){
     return 0;
       }else{
-        let prices = this.cart.map(b=>b.ItemPrice*b.Quantity);
+        let prices = this.cart.map(b=>b.Price*b.Quantity);
         return prices.reduce((acc,crr)=>acc+crr);
       }
     }

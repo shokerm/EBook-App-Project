@@ -13,9 +13,9 @@
       <div class="cart-row" *ngFor="let book of this.service.cart">
           <div class="cart-item cart-column">
               <img class="cart-item-image" [src]="book.ImageUrl" height="100">
-              <span class="cart-item-title">{{book.ItemContent}}</span>
+              <span class="cart-item-title">{{book.Name}}</span>
           </div>
-          <span class="cart-price cart-column">$ {{book.ItemPrice |number}}</span>
+          <span class="cart-price cart-column">$ {{book.Price |number}}</span>
           <div class="cart-quantity cart-column">
               <button mat-icon-button matTooltip="Add Quantity" (click)="bookQunatityAdd(book)"><mat-icon>add</mat-icon></button>
               <span class="quantity">{{book.Quantity}}</span>
