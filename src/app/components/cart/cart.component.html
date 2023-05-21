@@ -12,13 +12,13 @@
   <div class="cart-items">
       <div class="cart-row" *ngFor="let book of this.service.cart">
           <div class="cart-item cart-column">
-              <img class="cart-item-image" [src]="book.ImageUrl" height="100">
-              <span class="cart-item-title">{{book.Name}}</span>
+              <img class="cart-item-image" [src]="book.imageUrl" height="100">
+              <span class="cart-item-title">{{book.name}}</span>
           </div>
-          <span class="cart-price cart-column">$ {{book.Price |number}}</span>
+          <span class="cart-price cart-column">$ {{book.price |number}}</span>
           <div class="cart-quantity cart-column">
               <button mat-icon-button matTooltip="Add Quantity" (click)="bookQunatityAdd(book)"><mat-icon>add</mat-icon></button>
-              <span class="quantity">{{book.Quantity}}</span>
+              <span class="quantity">{{book.quantity}}</span>
               <button mat-icon-button matTooltip="Remove Quantity" (click)="bookQunatityRemove(book)"><mat-icon>remove</mat-icon></button>
               <button matTooltip="Remove Item" (click)="removeItem(book)" mat-icon-button><mat-icon>delete</mat-icon></button>
           </div>

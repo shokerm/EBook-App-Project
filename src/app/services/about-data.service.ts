@@ -10,38 +10,38 @@ export class AboutDatasService {
 
   cards :Item[] = [
     {
-      Id: 1,
-      ImageUrl: "../../../../assets//Images/books1.jpg",
-      ImageAlt: "image-1",
-      Name: "Buy now our latest books for learning online!",
-      LikeToggleStatus: "favorite_border",
-      Price: 0,
-      Quantity: 1
+      id: 1,
+      imageUrl: "../../../../assets//Images/books1.jpg",
+      imageAlt: "image-1",
+      name: "Buy now our latest books for learning online!",
+      likeToggleStatus: "favorite_border",
+      price: 0,
+      quantity: 1
     },
     {
-      Id:2,
-      ImageUrl: "../../../../assets//Images/codingbooks.jpg",
-      ImageAlt: "image-2",
-      Name: "Replace all your books with digital book!",
-      LikeToggleStatus: "favorite_border",
-      Price: 0,
-      Quantity: 1
+      id:2,
+      imageUrl: "../../../../assets//Images/codingbooks.jpg",
+      imageAlt: "image-2",
+      name: "Replace all your books with digital book!",
+      likeToggleStatus: "favorite_border",
+      price: 0,
+      quantity: 1
     },
     {
-      Id: 3,
-      ImageUrl: "../../../../assets//Images/learn-programming.jpeg",
-      ImageAlt: "image-3",
-      Name: "Save all your work study with you.",
-      LikeToggleStatus: "favorite_border",
-      Price: 0,
-      Quantity: 1
+      id: 3,
+      imageUrl: "../../../../assets//Images/learn-programming.jpeg",
+      imageAlt: "image-3",
+      name: "Save all your work study with you.",
+      likeToggleStatus: "favorite_border",
+      price: 0,
+      quantity: 1
     }
   ];
 
   changeLikeToggleService(card: Item):void{
-    card.LikeToggleStatus === "favorite_border" ?
-    card.LikeToggleStatus = "favorite" :
-    card.LikeToggleStatus = "favorite_border";
+    card.likeToggleStatus === "favorite_border" ?
+    card.likeToggleStatus = "favorite" :
+    card.likeToggleStatus = "favorite_border";
   }
 
 

@@ -10,103 +10,103 @@ export class StoredataService {
 
   booksStore :Item[]  = [
     {
-      Id:1,
-      ImageUrl: "../../../../assets//Images/store-images/javascript-book.jpg",
-      ImageAlt: "javascript-book",
-      Name: "JavaScript",
-      LikeToggleStatus: "favorite_border",
-      Price: 99.90,
-      Quantity: 1
+      id:1,
+      imageUrl: "../../../../assets//Images/store-images/javascript-book.jpg",
+      imageAlt: "javascript-book",
+      name: "JavaScript",
+      likeToggleStatus: "favorite_border",
+      price: 99.90,
+      quantity: 1
 
 
     },
     {
-      Id:2,
-      ImageUrl: "../../../../assets//Images/store-images/entity-framework-book.jpg",
-      ImageAlt: "entity-framework-book",
-      Name: "Entity Framework",
-      LikeToggleStatus: "favorite_border",
-      Price: 79.90,
-      Quantity: 1
+      id:2,
+      imageUrl: "../../../../assets//Images/store-images/entity-framework-book.jpg",
+      imageAlt: "entity-framework-book",
+      name: "Entity Framework",
+      likeToggleStatus: "favorite_border",
+      price: 79.90,
+      quantity: 1
     },
     {
-      Id:3,
-      ImageUrl: "../../../../assets//Images/store-images/jquery-book.jpg",
-      ImageAlt: "jQuery",
-      Name: "jQuery",
-      LikeToggleStatus: "favorite_border",
-      Price: 59.90,
-      Quantity: 1
+      id:3,
+      imageUrl: "../../../../assets//Images/store-images/jquery-book.jpg",
+      imageAlt: "jQuery",
+      name: "jQuery",
+      likeToggleStatus: "favorite_border",
+      price: 59.90,
+      quantity: 1
 
     },
     {
-      Id: 4,
-      ImageUrl: "../../../../assets//Images/store-images/powershell-book.jpg",
-      ImageAlt: "Powershell",
-      Name: "Powershell",
-      LikeToggleStatus: "favorite_border",
-      Price: 49.90,
-      Quantity: 1
+      id: 4,
+      imageUrl: "../../../../assets//Images/store-images/powershell-book.jpg",
+      imageAlt: "Powershell",
+      name: "Powershell",
+      likeToggleStatus: "favorite_border",
+      price: 49.90,
+      quantity: 1
 
     },
     {
-      Id: 5,
-      ImageUrl: "../../../../assets//Images/store-images/reactjs-book.jpg",
-      ImageAlt: "ReactJS",
-      Name: "ReactJS",
-      LikeToggleStatus: "favorite_border",
-      Price: 299.90,
-      Quantity: 1
+      id: 5,
+      imageUrl: "../../../../assets//Images/store-images/reactjs-book.jpg",
+      imageAlt: "ReactJS",
+      name: "ReactJS",
+      likeToggleStatus: "favorite_border",
+      price: 299.90,
+      quantity: 1
 
     },
     {
-      Id: 6,
-      ImageUrl: "../../../../assets//Images/store-images/git-book.jpg",
-      ImageAlt: "Git",
-      Name: "Git",
-      LikeToggleStatus: "favorite_border",
-      Price: 99.90,
-      Quantity: 1
+      id: 6,
+      imageUrl: "../../../../assets//Images/store-images/git-book.jpg",
+      imageAlt: "Git",
+      name: "Git",
+      likeToggleStatus: "favorite_border",
+      price: 99.90,
+      quantity: 1
 
     },
     {
-      Id:7,
-      ImageUrl: "../../../../assets//Images/store-images/ruby-on-rails-book.jpg",
-      ImageAlt: "Ruby on Rails",
-      Name: "Ruby on Rails",
-      LikeToggleStatus: "favorite_border",
-      Price: 99.90,
-      Quantity: 1
+      id:7,
+      imageUrl: "../../../../assets//Images/store-images/ruby-on-rails-book.jpg",
+      imageAlt: "Ruby on Rails",
+      name: "Ruby on Rails",
+      likeToggleStatus: "favorite_border",
+      price: 99.90,
+      quantity: 1
 
     },
     {
-      Id:8,
-      ImageUrl: "../../../../assets//Images/store-images/oracle-database-book.jpg",
-      ImageAlt: "Oracle Database",
-      Name: "Oracle Database",
-      LikeToggleStatus: "favorite_border",
-      Price: 99.90,
-      Quantity: 1
+      id:8,
+      imageUrl: "../../../../assets//Images/store-images/oracle-database-book.jpg",
+      imageAlt: "Oracle Database",
+      name: "Oracle Database",
+      likeToggleStatus: "favorite_border",
+      price: 99.90,
+      quantity: 1
 
     },
     {
-      Id:9,
-      ImageUrl: "../../../../assets//Images/store-images/ios-developer-book.jpg",
-      ImageAlt: "image-3",
-      Name: "IOS Developer ",
-      LikeToggleStatus: "favorite_border",
-      Price: 149.90,
-      Quantity: 1
+      id:9,
+      imageUrl: "../../../../assets//Images/store-images/ios-developer-book.jpg",
+      imageAlt: "image-3",
+      name: "IOS Developer ",
+      likeToggleStatus: "favorite_border",
+      price: 149.90,
+      quantity: 1
 
     },
     {
-      Id:10,
-      ImageUrl: "../../../../assets//Images/store-images/visual-basic-dotnet-book.jpg",
-      ImageAlt: "Visual Basic .NET",
-      Name: "Visual Basic .NET",
-      LikeToggleStatus: "favorite_border",
-      Price: 49.90,
-      Quantity: 1
+      id:10,
+      imageUrl: "../../../../assets//Images/store-images/visual-basic-dotnet-book.jpg",
+      imageAlt: "Visual Basic .NET",
+      name: "Visual Basic .NET",
+      likeToggleStatus: "favorite_border",
+      price: 49.90,
+      quantity: 1
 
     }
   ];
@@ -118,8 +118,8 @@ export class StoredataService {
 
 
   changeLikeToggleService(card: Item):void{
-    card.LikeToggleStatus === "favorite_border" ?
-    card.LikeToggleStatus = "favorite" :
-    card.LikeToggleStatus = "favorite_border";
+    card.likeToggleStatus === "favorite_border" ?
+    card.likeToggleStatus = "favorite" :
+    card.likeToggleStatus = "favorite_border";
   }
 }

@@ -1,11 +1,11 @@
-export interface Item{
-         Id: number,
-         ImageUrl: string,
-         ImageAlt:string,
-         Name:string,
-         LikeToggleStatus: string,
-         Price:number,
-         Quantity :number
+export declare type Item={
+         id: number,
+         imageUrl: string,
+         imageAlt:string,
+         name:string,
+         likeToggleStatus: string,
+         price:number,
+         quantity :number
 }
 
 export declare type bookType ={
