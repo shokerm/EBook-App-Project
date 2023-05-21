@@ -33,11 +33,11 @@ totalPriceForItemsInCart(){
       }
     }
 
-    bookQunatityAddService(book:any){
+    bookQunatityAddService(book:Item){
       book.quantity++;
     }
 
-    bookQunatityRemoveService(book: any){
+    bookQunatityRemoveService(book: Item){
       book.quantity <= 1? book.quantity = 1 :  book.quantity--;
      
     }

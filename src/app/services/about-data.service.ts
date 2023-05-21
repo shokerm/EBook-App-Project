@@ -8,7 +8,7 @@ export class AboutDatasService {
 
   constructor() { }
 
-  cards :Item[] = [
+  cards :any[] = [
     {
       id: 1,
       imageUrl: "../../../../assets//Images/books1.jpg",
@@ -38,7 +38,7 @@ export class AboutDatasService {
     }
   ];
 
-  changeLikeToggleService(card: Item):void{
+  changeLikeToggleService(card: any):void{
     card.likeToggleStatus === "favorite_border" ?
     card.likeToggleStatus = "favorite" :
     card.likeToggleStatus = "favorite_border";
