@@ -17,9 +17,9 @@
           </div>
           <span class="cart-price cart-column">$ {{book.price |number}}</span>
           <div class="cart-quantity cart-column">
-              <button mat-icon-button matTooltip="Add Quantity" (click)="bookQunatityAdd(book)"><mat-icon>add</mat-icon></button>
+            <button mat-icon-button matTooltip="Remove Quantity" (click)="bookQunatityRemove(book)"><mat-icon>remove</mat-icon></button>
               <span class="quantity">{{book.quantity}}</span>
-              <button mat-icon-button matTooltip="Remove Quantity" (click)="bookQunatityRemove(book)"><mat-icon>remove</mat-icon></button>
+              <button mat-icon-button matTooltip="Add Quantity" (click)="bookQunatityAdd(book)"><mat-icon>add</mat-icon></button>
               <button matTooltip="Remove Item" (click)="removeItem(book)" mat-icon-button><mat-icon>delete</mat-icon></button>
           </div>
       </div>

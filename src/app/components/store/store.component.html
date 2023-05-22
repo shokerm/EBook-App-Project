@@ -15,15 +15,14 @@ subNavParagraph="We invite you enjoy our products"
     <img mat-card-image [src]="book.imageUrl" [alt]="book.imageAlt">
     <mat-card-content>
       <h5>{{book.name}}</h5>
-      <h5>{{book.price}}</h5>
+      <h5>${{book.price}}</h5>
     </mat-card-content>
     <mat-card-actions>
       <button mat-icon-button matTooltip="Like" (click)="changeLikeToggle(book)"><mat-icon>{{book.likeToggleStatus}}</mat-icon></button>
       <button matTooltip="Add To Cart" mat-raised-button (click)="addToCart(book)">ADD TO CART</button>
-
-      <button mat-icon-button matTooltip="Add Quantity" (click)="bookQunatityAdd(book)"><mat-icon>add</mat-icon></button>
-      <span class="quantity">{{book.quantity}}</span>
       <button mat-icon-button matTooltip="Remove Quantity" (click)="bookQunatityRemove(book)"><mat-icon>remove</mat-icon></button>
+      <span class="quantity">{{book.quantity}}</span>
+      <button mat-icon-button matTooltip="Add Quantity" (click)="bookQunatityAdd(book)"><mat-icon>add</mat-icon></button>
     </mat-card-actions>
   </mat-card>
 </div>
