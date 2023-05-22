@@ -1,4 +1,4 @@
-export declare type Item={
+export declare type Item = {
          id: number,
          imageUrl: string,
          imageAlt:string,
@@ -8,10 +8,7 @@ export declare type Item={
          quantity :number
 }
 
-
-
-
-export declare type bookType ={
+export declare type bookType = {
     bookName: string,
     src: string
   }
