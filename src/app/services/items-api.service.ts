@@ -1,19 +1,18 @@
-import { Inject, Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {BASE_URL} from '../models.ts/Base_Url';
 
 
-const BASE_URL = "https://localhost:7254/api/items";
 @Injectable({
   providedIn: 'root'
 })
 export class ItemsApiService {
 
   constructor(private http: HttpClient) { 
-
   
   }
 
   fetchItem(){
-   return this.http.get(BASE_URL);
+   return this.http.get(`${BASE_URL}/items`);
   }
 }

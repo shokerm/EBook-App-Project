@@ -19,9 +19,11 @@ export class StoreComponent implements OnInit {
     this.ItemsApiService.fetchItem().subscribe((x:any) =>{
       this.Items = x;
     });
+
     
   }
-  Items:any;
+  Items : any  ;
+
   changeLikeToggle(card: Item) {
    this.service.changeLikeToggleService(card);
   }
