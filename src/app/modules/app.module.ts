@@ -37,6 +37,7 @@ import { MyBooksDataService } from '../services/my-books-data.service';
 import { CartDataService } from '../services/cart-data.service';
 import { ItemsApiService } from '../services/items-api.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ItemInCartDialogComponent } from '../components/dialogs-components/item-in-cart-dialog-component/item-in-cart-dialog';
 
 
 const COMPONENTS = [ 
@@ -57,6 +58,7 @@ const COMPONENTS = [
   SubNavComponent,
   LoginDialogComponent,
   RegisterDialogComponent,
+  ItemInCartDialogComponent,
   SearchBarComponent
   ];
 const SERVICES = [

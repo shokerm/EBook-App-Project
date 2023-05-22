@@ -1,0 +1,12 @@
+.header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+.cart-link{
+    cursor: pointer;
+    &:hover{
+        color: #1f1fd6f0;
+
+    }
+}

@@ -3,7 +3,6 @@ import { Item } from 'src/app/models.ts/Item';
 import { CartDataService } from 'src/app/services/cart-data.service';
 import { ItemsApiService } from 'src/app/services/items-api.service';
 import { StoredataService } from 'src/app/services/store-data.service';
-import { Observable,Subscription } from "rxjs";
 
 
 @Component({
