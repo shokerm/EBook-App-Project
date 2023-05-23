@@ -2,7 +2,7 @@
     <mat-toolbar color="primary" class="navbar navbar-expand-lg">
       <div class="container-fluid">
 
-  <button mat-button [matMenuTriggerFor]="menu3"><mat-icon>menu</mat-icon></button>
+  <button mat-button matTooltip="Open Menu" [matMenuTriggerFor]="menu3"><mat-icon>menu</mat-icon></button>
  <mat-menu #menu3="matMenu">
   <button mat-menu-item routerLink="about"><mat-icon>info</mat-icon>About</button>
   <button mat-menu-item routerLink="store"><mat-icon>storefront</mat-icon>store</button>

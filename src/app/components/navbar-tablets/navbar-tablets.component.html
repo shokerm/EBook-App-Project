@@ -4,7 +4,7 @@
       
       <div class="container-fluid">
 
-        <button mat-button [matMenuTriggerFor]="menu2"><mat-icon>menu</mat-icon></button>
+ <button mat-button matTooltip="Open Menu" [matMenuTriggerFor]="menu2"><mat-icon>menu</mat-icon></button>
  <mat-menu #menu2="matMenu">
   <button mat-menu-item routerLink="about"><mat-icon>info</mat-icon>About</button>
   <button mat-menu-item routerLink="my-books"><mat-icon>import_contacts</mat-icon>My Books</button>
