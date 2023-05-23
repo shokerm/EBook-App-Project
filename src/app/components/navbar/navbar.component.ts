@@ -19,17 +19,9 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  changMode():void{
-    this.service.isDarkMode = !this.service.isDarkMode;
-  }
 
-  openDialog():void{
-    this.dialog.open(LoginDialogComponent,{autoFocus:false});
-  }
 
-  getInCartITems(){
-    return this.cartService.cart.length? this.cartService.cart.length : null;     
-  }
+ 
 
 
 }
