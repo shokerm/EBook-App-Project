@@ -31,4 +31,5 @@ export class NavbarComponent implements OnInit {
     return this.cartService.cart.length? this.cartService.cart.length : null;     
   }
 
+
 }
