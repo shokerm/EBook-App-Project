@@ -38,11 +38,15 @@ import { CartDataService } from '../services/cart-data.service';
 import { ItemsApiService } from '../services/items-api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ItemInCartDialogComponent } from '../components/dialogs-components/item-in-cart-dialog-component/item-in-cart-dialog';
+import { NavbarTabletsComponent } from '../components/navbar-tablets/navbar-tablets.component';
+import { NavbarPhonesComponent } from '../components/navbar-phones/navbar-phones.component';
 
 
 const COMPONENTS = [ 
   AppComponent,
   NavbarComponent,
+  NavbarTabletsComponent,
+  NavbarPhonesComponent,
   FooterComponent,
   AboutComponent,
   CartComponent,

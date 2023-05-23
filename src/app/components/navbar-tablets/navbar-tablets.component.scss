@@ -3,9 +3,6 @@
     top: 0;
     z-index: 10;
 }
-navbar-tablets,navbar-phones{
-    display: none;
-}
 
 mat-toolbar{
     display: flex;
@@ -29,35 +26,30 @@ button{
     
 
 } 
+
 .mat-focus-indicator{
     line-height: 20px;
 }
 
 /* On screens that are 992px wide or less, the background color is blue */
-@media screen and (max-width: 992px) {
-    .nav-container {
-     display: none;
-    }
+// @media screen and (max-width: 992px) {
+//     .nav-container {
+//      display: none;
+      
+//     }
+//     .nav-container-for-tablets{
+//         display: block;
+//     }
+//   }
 
-    navbar-tablets{
-        display: block;
-    }
-
-    navbar-phones{
-        display: none;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
- 
-    navbar-tablets{
-        display: none;
-    }
-
-    navbar-phones{
-        display: block;
-    }
-  }
+//   @media screen and (max-width: 800px) {
+//     .nav-container-for-tablets{
+//         display: none;
+//     }
+//     .nav-container-for-phones {
+//         display: block;
+//     }
+//   }
   
   /* On screens that are 600px wide or less, the background color is olive */
 //   @media screen and (max-width: 600px) {

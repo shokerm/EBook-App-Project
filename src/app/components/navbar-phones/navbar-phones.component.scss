@@ -1,0 +1,28 @@
+.nav-container{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+mat-toolbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.active-link{
+    background: rgba(0,0,0,.2);
+}
+
+button{
+    span{
+        font-size: 25px;
+    }
+}
+.navbar{
+    .container-fluid{
+        justify-content: normal;
+
+    }
+    
+
+} 
