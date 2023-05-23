@@ -1,4 +1,4 @@
-.nav-container{
+navbar-desktop{
     position: sticky;
     top: 0;
     z-index: 10;
@@ -35,7 +35,7 @@ button{
 
 /* On screens that are 992px wide or less, the background color is blue */
 @media screen and (max-width: 992px) {
-    .nav-container {
+    navbar-desktop {
      display: none;
     }
 

@@ -1,7 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { StoredataService } from '../../services/store-data.service';
 import { ItemsApiService } from 'src/app/services/items-api.service';
-import { BASE_URL } from 'src/app/models.ts/Base_Url';
 
 @Component({
   selector: 'app-search-bar',

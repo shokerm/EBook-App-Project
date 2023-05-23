@@ -6,25 +6,10 @@
 
         <button mat-button [matMenuTriggerFor]="menu2"><mat-icon>menu</mat-icon></button>
  <mat-menu #menu2="matMenu">
-  <button mat-menu-item routerLink="about">About</button>
-  <button mat-menu-item  routerLink="my-books">My Books</button>
-  <button mat-menu-item routerLink="contact-us">Contact Us</button>
-  <button mat-menu-item (click)="openDialog()">Login / Register</button>
-
-
-
-
-  <!-- <div mat-menu-item>
-    <button (click)="changMode()" *ngIf="this.service.isDarkMode===true" mat-icon-button type="button" class="mat-focus-indicator mat-icon-button mat-button-base"
-    matTooltip="Switch to light mode" aria-label="Switch to light mode"><span class="mat-button-wrapper"><mat-icon role="img" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font"> light_mode </mat-icon>
-   </span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button>
-   <button (click)="changMode()" *ngIf="this.service.isDarkMode===false" mat-icon-button type="button" class="mat-focus-indicator mat-icon-button mat-button-base" 
-   matTooltip="Switch to dark mode" aria-label="Switch to light mode"><span class="mat-button-wrapper"><mat-icon role="img" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font"> dark_mode </mat-icon></span>
-   <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button>
-  </div> -->
-  
- 
- 
+  <button mat-menu-item routerLink="about"><mat-icon>info</mat-icon>About</button>
+  <button mat-menu-item routerLink="my-books"><mat-icon>import_contacts</mat-icon>My Books</button>
+  <button mat-menu-item routerLink="contact-us"><mat-icon>contact_support</mat-icon>Contact Us</button>
+  <button mat-menu-item (click)="openDialog()"><mat-icon>account_circle</mat-icon> Login / Register</button>
 
 </mat-menu>
         
@@ -41,11 +26,6 @@
        <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button>
        
       <button disabled="true" mat-button> <app-search-bar></app-search-bar></button>
-      
-
-   
-
-
 
     </div>
     </mat-toolbar>
