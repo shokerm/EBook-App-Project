@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {BASE_URL} from '../models.ts/Base_Url';
+import { BASE_URL } from '../models/Base_Url';
 
 
 @Injectable({
@@ -8,11 +8,12 @@ import {BASE_URL} from '../models.ts/Base_Url';
 })
 export class ItemsApiService {
 
-  constructor(private http: HttpClient) { 
-  
+  constructor(private http: HttpClient) {
+
   }
 
-  fetchItem(){
-   return this.http.get(`${BASE_URL}/items`);
+  fetchItem() {
+    return this.http.get(`${BASE_URL}/items`);
   }
+
 }

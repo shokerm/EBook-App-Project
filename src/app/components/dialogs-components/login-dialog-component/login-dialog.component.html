@@ -32,7 +32,7 @@
         </div>
        
 
-        <button mat-raised-button type="submit" (click)="closeDialog()" [disabled]="!contactFOrm.form.valid">LOGIN</button>
+        <button mat-raised-button type="submit" (click)="login( this.loginUserForm.Email,this.loginUserForm.Password)" [disabled]="!contactFOrm.form.valid">LOGIN</button>
       </form>
     </div>
     <div class="registerBtn">

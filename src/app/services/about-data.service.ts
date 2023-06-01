@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Item } from '../models.ts/Item';
+import { Item } from '../models/Item';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,7 @@ export class AboutDatasService {
 
   constructor() { }
 
-  cards :any[] = [
+  cards: any[] = [
     {
       id: 1,
       imageUrl: "../../../../assets//Images/books1.jpg",
@@ -19,7 +19,7 @@ export class AboutDatasService {
       quantity: 1
     },
     {
-      id:2,
+      id: 2,
       imageUrl: "../../../../assets//Images/codingbooks.jpg",
       imageAlt: "image-2",
       name: "Replace all your books with digital book!",
@@ -38,10 +38,10 @@ export class AboutDatasService {
     }
   ];
 
-  changeLikeToggleService(card: any):void{
+  changeLikeToggleService(card: any): void {
     card.likeToggleStatus === "favorite_border" ?
-    card.likeToggleStatus = "favorite" :
-    card.likeToggleStatus = "favorite_border";
+      card.likeToggleStatus = "favorite" :
+      card.likeToggleStatus = "favorite_border";
   }
 
 

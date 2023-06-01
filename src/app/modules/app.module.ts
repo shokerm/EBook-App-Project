@@ -41,9 +41,10 @@ import { ItemInCartDialogComponent } from '../components/dialogs-components/item
 import { NavbarTabletsComponent } from '../components/navbar-tablets/navbar-tablets.component';
 import { NavbarPhonesComponent } from '../components/navbar-phones/navbar-phones.component';
 import { NavbarDesktopComponent } from '../components/navbar-desktop/navbar-desktop.component';
+import { AuthService } from '../services/auth.service';
 
 
-const COMPONENTS = [ 
+const COMPONENTS = [
   AppComponent,
   NavbarComponent,
   NavbarDesktopComponent,
@@ -66,14 +67,17 @@ const COMPONENTS = [
   RegisterDialogComponent,
   ItemInCartDialogComponent,
   SearchBarComponent
-  ];
+];
 const SERVICES = [
   DataService,
   AboutDatasService,
   StoredataService,
   MyBooksDataService,
   CartDataService,
-  ItemsApiService
+  ItemsApiService,
+  AuthService,
+
+
 ];
 const PIPES = [
   FilterPipe
@@ -94,11 +98,11 @@ const PIPES = [
     ReactiveFormsModule,
     PdfViewerModule,
     HttpClientModule
-    
+
 
 
   ],
-  providers: [SERVICES,PIPES],
+  providers: [SERVICES, PIPES],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

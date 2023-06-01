@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Item } from '../models.ts/Item';
+import { Item } from '../models/Item';
 
 @Injectable({
   providedIn: 'root'
@@ -111,9 +111,9 @@ export class StoredataService {
   //   }
   // ];
 
-  changeLikeToggleService(card: Item):void{
+  changeLikeToggleService(card: Item): void {
     card.likeToggleStatus === "favorite_border" ?
-    card.likeToggleStatus = "favorite" :
-    card.likeToggleStatus = "favorite_border";
+      card.likeToggleStatus = "favorite" :
+      card.likeToggleStatus = "favorite_border";
   }
 }

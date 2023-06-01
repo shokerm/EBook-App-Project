@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Item } from 'src/app/models.ts/Item';
+import { Item } from 'src/app/models/Item';
 import { AboutDatasService } from 'src/app/services/about-data.service';
 
 @Component({
@@ -15,8 +15,8 @@ export class AboutComponent implements OnInit {
   }
 
 
-  changeLikeToggle(card: Item):void{
-      this.service.changeLikeToggleService(card);
+  changeLikeToggle(card: Item): void {
+    this.service.changeLikeToggleService(card);
   }
 
 }

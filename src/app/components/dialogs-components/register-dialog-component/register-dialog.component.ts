@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { RegisterUserForm } from 'src/app/models.ts/RegisterUserForm';
+import { RegisterUserForm } from 'src/app/models/RegisterUserForm';
 
 
 @Component({
@@ -12,18 +12,18 @@ export class RegisterDialogComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
 
-  registerUserForm:RegisterUserForm = new RegisterUserForm('', '', '', '');
-  submitted:boolean = false;
-  afterSubmit:boolean = true;
+  registerUserForm: RegisterUserForm = new RegisterUserForm('', '', '', '');
+  submitted: boolean = false;
+  afterSubmit: boolean = true;
 
   ngOnInit(): void {
   }
 
-  closeDialog():void{
+  closeDialog(): void {
     this.dialog.ngOnDestroy();
   }
 
-  onSubmit():void {
+  onSubmit(): void {
     this.submitted = true;
     this.afterSubmit = false;
   }
