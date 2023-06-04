@@ -24,6 +24,11 @@ export class LoginDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  closeDialog() {
+    this.dialog.closeAll();
+
+  }
+
   login(email: string, password: string) {
     this.authService.loginService(email, password).subscribe((data: UserTokenResponse) => {
       LocalStorageHandler.SaveUserLoginToken(data.token);
