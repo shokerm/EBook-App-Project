@@ -8,12 +8,12 @@ import {
 } from '@angular/common/http';
 import { catchError, map } from 'rxjs/operators';
 import { throwError } from 'rxjs';
-import { LocalStorageHandler } from 'src/app/models/LocalStorageHandler';
+import { LocalStorageKey } from 'src/app/models/Enums';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler) {
-        let token = localStorage.getItem(LocalStorageHandler.Token);
+        let token = localStorage.getItem(LocalStorageKey.Token);
         if (token) {
             let clonedReq = this.addToken(request, token);
             return next.handle(clonedReq).pipe(
