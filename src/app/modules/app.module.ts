@@ -14,7 +14,7 @@ import { AboutComponent } from '../components/about/about.component';
 import { CartComponent } from '../components/cart/cart.component';
 import { ContactUsComponent } from '../components/contact-us/contact-us.component'
 import { MyBooksComponent } from '../components/my-books/my-books.component';
-import { HomeComponent } from '../components/pages/home/home.component';
+import { HomeComponent } from '../components/pages/home-page/home.component';
 import { StoreComponent } from '../components/store/store.component';
 import { AboutPageComponent } from '../components/pages/about-page/about-page.component';
 import { CartPageComponent } from '../components/pages/cart-page/cart-page.component';
