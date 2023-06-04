@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaderResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BASE_URL } from '../models/Base_Url';
 import { UserLoginForRequset, UserTokenResponse } from '../models/LoginUsersModel';
