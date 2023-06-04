@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { RegisterUserForm } from 'src/app/models/RegisterUserForm';
 
@@ -15,6 +15,7 @@ export class RegisterDialogComponent implements OnInit {
   registerUserForm: RegisterUserForm = new RegisterUserForm('', '', '', '');
   submitted: boolean = false;
   afterSubmit: boolean = true;
+  @Output() isLoginDialogIsShow = new EventEmitter<boolean>();
 
   ngOnInit(): void {
   }
@@ -26,6 +27,11 @@ export class RegisterDialogComponent implements OnInit {
   onSubmit(): void {
     this.submitted = true;
     this.afterSubmit = false;
+  }
+
+  backToLoginDialog(): void {
+    this.isLoginDialogIsShow.emit(true)
+
   }
 
 }

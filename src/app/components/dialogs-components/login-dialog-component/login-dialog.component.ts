@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { BehaviorSubject } from 'rxjs';
 import { LocalStorageHandler } from 'src/app/models/LocalStorageHandler';
 import { LoginUserForm } from 'src/app/models/LoginUserForm';
 import { UserTokenResponse } from 'src/app/models/LoginUsersModel';
 import { AuthService } from 'src/app/services/auth.service';
+
 
 @Component({
   selector: 'app-login-dialog',
@@ -17,6 +19,7 @@ export class LoginDialogComponent implements OnInit {
   submitted: boolean = false;
   afterSubmit: boolean = true;
   isLoginDialogDisplay: boolean = true;
+
 
   ngOnInit(): void {
   }
@@ -36,6 +39,10 @@ export class LoginDialogComponent implements OnInit {
     this.submitted = true;
     this.afterSubmit = false;
 
+  }
+
+  showLoginDialog(value: boolean) {
+    this.isLoginDialogDisplay = value;
   }
 
 }

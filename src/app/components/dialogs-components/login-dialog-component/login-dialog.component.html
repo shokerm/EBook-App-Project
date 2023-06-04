@@ -41,7 +41,7 @@
     </div>
   </div>
 <ng-template #showRegisterDialog>
-    <app-register-dialog></app-register-dialog>
+    <app-register-dialog (isLoginDialogIsShow)="showLoginDialog($event)"></app-register-dialog>
 </ng-template>
   
     
