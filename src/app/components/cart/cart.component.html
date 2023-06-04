@@ -5,9 +5,9 @@
 <div class="container">
     <div class="row">
   <div class="cart-row">
-      <span class="cart-item cart-header cart-column">ITEM</span>
-      <span class="cart-price cart-header cart-column">PRICE</span>
-      <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+      <span class="cart-item cart-header cart-column">Item</span>
+      <span class="cart-price cart-header cart-column">Price</span>
+      <span class="cart-quantity cart-header cart-column">Quantity</span>
   </div>
   <div class="cart-items">
       <div class="cart-row" *ngFor="let book of this.service.cart">
@@ -28,7 +28,7 @@
       <strong class="cart-total-title">Total: </strong>
       <span class="cart-total-price" >$ {{this.service.totalPriceForItemsInCart() | number}} </span>
   </div>
-  <div class="parchaseBtn"><button mat-raised-button type="button" >PURCHASE</button>
+  <div class="parchaseBtn"><button mat-raised-button type="button" >Purchase</button>
   </div>
 </div>
 </div>
