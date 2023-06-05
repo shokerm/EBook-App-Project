@@ -1,1 +1,8 @@
-<app-cart></app-cart>
+<app-sub-nav subNavHeader="Cart"
+subNavParagraph="One click and your parchase is done">
+</app-sub-nav>
+
+<app-cart *ngIf="this.service.cart.length>0;else showCart"></app-cart>
+<ng-template #showCart>
+    <app-cart-is-empty></app-cart-is-empty>
+</ng-template>

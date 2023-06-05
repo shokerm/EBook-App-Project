@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    img{
+        position: relative;
+        right: 1%;
+    }
+    .cart-empty-text{
+        line-height: 5.5;
+
+
+    }
+   
+    
+    mat-icon{
+        font-size: 200px;
+        color: grey;
+    }
+}

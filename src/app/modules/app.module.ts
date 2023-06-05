@@ -43,6 +43,7 @@ import { NavbarPhonesComponent } from '../components/navbar-phones/navbar-phones
 import { NavbarDesktopComponent } from '../components/navbar-desktop/navbar-desktop.component';
 import { AuthService } from '../services/auth.service';
 import { PageNotFoundComponent } from '../components/pages/page-not-found/page-not-found.component';
+import { CartIsEmptyComponent } from '../components/cart-is-empty/cart-is-empty.component';
 
 
 const COMPONENTS = [
@@ -54,6 +55,7 @@ const COMPONENTS = [
   FooterComponent,
   AboutComponent,
   CartComponent,
+  CartIsEmptyComponent,
   ContactUsComponent,
   MyBooksComponent,
   HomeComponent,
