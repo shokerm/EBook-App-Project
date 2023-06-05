@@ -67,6 +67,7 @@ const COMPONENTS = [
   RegisterDialogComponent,
   ItemInCartDialogComponent,
   SearchBarComponent
+
 ];
 const SERVICES = [
   DataService,
