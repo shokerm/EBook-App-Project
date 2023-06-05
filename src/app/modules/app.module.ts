@@ -42,6 +42,7 @@ import { NavbarTabletsComponent } from '../components/navbar-tablets/navbar-tabl
 import { NavbarPhonesComponent } from '../components/navbar-phones/navbar-phones.component';
 import { NavbarDesktopComponent } from '../components/navbar-desktop/navbar-desktop.component';
 import { AuthService } from '../services/auth.service';
+import { PageNotFoundComponent } from '../components/pages/page-not-found/page-not-found.component';
 
 
 const COMPONENTS = [
@@ -66,7 +67,8 @@ const COMPONENTS = [
   LoginDialogComponent,
   RegisterDialogComponent,
   ItemInCartDialogComponent,
-  SearchBarComponent
+  SearchBarComponent,
+  PageNotFoundComponent
 
 ];
 const SERVICES = [
