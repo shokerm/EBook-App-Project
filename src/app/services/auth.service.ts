@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BASE_URL } from '../models/Base_Url';
-import { UserLoginForRequset, UserTokenResponse } from '../models/LoginUsersModel';
+import { UserLoginForRequset, UserResponse } from '../models/LoginUsersModel';
 
 
 @Injectable({
@@ -18,7 +18,7 @@ export class AuthService {
       password: password
     }
 
-    return this.http.post<UserTokenResponse>(`${BASE_URL}/Auth/login`, userDeatilsToLogin);
+    return this.http.post<UserResponse>(`${BASE_URL}/Auth/login`, userDeatilsToLogin);
 
   }
 
@@ -27,6 +27,8 @@ export class AuthService {
 
 
   }
+
+
 
 
 }

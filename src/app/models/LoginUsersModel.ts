@@ -4,7 +4,7 @@ export interface UserLoginForRequset {
     password: string
 }
 
-export interface UserTokenResponse {
+export interface UserResponse {
     id: string,
     token: string
     refreshToken: string

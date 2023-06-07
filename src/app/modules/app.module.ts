@@ -36,7 +36,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer'; // <- import PdfViewerModule
 import { MyBooksDataService } from '../services/my-books-data.service';
 import { CartDataService } from '../services/cart-data.service';
 import { ItemsApiService } from '../services/items-api.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ItemInCartDialogComponent } from '../components/dialogs-components/item-in-cart-dialog-component/item-in-cart-dialog';
 import { NavbarTabletsComponent } from '../components/navbar-tablets/navbar-tablets.component';
 import { NavbarPhonesComponent } from '../components/navbar-phones/navbar-phones.component';
@@ -44,6 +44,7 @@ import { NavbarDesktopComponent } from '../components/navbar-desktop/navbar-desk
 import { AuthService } from '../services/auth.service';
 import { PageNotFoundComponent } from '../components/pages/page-not-found/page-not-found.component';
 import { CartIsEmptyComponent } from '../components/cart-is-empty/cart-is-empty.component';
+import { JwtInterceptor } from '../services/Interceptors/jwt.interceptor';
 
 
 const COMPONENTS = [
@@ -107,7 +108,10 @@ const PIPES = [
 
 
   ],
-  providers: [SERVICES, PIPES],
+  providers: [SERVICES, PIPES,
+    AuthService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
