@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { LocalStorageHandler } from 'src/app/models/LocalStorageHandler';
-import { LoginUserForm } from 'src/app/models/LoginUserForm';
-import { UserResponse } from 'src/app/models/LoginUsersModel';
-import { AuthService } from 'src/app/services/auth.service';
+import { LocalStorageHandler } from '@models/localStorageHandler';
+import { LoginUserForm } from '@models/loginUserForm';
+import { UserResponse } from '@models/loginUsersModel';
+import { AuthService } from '@services/auth.service';
+
+
 
 
 @Component({
@@ -30,7 +32,7 @@ export class LoginDialogComponent implements OnInit {
   //#region deprecated way
   login(email: string, password: string) {
     this.authService.loginService(email, password).subscribe((res: UserResponse) => {
-      LocalStorageHandler.SaveUserResToLocalStorage(res);
+      LocalStorageHandler.saveUserResToLocalStorage(res);
       this.authService.getUserService(res.id).subscribe((user: any) => {
         console.log(user);
       })

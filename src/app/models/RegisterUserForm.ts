@@ -1,8 +1,8 @@
 export class RegisterUserForm {
     constructor(
-        public FirstName: string,
-        public LastName: string,
-        public Email: string,
-        public Password: string
+        public firstName: string,
+        public lastName: string,
+        public email: string,
+        public password: string
     ) { }
 }

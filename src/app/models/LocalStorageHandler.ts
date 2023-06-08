@@ -1,11 +1,11 @@
-import { LocalStorageKey } from "./Enums";
-import { UserResponse } from "./LoginUsersModel";
+import { LocalStorageKey } from "./enums";
+import { UserResponse } from "./loginUsersModel";
 
 export class LocalStorageHandler {
     constructor() { }
-    static SaveUserResToLocalStorage(args: UserResponse) {
-        localStorage.setItem(LocalStorageKey.Id, args.id);
-        localStorage.setItem(LocalStorageKey.Token, args.token);
-        localStorage.setItem(LocalStorageKey.RefershToken, args.refreshToken);
+    static saveUserResToLocalStorage(args: UserResponse) {
+        localStorage.setItem(LocalStorageKey.id, args.id);
+        localStorage.setItem(LocalStorageKey.token, args.token);
+        localStorage.setItem(LocalStorageKey.refershToken, args.refreshToken);
     }
 }

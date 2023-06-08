@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Item } from 'src/app/models/Item';
-import { CartDataService } from 'src/app/services/cart-data.service';
-import { ItemsApiService } from 'src/app/services/items-api.service';
-import { StoredataService } from 'src/app/services/store-data.service';
+import { Item } from '@models/item';
+import { CartDataService } from '@services/cart-data.service';
+import { ItemsApiService } from '@services/items-api.service';
+import { StoredataService } from '@services/store-data.service';
 
 
 @Component({

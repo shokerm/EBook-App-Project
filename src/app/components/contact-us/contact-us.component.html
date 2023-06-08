@@ -24,7 +24,7 @@ subNavParagraph="We are always here for you"
           <mat-label>Last Name</mat-label>
           <input matInput type="text" id="lastName"
                required
-               [(ngModel)]="userContactDetails.LastName" name="lastName"
+               [(ngModel)]="userContactDetails.lastName" name="lastName"
                #lastName="ngModel">
         </mat-form-field>
         <div [hidden]="lastName.valid || lastName.pristine" class="my-alert-danger">
@@ -38,7 +38,7 @@ subNavParagraph="We are always here for you"
         <mat-label>Email</mat-label>
         <input matInput type="email" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                required
-               [(ngModel)]="userContactDetails.Email" name="Email"
+               [(ngModel)]="userContactDetails.email" name="Email"
                #Email="ngModel" placeholder="Ex. pat@example.com">
         </mat-form-field>
 
@@ -55,7 +55,7 @@ subNavParagraph="We are always here for you"
           <mat-label>Content</mat-label>
         <textarea matInput name="" id="Content" cols="30" rows="10"
         required
-               [(ngModel)]="userContactDetails.Content" name="Content"
+               [(ngModel)]="userContactDetails.content" name="Content"
                #Content="ngModel"
         
         ></textarea>
@@ -85,15 +85,15 @@ subNavParagraph="We are always here for you"
     </tr>
     <tr>
       <td class="header" mat-header-cell>Last Name:</td>
-      <td>{{userContactDetails.LastName}}</td>
+      <td>{{userContactDetails.lastName}}</td>
     </tr>
     <tr>
       <td class="header" mat-header-cell>Email:</td>
-      <td>{{userContactDetails.Email}}</td>
+      <td>{{userContactDetails.email}}</td>
     </tr>
     <tr>
       <td class="header" mat-header-cell>Content:</td>
-      <td>{{userContactDetails.Content}}</td>
+      <td>{{userContactDetails.content}}</td>
     </tr>
  
 </table>

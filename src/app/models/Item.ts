@@ -8,7 +8,7 @@ export declare type Item = {
   quantity: number
 }
 
-export declare type bookType = {
+export declare type BookType = {
   bookName: string,
   src: string
 }

@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Item } from '../models/Item';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +10,7 @@ export class AboutDatasService {
   cards: any[] = [
     {
       id: 1,
-      imageUrl: "../../../../assets//Images/books1.jpg",
+      imageUrl: "../../../../assets//images/books1.jpg",
       imageAlt: "image-1",
       name: "Buy now our latest books for learning online!",
       likeToggleStatus: "favorite_border",
@@ -20,7 +19,7 @@ export class AboutDatasService {
     },
     {
       id: 2,
-      imageUrl: "../../../../assets//Images/codingbooks.jpg",
+      imageUrl: "../../../../assets//images/codingbooks.jpg",
       imageAlt: "image-2",
       name: "Replace all your books with digital book!",
       likeToggleStatus: "favorite_border",
@@ -29,7 +28,7 @@ export class AboutDatasService {
     },
     {
       id: 3,
-      imageUrl: "../../../../assets//Images/learn-programming.jpeg",
+      imageUrl: "../../../../assets//images/learn-programming.jpeg",
       imageAlt: "image-3",
       name: "Save all your work study with you.",
       likeToggleStatus: "favorite_border",

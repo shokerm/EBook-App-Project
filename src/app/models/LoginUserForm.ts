@@ -1,6 +1,6 @@
 export class LoginUserForm {
     constructor(
-        public Email: string,
-        public Password: string
+        public email: string,
+        public password: string
     ) { }
 }

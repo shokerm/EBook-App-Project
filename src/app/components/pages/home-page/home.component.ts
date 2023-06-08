@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  homePageImage: string = "../../../../assets/images/ebook-store2.png";
 
 
 }

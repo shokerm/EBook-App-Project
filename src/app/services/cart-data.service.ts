@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Item } from '../models/Item';
+import { Item } from '@models/item';
 import { MatDialog } from '@angular/material/dialog';
-import { ItemInCartDialogComponent } from '../components/dialogs-components/item-in-cart-dialog-component/item-in-cart-dialog';
+import { ItemInCartDialogComponent } from '@components/dialogs-components/item-in-cart-dialog-component/item-in-cart-dialog';
 
 @Injectable({
   providedIn: 'root'

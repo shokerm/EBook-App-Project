@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Item } from 'src/app/models/Item';
-import { AboutDatasService } from 'src/app/services/about-data.service';
+import { Item } from '@models/item';
+import { AboutDatasService } from '@services/about-data.service';
 
 @Component({
   selector: 'app-about',

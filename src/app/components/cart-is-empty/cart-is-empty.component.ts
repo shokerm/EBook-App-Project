@@ -11,5 +11,6 @@ export class CartIsEmptyComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  cartIsEmptyImage: string = "../../../assets/images/cart-empty.png";
 
 }

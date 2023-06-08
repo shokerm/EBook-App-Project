@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { RegisterUserForm } from 'src/app/models/RegisterUserForm';
+import { RegisterUserForm } from '@models/registerUserForm';
 
 
 @Component({

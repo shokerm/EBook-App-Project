@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BASE_URL } from '../models/Base_Url';
+import { BASE_URL } from '@models/baseUrl';
 
 
 @Injectable({

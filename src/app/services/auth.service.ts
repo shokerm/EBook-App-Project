@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BASE_URL } from '../models/Base_Url';
-import { UserLoginForRequset, UserResponse } from '../models/LoginUsersModel';
+import { BASE_URL } from '@models/baseUrl';
+import { UserLoginForRequset, UserResponse } from '@models/loginUsersModel';
 
 
 @Injectable({

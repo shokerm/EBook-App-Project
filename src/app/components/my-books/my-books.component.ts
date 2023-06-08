@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
 import { PDFDocumentProxy } from 'ng2-pdf-viewer'
-import { bookType } from 'src/app/models/Item';
-import { MyBooksDataService } from 'src/app/services/my-books-data.service';
+import { BookType } from '@models/item';
+import { MyBooksDataService } from '@services/my-books-data.service';
 
 @Component({
   selector: 'app-my-books',
@@ -15,7 +15,7 @@ export class MyBooksComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  src: string = "../../assets/Books/Wellcom-to-EBook.pdf";
+  src: string = "../../assets/books/Wellcom-to-EBook.pdf";
   currentPage: number = 1;
   totalPages: number = 0;
   isOrginalSize: boolean = false;
@@ -35,7 +35,7 @@ export class MyBooksComponent implements OnInit {
   isSettingsBarIsHidden: boolean = true;
   settingsButtonName: string = 'More Settings';
 
-  choseBookBtn(book: bookType) {
+  choseBookBtn(book: BookType) {
     this.src = book.src;
   }
 

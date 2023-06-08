@@ -9,7 +9,7 @@
             <mat-label>First Name</mat-label>
             <input matInput type="text" id="firstName"
                  required
-                 [(ngModel)]="registerUserForm.FirstName" name="firstName"
+                 [(ngModel)]="registerUserForm.firstName" name="firstName"
                  #FirstName="ngModel">
           </mat-form-field>
           <div [hidden]="FirstName.valid || FirstName.pristine" class="my-alert-danger">
@@ -22,7 +22,7 @@
             <mat-label>Last Name</mat-label>
             <input matInput type="text" id="lastName"
                  required
-                 [(ngModel)]="registerUserForm.LastName" name="lastName"
+                 [(ngModel)]="registerUserForm.lastName" name="lastName"
                  #LastName="ngModel">
           </mat-form-field>
           <div [hidden]="LastName.valid || LastName.pristine" class="my-alert-danger">
@@ -35,7 +35,7 @@
           <mat-label>Email</mat-label>
           <input matInput type="email" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                  required
-                 [(ngModel)]="registerUserForm.Email" name="Email"
+                 [(ngModel)]="registerUserForm.email" name="Email"
                  #Email="ngModel" placeholder="Ex. pat@example.com">
           </mat-form-field>
           <div [hidden]="Email.valid || Email.pristine"
@@ -49,7 +49,7 @@
             <mat-label>Password</mat-label>
             <input matInput type="password" id="password"
                  required
-                 [(ngModel)]="registerUserForm.Password" name="password"
+                 [(ngModel)]="registerUserForm.password" name="password"
                  #password="ngModel">
           </mat-form-field>
           <div [hidden]="password.valid || password.pristine" class="my-alert-danger">

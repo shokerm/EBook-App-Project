@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from './services/data.service';
+import { DataService } from '@services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,8 @@ import { DataService } from './services/data.service';
 })
 export class AppComponent {
   constructor(public service: DataService) { }
-  
-  isDarkTheme :boolean = this.service.isDarkMode;
+
+  isDarkTheme: boolean = this.service.isDarkMode;
 
 
 
