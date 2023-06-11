@@ -22,10 +22,17 @@ export class AuthService {
 
   }
 
+  registerService(userName: string, email: string, password: string) {
+    let newUser = {
+      userName: userName,
+      email: email,
+      password: password
+    }
+    return this.http.post(`${BASE_URL}/Auth/register`, newUser);
+  }
+
   getUserService(id: string) {
     return this.http.get(`${BASE_URL}/Auth/getUser/${id}`);
-
-
   }
 
 

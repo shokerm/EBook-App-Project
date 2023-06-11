@@ -5,7 +5,9 @@ export enum AuthLevel {
 }
 
 export enum LocalStorageKey {
-    id = "Id",
-    token = "Token",
-    refershToken = "RefreshToken"
+    id = "id",
+    token = "token",
+    refershToken = "refreshToken",
+    currentUserName = "username",
+    isLogin = "isLogin"
 }

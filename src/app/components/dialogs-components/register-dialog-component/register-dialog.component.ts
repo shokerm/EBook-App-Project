@@ -1,6 +1,7 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { RegisterUserForm } from '@models/registerUserForm';
+import { AuthService } from '@services/auth.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { RegisterUserForm } from '@models/registerUserForm';
 })
 export class RegisterDialogComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private authServics: AuthService) { }
 
   registerUserForm: RegisterUserForm = new RegisterUserForm('', '', '', '');
   submitted: boolean = false;
@@ -20,7 +21,11 @@ export class RegisterDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  closeDialog(): void {
+  register(): void {
+    this.authServics.registerService(this.registerUserForm.firstName, this.registerUserForm.email, this.registerUserForm.password)
+      .subscribe((res: any) => {
+
+      })
     this.dialog.ngOnDestroy();
   }
 

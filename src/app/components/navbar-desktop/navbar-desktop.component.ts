@@ -3,6 +3,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { LoginDialogComponent } from '@components/dialogs-components/login-dialog-component/login-dialog.component';
 import { DataService } from '@services/data.service';
 import { CartDataService } from '@services/cart-data.service';
+import { LocalStorageHandler } from '@models/localStorageHandler';
+import { AuthService } from '@services/auth.service';
 
 
 
@@ -13,10 +15,11 @@ import { CartDataService } from '@services/cart-data.service';
 })
 export class NavbarDesktopComponent implements OnInit {
 
-  constructor(public service: DataService, public dialog: MatDialog, public cartService: CartDataService) { }
+  constructor(public service: DataService, public dialog: MatDialog, public cartService: CartDataService, private authService: AuthService) { }
 
   ngOnInit(): void {
   }
+  currentUserName: string | undefined | null;
 
 
   changMode(): void {
@@ -29,6 +32,17 @@ export class NavbarDesktopComponent implements OnInit {
 
   getInCartITems() {
     return this.cartService.cart.length ? this.cartService.cart.length : null;
+  }
+
+  userIsLoggedIn() {
+    this.currentUserName = LocalStorageHandler.getCurrentUserName();
+    return LocalStorageHandler.isUserNameIsExsit();
+  }
+
+  logOut() {
+    LocalStorageHandler.deleteAllLocalStoreage();
+    this.cartService.cart = [];
+
   }
 
 }

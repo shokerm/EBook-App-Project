@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Item } from '@models/item';
+import { LocalStorageHandler } from '@models/localStorageHandler';
 import { CartDataService } from '@services/cart-data.service';
 import { ItemsApiService } from '@services/items-api.service';
 import { StoredataService } from '@services/store-data.service';
@@ -12,7 +14,7 @@ import { StoredataService } from '@services/store-data.service';
 })
 export class StoreComponent implements OnInit {
 
-  constructor(public service: StoredataService, public cartService: CartDataService, public ItemsApiService: ItemsApiService) {
+  constructor(public service: StoredataService, public cartService: CartDataService, public ItemsApiService: ItemsApiService, private dialog: MatDialog) {
 
   }
 
@@ -30,6 +32,7 @@ export class StoreComponent implements OnInit {
 
   addToCart(book: Item) {
     this.cartService.addToCartService(book);
+
   }
 
   bookQunatityAdd(book: Item) {

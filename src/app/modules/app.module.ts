@@ -39,11 +39,12 @@ import { MyBooksDataService } from '@services/my-books-data.service';
 import { CartDataService } from '@services/cart-data.service';
 import { ItemsApiService } from '@services/items-api.service';
 import { AuthService } from '@services/auth.service';
-import { JwtInterceptor } from '@services/Interceptors/jwt.interceptor';
+import { JwtInterceptor } from '@services/interceptors/jwt.interceptor';
 
 import { FilterPipe } from '@pipes/filter.pipe';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { LoginIsNotLogInDialogComponent } from '@components/dialogs-components/login-is-not-login-dialog-component/login-is-not-log-in-dialog.component';
 
 const COMPONENTS = [
   AppComponent,
@@ -68,6 +69,7 @@ const COMPONENTS = [
   LoginDialogComponent,
   RegisterDialogComponent,
   ItemInCartDialogComponent,
+  LoginIsNotLogInDialogComponent,
   SearchBarComponent,
   PageNotFoundComponent
 

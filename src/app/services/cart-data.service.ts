@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Item } from '@models/item';
 import { MatDialog } from '@angular/material/dialog';
 import { ItemInCartDialogComponent } from '@components/dialogs-components/item-in-cart-dialog-component/item-in-cart-dialog';
+import { LocalStorageHandler } from '@models/localStorageHandler';
+import { LoginIsNotLogInDialogComponent } from '@components/dialogs-components/login-is-not-login-dialog-component/login-is-not-log-in-dialog.component';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +22,13 @@ export class CartDataService {
   }
 
   addToCartService(book: Item): void {
-    let index = this.cart.findIndex(b => b.id === book.id);
-    index > -1 ? this.dialog.open(ItemInCartDialogComponent) : this.cart.push(book);
+
+    if (LocalStorageHandler.isUserLoggedIn()) {
+      let index = this.cart.findIndex(b => b.id === book.id);
+      index > -1 ? this.dialog.open(ItemInCartDialogComponent) : this.cart.push(book);
+    } else {
+      this.dialog.open(LoginIsNotLogInDialogComponent);
+    }
   }
 
   totalPriceForItemsInCart() {

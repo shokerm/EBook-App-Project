@@ -10,8 +10,8 @@ import { MatDialog } from '@angular/material/dialog';
 export class ItemInCartDialogComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
-  submitted:boolean = false;
-  afterSubmit:boolean = true;
+  submitted: boolean = false;
+  afterSubmit: boolean = true;
   isLoginDialogDisplay: boolean = true;
 
   ngOnInit(): void {
@@ -25,7 +25,7 @@ export class ItemInCartDialogComponent implements OnInit {
     this.isLoginDialogDisplay = false;
   }
 
-  onSubmit():void{
+  onSubmit(): void {
     this.submitted = true;
     this.afterSubmit = false;
 

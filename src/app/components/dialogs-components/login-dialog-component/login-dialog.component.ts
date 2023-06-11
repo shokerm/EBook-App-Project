@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { LocalStorageKey } from '@models/enums';
 import { LocalStorageHandler } from '@models/localStorageHandler';
 import { LoginUserForm } from '@models/loginUserForm';
 import { UserResponse } from '@models/loginUsersModel';
@@ -34,7 +35,7 @@ export class LoginDialogComponent implements OnInit {
     this.authService.loginService(email, password).subscribe((res: UserResponse) => {
       LocalStorageHandler.saveUserResToLocalStorage(res);
       this.authService.getUserService(res.id).subscribe((user: any) => {
-        console.log(user);
+        LocalStorageHandler.saveToLocalStorage(LocalStorageKey.currentUserName, user.name);
       })
     }, err => {
       if (err) {
@@ -47,21 +48,28 @@ export class LoginDialogComponent implements OnInit {
 
   //#region new way
   // login(email: string, password: string) {
+  //   var self = this;
   //   this.authService.loginService(email, password).subscribe({
   //     next(res: UserResponse) {
-  //       LocalStorageHandler.SaveUserResToLocalStorage(res);
-
-  //       alert("user logged in!")
-  //     }, error() {
+  //       LocalStorageHandler.saveUserResToLocalStorage(res);
+  //       alert("user logged in!");
+  //       self.authService.getUserService(res.id).subscribe({
+  //         next(value: any) {
+  //           console.log(value);
+  //           LocalStorageHandler.saveToLocalStorage(LocalStorageKey.currentUserName, value.name);
+  //         }, error() {
+  //           alert("Wrong user name!")
+  //         }
+  //       })
+  //     },
+  //     error() {
   //       alert("Wrong user entry!")
   //     }
-  //   })
-
+  //   });
 
   //   this.dialog.closeAll();
   // }
   //#endregion
-
   moveToRegisterDialog(): void {
     this.isLoginDialogDisplay = false;
 
