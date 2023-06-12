@@ -1,0 +1,49 @@
+<div mat-dialog-content class="login-user">
+  <button matTooltip="Close" (click)="closeDialog()" class="close-button" mat-icon-button><mat-icon>close</mat-icon></button>
+
+  <h1 mat-dialog-title>ADD NEW ITEM</h1>
+  <mat-icon>edit_note</mat-icon>
+    <div class="form-feilds" [hidden]="submitted">
+      <form (ngSubmit)="onSubmit()" #editItemForm="ngForm">
+
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>New Item Name</mat-label>
+            <input matInput type="text" id="firstName"
+            required
+                 [(ngModel)]="newEdittedItem.name" name="Name"
+                 #Name="ngModel">
+          </mat-form-field>
+          <div [hidden]="Name.valid || Name.pristine" class="my-alert-danger">
+            New Name is <strong>required</strong>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>New Price</mat-label>
+            <input matInput type="text" id="price"
+                 required
+                 [(ngModel)]="newEdittedItem.price" name="price"
+                 #Price="ngModel">
+          </mat-form-field>
+          <div [hidden]="Price.valid || Price.pristine" class="my-alert-danger">
+            Price is <strong>required</strong>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Image URL</mat-label>
+            <input matInput type="text" id="imageURL"
+                 [(ngModel)]="newEdittedItem.imageUrl" name="imageURL"
+                 #ImageURL="ngModel">
+          </mat-form-field>
+        </div>
+        <button class="apply-button" matTooltip="Apply Changes" mat-raised-button type="submit" (click)="addNewItem()" [disabled]="!editItemForm.form.valid">APPLY CHANGES</button>
+      </form>
+
+    </div>
+ 
+  </div>
+

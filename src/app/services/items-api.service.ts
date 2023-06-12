@@ -21,6 +21,10 @@ export class ItemsApiService {
     return this.http.get(`${BASE_URL}/items`);
   }
 
+  addItem(newItem: NewEdittedItem) {
+    return this.http.post(`${BASE_URL}/items`, newItem);
+  }
+
   deleteItem(id: number) {
     return this.http.delete(`${BASE_URL}/items/${id}`)
   }

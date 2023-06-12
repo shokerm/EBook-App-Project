@@ -1,0 +1,13 @@
+ <div class="header">
+  <mat-icon>report_gmailerrorred</mat-icon>
+<h1 mat-dialog-title>Are You Sure You Want To Delete This Item?</h1>
+</div>
+<div mat-dialog-content>We invite you to parchase books with one single click</div>
+<div mat-dialog-content>If you have any problems or even if you just want to talk with us click on 'Contact Us'</div>
+
+
+<div mat-dialog-actions>
+  <button mat-stroked-button color="warn" mat-dialog-close="{{true}}" (click)="clickOk()">Delete</button>
+  <button mat-stroked-button mat-dialog-close="{{false}}">Cancel</button>
+
+</div>

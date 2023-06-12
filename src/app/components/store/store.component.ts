@@ -1,6 +1,8 @@
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { DeleteItemDialogComponent } from '@components/dialogs-components/delete-item-dialog-component/delete-item-dialog-component';
 import { EditItemDialogComponent } from '@components/dialogs-components/edit-item-dialog-component/edit-item-dialog-component';
+import { NewItemDialogComponent } from '@components/dialogs-components/new-item-dialog-component/new-item-dialog-component';
 import { Item } from '@models/item';
 import { CartDataService } from '@services/cart-data.service';
 import { ItemsApiService } from '@services/items-api.service';
@@ -59,11 +61,23 @@ export class StoreComponent implements OnInit {
   }
 
   deleteItem(id: number): void {
-    this.ItemsApiService.deleteItem(id).subscribe(x => {
+    let dialogRef = this.dialog.open(DeleteItemDialogComponent);
+    dialogRef.afterClosed().subscribe(data => {
+      if (JSON.parse(data)) {
+        this.ItemsApiService.deleteItem(id).subscribe(x => {
+          this.ngOnInit();
+        });
+      }
+
+    })
+
+  }
+
+  addItem(): void {
+    let dialogRef = this.dialog.open(NewItemDialogComponent);
+    dialogRef.afterClosed().subscribe(result => {
       this.ngOnInit();
     });
-
-
 
   }
 }
