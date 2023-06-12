@@ -5,7 +5,7 @@ import { AuthService } from '@services/auth.service';
 
 
 @Component({
-  selector: 'app-register-dialog',
+  selector: 'register-dialog',
   templateUrl: './register-dialog.component.html',
   styleUrls: ['./register-dialog.component.scss']
 })

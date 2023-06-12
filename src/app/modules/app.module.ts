@@ -45,6 +45,7 @@ import { FilterPipe } from '@pipes/filter.pipe';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { LoginIsNotLogInDialogComponent } from '@components/dialogs-components/login-is-not-login-dialog-component/login-is-not-log-in-dialog.component';
+import { EditItemDialogComponent } from '@components/dialogs-components/edit-item-dialog-component/edit-item-dialog-component';
 
 const COMPONENTS = [
   AppComponent,
@@ -70,8 +71,9 @@ const COMPONENTS = [
   RegisterDialogComponent,
   ItemInCartDialogComponent,
   LoginIsNotLogInDialogComponent,
+  EditItemDialogComponent,
   SearchBarComponent,
-  PageNotFoundComponent
+  PageNotFoundComponent,
 
 ];
 const SERVICES = [

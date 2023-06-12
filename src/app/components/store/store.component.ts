@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { EditItemDialogComponent } from '@components/dialogs-components/edit-item-dialog-component/edit-item-dialog-component';
 import { Item } from '@models/item';
-import { LocalStorageHandler } from '@models/localStorageHandler';
 import { CartDataService } from '@services/cart-data.service';
 import { ItemsApiService } from '@services/items-api.service';
 import { StoredataService } from '@services/store-data.service';
@@ -18,11 +18,18 @@ export class StoreComponent implements OnInit {
 
   }
 
+
+
   ngOnInit(): void {
+    this.getItems();
+  }
+
+  getItems(): void {
     this.ItemsApiService.fetchItem().subscribe((x: object) => {
       this.Items = x;
     });
   }
+
 
   Items: any;
 
@@ -42,4 +49,21 @@ export class StoreComponent implements OnInit {
     this.cartService.bookQunatityRemoveService(book);
   }
 
+  editItem(id: number) {
+    let dialogRef = this.dialog.open(EditItemDialogComponent, { autoFocus: true, data: { "id": id } });
+    dialogRef.afterClosed().subscribe(result => {
+      this.ngOnInit();
+    });
+
+
+  }
+
+  deleteItem(id: number): void {
+    this.ItemsApiService.deleteItem(id).subscribe(x => {
+      this.ngOnInit();
+    });
+
+
+
+  }
 }

@@ -1,8 +1,8 @@
-<div mat-dialog-content class="login-user">
-  <h1 mat-dialog-title>REGISTER</h1>
+<div mat-dialog-content class="register-user">
+<h1 mat-dialog-title>REGISTER</h1>
   <mat-icon>account_circle</mat-icon>
     <div class="form-feilds" [hidden]="submitted">
-      <form (ngSubmit)="onSubmit()" #contactFOrm="ngForm">
+      <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
 
         <div class="form-group">
           <mat-form-field>
@@ -56,14 +56,13 @@
                Password is <strong>required</strong>
           </div>
         </div>
-       
-
-        <button mat-raised-button type="submit" (click)="register()" [disabled]="!contactFOrm.form.valid">SIGN UP</button>
+        <button mat-raised-button type="submit" (click)="register()" [disabled]="!registerForm.form.valid">SIGN UP</button>
         <button matTooltip="Login" class="backToLoginButton" mat-button color="primary" (click)="backToLoginDialog()">Login</button>
 
       </form>
 
     </div>
- 
-  </div>
 
+
+
+  

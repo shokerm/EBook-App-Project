@@ -8,6 +8,15 @@ subNavParagraph="We invite you enjoy our products"
 <div class="cards-container" >
 <mat-card class="example-card" *ngFor="let book of this.Items;">
     <mat-card-header>
+      <div class="edit-container">
+        <button mat-icon-button matTooltip="Edit" (click)="editItem(book.id)">
+            <mat-icon >mode_edit_outline</mat-icon>
+          </button>
+          <button mat-icon-button matTooltip="Delete" (click)="deleteItem(book.id)">
+            <mat-icon>delete_outline</mat-icon>
+          </button>
+        </div>
+
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>EBook</mat-card-title>
       <mat-card-subtitle>Notes For Professionals</mat-card-subtitle>

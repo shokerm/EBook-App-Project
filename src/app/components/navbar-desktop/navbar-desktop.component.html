@@ -18,7 +18,7 @@
     matTooltip="Switch to dark mode" aria-label="Switch to light mode"><span class="mat-button-wrapper"><mat-icon role="img" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font"> dark_mode </mat-icon></span>
     <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button>
     <button *ngIf="!userIsLoggedIn();else showUserName" mat-button (click)="openDialog()">Login / Register</button>
-    <ng-template #showUserName [(ngModel)]="this.currentUserName">Hello {{this.currentUserName}}
+    <ng-template #showUserName [(ngModel)]="this.currentUserName" ngDefaultControl >Hello {{this.currentUserName}}
       <button mat-button (click)="logOut()">log out</button>
     </ng-template>
     <button disabled="true" mat-button> 

@@ -1,46 +1,46 @@
 @mixin dialogFeildWidth {
-width: 250px;;
-} 
-.mat-dialog-content{
-    max-height: 100vh;
-}
-
-mat-form-field-flex{
-    @include dialogFeildWidth();
-}
-.login-user{
- 
-   .form-feilds{
-    @include dialogFeildWidth();
-   }
-    mat-icon{
-        font-size: 100px;
-        position: relative;
-        left: 30%;
+    width: 250px;;
+    } 
+    .mat-dialog-content{
+        max-height: 100vh;
     }
-   
     
-}
-mat-form-field{
-    @include dialogFeildWidth();
-}
-
-
-[class="my-alert-danger"]{
-    color: var(--mdc-theme-error, #f44336);
-    font-size: 12px;
-
-}
-.registerBtn{
-    margin: 20px 0;
-}
-.close-button{
-    position: relative;
-    left: 90%;
-    mat-icon{
-        position: static;
-        font-size: 20px;
-        color: gray;
-
+    mat-form-field-flex{
+        @include dialogFeildWidth();
     }
-}
+    .login-user{
+     
+       .form-feilds{
+        @include dialogFeildWidth();
+       }
+        mat-icon{
+            font-size: 100px;
+            position: relative;
+            left: 30%;
+        }
+       
+        
+    }
+    mat-form-field{
+        @include dialogFeildWidth();
+    }
+    
+    
+    [class="my-alert-danger"]{
+        color: var(--mdc-theme-error, #f44336);
+        font-size: 12px;
+    
+    }
+    .registerBtn{
+        margin: 20px 0;
+    }
+    .close-button{
+        position: relative;
+        left: 90%;
+        mat-icon{
+            position: static;
+            font-size: 20px;
+            color: gray;
+    
+        }
+    }

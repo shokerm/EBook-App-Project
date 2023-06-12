@@ -32,6 +32,11 @@ html {
   display: table;
 }
 
+.edit-container{
+  display: flex;
+    flex-direction: row;
+}
+
 .button {
   border: none;
   outline: 0;
