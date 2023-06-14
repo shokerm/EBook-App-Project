@@ -4,6 +4,7 @@ import { NewEdittedItem } from '@models/newEdittedItem';
 import { ItemsApiService } from '@services/items-api.service';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { LoginIsNotLogInDialogComponent } from '../login-is-not-login-dialog-component/login-is-not-log-in-dialog.component';
+import { StoredataService } from '@services/store-data.service';
 
 
 @Component({
@@ -31,21 +32,24 @@ export class NewItemDialogComponent implements OnInit {
   }
 
 
-  addNewItem(): void {
+  addNewItem() {
     this.itemsAPI.addItem(this.newEdittedItem).subscribe((x: any) => {
       this.dialog.closeAll();
     }, err => {
       if (err) {
-        this.dialog.ngOnDestroy();
+        this.dialog.closeAll();
         this.dialog.open(LoginIsNotLogInDialogComponent);
       }
 
-    }
-    )
+    })
 
   }
   closeDialog(): void {
     this.dialog.closeAll();
+  }
+
+  uploadUrlFromLocalStorage() {
+    localStorage.getItem("image");
   }
 
 

@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteItemDialogComponent } from '@components/dialogs-components/delete-item-dialog-component/delete-item-dialog-component';
 import { EditItemDialogComponent } from '@components/dialogs-components/edit-item-dialog-component/edit-item-dialog-component';
@@ -76,7 +76,7 @@ export class StoreComponent implements OnInit {
   addItem(): void {
     let dialogRef = this.dialog.open(NewItemDialogComponent);
     dialogRef.afterClosed().subscribe(result => {
-      this.ngOnInit();
+      this.getItems();
     });
 
   }

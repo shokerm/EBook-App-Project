@@ -8,6 +8,9 @@ export class StoredataService {
 
   constructor() { }
 
+  imageUrl: any = localStorage.getItem("image");
+
+
   // booksStore :Item[]  = [
   //   {
   //     id:1,

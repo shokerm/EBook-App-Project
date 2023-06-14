@@ -14,7 +14,7 @@ import { AboutComponent } from '@components/about/about.component';
 import { CartComponent } from '@components/cart/cart.component';
 import { ContactUsComponent } from '@components/contact-us/contact-us.component'
 import { MyBooksComponent } from '@components/my-books/my-books.component';
-import { HomeComponent } from '@components/pages/home-page/home.component';
+import { HomePageComponent } from '@components/pages/home-page/home-page.component';
 import { StoreComponent } from '@components/store/store.component';
 import { AboutPageComponent } from '@components/pages/about-page/about-page.component';
 import { CartPageComponent } from '@components/pages/cart-page/cart-page.component';
@@ -48,6 +48,8 @@ import { LoginIsNotLogInDialogComponent } from '@components/dialogs-components/l
 import { EditItemDialogComponent } from '@components/dialogs-components/edit-item-dialog-component/edit-item-dialog-component';
 import { NewItemDialogComponent } from '@components/dialogs-components/new-item-dialog-component/new-item-dialog-component';
 import { DeleteItemDialogComponent } from '@components/dialogs-components/delete-item-dialog-component/delete-item-dialog-component';
+import { UploadImageComponent } from '@components/upload-image/upload-image.component';
+import { HomePageLogoComponent } from '@components/home-page-logo/home-page-logo.component';
 
 const COMPONENTS = [
   AppComponent,
@@ -61,7 +63,7 @@ const COMPONENTS = [
   CartIsEmptyComponent,
   ContactUsComponent,
   MyBooksComponent,
-  HomeComponent,
+  HomePageComponent,
   StoreComponent,
   AboutPageComponent,
   CartPageComponent,
@@ -78,6 +80,8 @@ const COMPONENTS = [
   DeleteItemDialogComponent,
   SearchBarComponent,
   PageNotFoundComponent,
+  UploadImageComponent,
+  HomePageLogoComponent
 
 ];
 const SERVICES = [

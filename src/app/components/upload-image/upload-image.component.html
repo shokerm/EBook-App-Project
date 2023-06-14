@@ -1,0 +1,34 @@
+<div class="jumbotron text-center">
+	
+</div>
+
+<div class="container">
+	<div class="row custom-wrapper">
+		<div class="col-md-12">
+
+			<!-- Form starts -->
+			<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+				<div class="group-gap">
+
+					<!-- Upload image -->
+					<div class="avatar-upload">
+						<div class="avatar-edit">
+							<input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" #fileInput (change)="uploadFile($event)" />
+            </div>
+            <div class="avatar-preview">
+              <div id="imagePreview">
+                <img [src]="this.service.imageUrl" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- Submit Button -->
+          <button mat-raised-button type="submit" class="btn btn-danger btn-lg btn-block" (click)="removeUploadedFile()">Remove Image</button>
+
+      </form><!-- Form ends -->
+
+    </div>
+  </div>
+</div>
