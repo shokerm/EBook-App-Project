@@ -5,6 +5,7 @@ import { LocalStorageHandler } from '@models/localStorageHandler';
 import { LoginUserForm } from '@models/loginUserForm';
 import { UserResponse } from '@models/loginUsersModel';
 import { AuthService } from '@services/auth.service';
+import { ErrorDialogComponent } from '../error-dialog-component/error-dialog-component.component';
 
 
 
@@ -36,10 +37,20 @@ export class LoginDialogComponent implements OnInit {
       LocalStorageHandler.saveUserResToLocalStorage(res);
       this.authService.getUserService(res.id).subscribe((user: any) => {
         LocalStorageHandler.saveToLocalStorage(LocalStorageKey.currentUserName, user.name);
+        location.reload();
       })
     }, err => {
       if (err) {
-        alert("Wrong user entry")
+        this.dialog.open(ErrorDialogComponent,
+          {
+            data: {
+              "header": "Error in login details!",
+              "firstDialogLine": "Unfortunately, an error occurred while entering one or more of the username and/or password details",
+              "secondDialogLine": "Please try re-entering the details and logging in."
+
+            }
+          });
+
       }
     })
     this.dialog.closeAll();

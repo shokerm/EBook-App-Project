@@ -50,6 +50,8 @@ import { NewItemDialogComponent } from '@components/dialogs-components/new-item-
 import { DeleteItemDialogComponent } from '@components/dialogs-components/delete-item-dialog-component/delete-item-dialog-component';
 import { UploadImageComponent } from '@components/upload-image/upload-image.component';
 import { HomePageLogoComponent } from '@components/home-page-logo/home-page-logo.component';
+import { AuthGuard } from '@app/guards/auth.guard';
+import { ErrorDialogComponent } from '@components/dialogs-components/error-dialog-component/error-dialog-component.component';
 
 const COMPONENTS = [
   AppComponent,
@@ -78,6 +80,7 @@ const COMPONENTS = [
   EditItemDialogComponent,
   NewItemDialogComponent,
   DeleteItemDialogComponent,
+  ErrorDialogComponent,
   SearchBarComponent,
   PageNotFoundComponent,
   UploadImageComponent,
@@ -99,6 +102,8 @@ const PIPES = [
   FilterPipe
 ];
 
+const GUARDS = [AuthGuard]
+
 @NgModule({
   declarations: [
     COMPONENTS,
@@ -118,7 +123,7 @@ const PIPES = [
 
 
   ],
-  providers: [SERVICES, PIPES,
+  providers: [SERVICES, PIPES, GUARDS,
     AuthService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
   ],

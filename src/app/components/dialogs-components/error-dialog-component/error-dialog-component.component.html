@@ -1,9 +1,9 @@
 <div class="header">
   <mat-icon>report_gmailerrorred</mat-icon>
-<h1 mat-dialog-title>You must log in to perform this action!</h1>
+<h1 mat-dialog-title>{{this.header}}</h1>
 </div>
-<div mat-dialog-content>If you already have an account, just log in to continue.</div>
-<div mat-dialog-content>If you don't have an account yet, we invite you to register now.</div>
+<div mat-dialog-content>{{this.firstDialogLine}}</div>
+<div mat-dialog-content>{{this.secondDialogLine}}</div>
 
 
 <div mat-dialog-actions>

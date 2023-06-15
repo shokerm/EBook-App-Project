@@ -1,26 +1,26 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { LoginIsNotLogInDialogComponent } from '@components/dialogs-components/login-is-not-login-dialog-component/login-is-not-log-in-dialog.component';
+import { LocalStorageHandler } from '@models/localStorageHandler';
+import { Observable } from 'rxjs';
 
-
-@Injectable({ providedIn: 'root' })
+@Injectable({
+  providedIn: 'root'
+})
 export class AuthGuard implements CanActivate {
-    constructor(
-        private usersService: AuthService,
-        private router: Router,
-        private dialog: DialogBoxService
-    ) { }
+  constructor(private dialog: MatDialog) { }
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    canActivate() {
-        if (!this.usersService.loggedInUser) {
-            this.router.navigate(['/login'])
-                .then(() => {
-                    this.dialog.fire(
-                        `הגישה נדחתה`,
-                        'יש להיות מחובר על מנת לקבל גישה לאזור זה',
-                        'warning'
-                    );
-                });
-        }
-        return this.usersService.loggedInUser !== null;
+    if (LocalStorageHandler.isUserLoggedIn()) {
+      return true;
+    } else {
+      this.dialog.open(LoginIsNotLogInDialogComponent);
+      return false;
     }
+
+  }
+
 }

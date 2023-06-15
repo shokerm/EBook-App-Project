@@ -42,6 +42,7 @@ export class NavbarDesktopComponent implements OnInit {
   logOut() {
     LocalStorageHandler.deleteAllLocalStoreage();
     this.cartService.cart = [];
+    location.reload();
 
   }
 

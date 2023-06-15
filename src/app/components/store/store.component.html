@@ -4,7 +4,7 @@ subNavParagraph="We invite you enjoy our products"
 ></app-sub-nav>
   
 <!-- books -->
-<div class="add-item-container">
+<div class="add-item-container"  *ngIf="this.currentUser">
   <button mat-raised-button matTooltip="Add Item" (click)="addItem()">
     ADD ITEM
     <mat-icon >add</mat-icon>
@@ -12,9 +12,9 @@ subNavParagraph="We invite you enjoy our products"
 </div>
 <div class="cards-container" >
 
-<mat-card class="example-card" *ngFor="let book of this.Items;">
+<mat-card class="example-card" *ngFor="let book of this.Items">
     <mat-card-header>
-      <div class="edit-container">
+      <div class="edit-container" *ngIf="this.currentUser">
         <button mat-icon-button matTooltip="Edit" (click)="editItem(book.id)">
             <mat-icon >mode_edit_outline</mat-icon>
           </button>
@@ -25,7 +25,7 @@ subNavParagraph="We invite you enjoy our products"
 
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>EBook</mat-card-title>
-      <mat-card-subtitle>Notes For Professionals</mat-card-subtitle>
+      <mat-card-subtitle>Online Book Shop</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image [src]="book.imageUrl" [alt]="book.imageAlt">
     <mat-card-content>

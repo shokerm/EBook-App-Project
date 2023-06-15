@@ -56,9 +56,11 @@
                Password is <strong>required</strong>
           </div>
         </div>
+
+        <div class="register-dialog">
         <button mat-raised-button type="submit" (click)="register()" [disabled]="!registerForm.form.valid">SIGN UP</button>
         <button matTooltip="Login" class="backToLoginButton" mat-button color="primary" (click)="backToLoginDialog()">Login</button>
-
+      </div>
       </form>
 
     </div>
