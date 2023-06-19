@@ -5,6 +5,7 @@ import { ItemsApiService } from '@services/items-api.service';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { LoginIsNotLogInDialogComponent } from '../login-is-not-login-dialog-component/login-is-not-log-in-dialog.component';
 import { StoredataService } from '@services/store-data.service';
+import { ErrorDialogComponent } from '../error-dialog-component/error-dialog-component.component';
 
 
 @Component({
@@ -38,7 +39,15 @@ export class NewItemDialogComponent implements OnInit {
     }, err => {
       if (err) {
         this.dialog.closeAll();
-        this.dialog.open(LoginIsNotLogInDialogComponent);
+        this.dialog.open(ErrorDialogComponent,
+          {
+            data: {
+              "header": "You have not authorized to pefroem this action",
+              "firstDialogLine": "Unfortunately, you don't have the authority to perform this action",
+              "secondDialogLine": "Please ask from the administrator to provide you the authorization."
+
+            }
+          });
       }
 
     })

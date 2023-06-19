@@ -52,6 +52,10 @@ import { UploadImageComponent } from '@components/upload-image/upload-image.comp
 import { HomePageLogoComponent } from '@components/home-page-logo/home-page-logo.component';
 import { AuthGuard } from '@app/guards/auth.guard';
 import { ErrorDialogComponent } from '@components/dialogs-components/error-dialog-component/error-dialog-component.component';
+import { SalesApiService } from '@services/sales-api.service';
+import { UsersPageComponent } from '@components/pages/users-page/users-page.component';
+import { SalesPageComponent } from '@components/pages/sales-page/sales-page.component';
+import { SalesComponent } from '@components/sales/sales.component';
 
 const COMPONENTS = [
   AppComponent,
@@ -72,6 +76,8 @@ const COMPONENTS = [
   MyBooksPageComponent,
   ContactUsPageComponent,
   StorePageComponent,
+  UsersPageComponent,
+  SalesPageComponent,
   SubNavComponent,
   LoginDialogComponent,
   RegisterDialogComponent,
@@ -84,7 +90,8 @@ const COMPONENTS = [
   SearchBarComponent,
   PageNotFoundComponent,
   UploadImageComponent,
-  HomePageLogoComponent
+  HomePageLogoComponent,
+  SalesComponent
 
 ];
 const SERVICES = [
@@ -94,6 +101,7 @@ const SERVICES = [
   MyBooksDataService,
   CartDataService,
   ItemsApiService,
+  SalesApiService,
   AuthService,
 
 

@@ -24,7 +24,7 @@
       <strong class="cart-total-title">Total: </strong>
       <span class="cart-total-price" >$ {{this.service.totalPriceForItemsInCart() | number}} </span>
   </div>
-  <div class="parchaseBtn"><button mat-raised-button type="button" >Purchase</button>
+  <div class="parchaseBtn"><button mat-raised-button type="button" (click)="purchase()">Purchase</button>
   </div>
 </div>
 </div>

@@ -8,6 +8,7 @@ export class LocalStorageHandler {
         localStorage.setItem(LocalStorageKey.token, args.token);
         localStorage.setItem(LocalStorageKey.refershToken, args.refreshToken);
         localStorage.setItem(LocalStorageKey.isLogin, String(true));
+        localStorage.setItem(LocalStorageKey.user, JSON.stringify(args));
     }
     static saveToLocalStorage(key: LocalStorageKey, value: any) {
         localStorage.setItem(key, value);

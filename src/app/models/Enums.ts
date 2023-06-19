@@ -9,5 +9,6 @@ export enum LocalStorageKey {
     token = "token",
     refershToken = "refreshToken",
     currentUserName = "username",
-    isLogin = "isLogin"
+    isLogin = "isLogin",
+    user = "user"
 }
