@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { SaleItem } from '@models/saleItem';
+import { JoinedSaleItem } from '@models/saleItem';
 import { ItemsApiService } from '@services/items-api.service';
 import { SalesApiService } from '@services/sales-api.service';
 
@@ -20,38 +20,39 @@ export class SalesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSales();
-
   }
 
-  getSales() {
+  getSale(id: number): void {
+    var user: any;
+    this.salesApiService.getSale(id).subscribe(async x => {
+      user = x
+      console.log(user);
+    });
+  }
+
+  getSales(): void {
     this.salesApiService.getAllSales().subscribe((d: any) => {
       this.dataSource = d;
     })
-
   }
 
 
-  deleteSale(id: number) {
+  deleteSale(id: number): void {
     this.salesApiService.deleteSale(id).subscribe(x => {
       this.getSales();
-
     })
   }
 
-  editSale(element: any) {
-    console.log(element);
-    let e = element;
-    let newQuantity = prompt("Enter new quantity");
-    e.quantity = newQuantity;
-    this.salesApiService.editItem(element.id, e).subscribe(x => {
-      this.getSales();
-    })
-
-
-
-
-
-
+  editSale(element: JoinedSaleItem): void {
+    let user: any;
+    this.salesApiService.getSale(element.id).subscribe(x => {
+      user = x;
+      let newQuantity: number = Number(prompt("Enter new quantity"));
+      user.quantity = newQuantity;
+      this.salesApiService.editItem(element.id, user).subscribe(x => {
+        this.getSales();
+      })
+    });
   }
 
 

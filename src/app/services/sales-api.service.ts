@@ -9,15 +9,14 @@ import { SaleItem } from '@models/saleItem';
 })
 export class SalesApiService {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) { }
 
-  }
 
   getAllSales() {
     return this.http.get(`${BASE_URL}/Sales`);
   }
 
-  getItem(id: number) {
+  getSale(id: number) {
     return this.http.get(`${BASE_URL}/Sales/${id}`);
   }
 
@@ -29,9 +28,8 @@ export class SalesApiService {
     return this.http.delete(`${BASE_URL}/Sales/${id}`);
   }
 
-
-  editItem(id: number, editedSaleItem: SaleItem) {
-    return this.http.put(`${BASE_URL}/items/${id}`, editedSaleItem);
+  editItem(id: number, userToEdit: any) {
+    return this.http.put(`${BASE_URL}/Sales/${id}`, userToEdit);
   }
 
 

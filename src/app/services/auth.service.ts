@@ -17,9 +17,7 @@ export class AuthService {
       email: email,
       password: password
     }
-
     return this.http.post<UserResponse>(`${BASE_URL}/Auth/login`, userDeatilsToLogin);
-
   }
 
   registerService(userName: string, email: string, password: string) {

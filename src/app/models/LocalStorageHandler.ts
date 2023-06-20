@@ -16,6 +16,10 @@ export class LocalStorageHandler {
     static getFromLocalStorage(key: LocalStorageKey) {
         return localStorage.getItem(key);
     }
+
+    static getUserIdFromLocalStorage() {
+        return localStorage.getItem(LocalStorageKey.id);
+    }
     static getCurrentUserName() {
         return localStorage.getItem(LocalStorageKey.currentUserName);
     }

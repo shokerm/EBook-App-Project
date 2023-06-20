@@ -1,8 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Item } from '@models/item';
-import { saleDTOArray } from '@models/salesDTO';
 import { CartDataService } from '@services/cart-data.service';
 import { SalesApiService } from '@services/sales-api.service';
+
+
 
 @Component({
   selector: 'app-cart',
@@ -28,23 +29,12 @@ export class CartComponent implements OnInit {
   }
 
 
-  purchase() {
-
-
-    let currentCart = saleDTOArray(this.service.cart);
-
+  purchase(): void {
+    let currentCart = this.service.convertTosaleDTOArray(this.service.cart);
     currentCart.forEach((e: any) => {
-      console.log(e);
-
-      this.salesAPIService.addNewSale(e).subscribe(x => {
-
-      })
-
-      console.log(e);
+      this.salesAPIService.addNewSale(e).subscribe(x => { });
     });
-
-    // this.service.cart.splice(0, this.service.cart.length);
-
+    this.service.cart.splice(0, this.service.cart.length);
   }
 
 

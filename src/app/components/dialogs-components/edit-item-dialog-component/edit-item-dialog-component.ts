@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { NewEdittedItem } from '@models/newEdittedItem';
+import { NewEditedItem } from '@models/newEdittedItem';
 import { ItemsApiService } from '@services/items-api.service';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ErrorDialogComponent } from '../error-dialog-component/error-dialog-component.component';
@@ -16,7 +16,7 @@ export class EditItemDialogComponent implements OnInit {
 
   constructor(public dialog: MatDialog, private itemsAPI: ItemsApiService, @Inject(MAT_DIALOG_DATA) public data: { id: string }) { }
 
-  newEdittedItem: NewEdittedItem = new NewEdittedItem('', undefined, '', '');
+  newEdittedItem: NewEditedItem = new NewEditedItem('', undefined, '', '');
   submitted: boolean = false;
   afterSubmit: boolean = true;
 

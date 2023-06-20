@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BASE_URL } from '@models/baseUrl';
-import { NewEdittedItem } from '@models/newEdittedItem';
+import { NewEditedItem } from '@models/newEdittedItem';
 
 
 @Injectable({
@@ -9,9 +9,7 @@ import { NewEdittedItem } from '@models/newEdittedItem';
 })
 export class ItemsApiService {
 
-  constructor(private http: HttpClient) {
-
-  }
+  constructor(private http: HttpClient) { }
 
   getItem(id: number) {
     return this.http.get(`${BASE_URL}/items/${id}`);
@@ -21,7 +19,7 @@ export class ItemsApiService {
     return this.http.get(`${BASE_URL}/items`);
   }
 
-  addItem(newItem: NewEdittedItem) {
+  addItem(newItem: NewEditedItem) {
     return this.http.post(`${BASE_URL}/items`, newItem);
   }
 
@@ -29,10 +27,8 @@ export class ItemsApiService {
     return this.http.delete(`${BASE_URL}/items/${id}`)
   }
 
-  editItem(id: number, newEdittedItem: NewEdittedItem) {
+  editItem(id: number, newEdittedItem: NewEditedItem) {
     return this.http.put(`${BASE_URL}/items/${id}`, newEdittedItem);
-
-
   }
 
 }

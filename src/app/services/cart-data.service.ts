@@ -15,8 +15,6 @@ export class CartDataService {
 
   cart: Item[] = [];
 
-
-
   removeItemService(book: Item): void {
     let index = this.cart.findIndex(b => b.id === book.id);
     this.cart.splice(index, 1);
@@ -48,6 +46,20 @@ export class CartDataService {
   bookQunatityRemoveService(book: Item) {
     book.quantity <= 1 ? book.quantity = 1 : book.quantity--;
 
+  }
+
+  convertTosaleDTOArray(arr: Item[]) {
+    let newSaleItemDTO: any = [];
+    arr.forEach((i: any) => {
+      let userDTO: SaleItem = {
+        product: i.name,
+        itemId: i.id,
+        userId: LocalStorageHandler.getUserIdFromLocalStorage(),
+        quantity: i.quantity,
+      };
+      newSaleItemDTO.push(userDTO);
+    });
+    return newSaleItemDTO;
   }
 
 
