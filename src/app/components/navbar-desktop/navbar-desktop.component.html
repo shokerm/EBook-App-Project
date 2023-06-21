@@ -1,30 +1,40 @@
-<div  class="nav-container">
+<div class="nav-container">
   <mat-toolbar color="primary" class="navbar navbar-expand-lg">
     <div class="container-fluid">
-    <button mat-button routerLink="home"><mat-icon>menu_book</mat-icon> <span> EBook</span></button>
-    <button mat-button routerLink="about" routerLinkActive='active-link'>About</button>
-    <button mat-button routerLink="store" routerLinkActive='active-link'><mat-icon>storefront</mat-icon> Store</button>
-    <button mat-button routerLink="my-books" routerLinkActive='active-link'>My Books</button>
-    <button mat-button routerLink="contact-us" routerLinkActive='active-link'>Contact Us</button>
-    <button mat-button routerLink="cart" routerLinkActive='active-link'>
-      <mat-icon matBadge=" {{getInCartITems()}}" matBadgeColor="warn" matBadgeSize="small">local_grocery_store</mat-icon> Cart</button>
-  </div>
+      <button mat-button routerLink="home"><mat-icon>menu_book</mat-icon> <span> EBook</span></button>
+      <button mat-button routerLink="about" routerLinkActive='active-link'>About</button>
+      <button mat-button routerLink="store" routerLinkActive='active-link'><mat-icon>storefront</mat-icon>
+        Store</button>
+      <button mat-button routerLink="my-books" routerLinkActive='active-link'>My Books</button>
+      <button mat-button routerLink="contact-us" routerLinkActive='active-link'>Contact Us</button>
+      <button mat-button routerLink="cart" routerLinkActive='active-link'>
+        <mat-icon matBadge=" {{getInCartITems()}}" matBadgeColor="warn"
+          matBadgeSize="small">local_grocery_store</mat-icon> Cart</button>
+    </div>
 
-  <div>
-    <button mat-icon-button (click)="changMode()" *ngIf="this.service.isDarkMode===true" type="button" class="mat-focus-indicator mat-icon-button mat-button-base"
-     matTooltip="Switch to light mode" aria-label="Switch to light mode"><span class="mat-button-wrapper"><mat-icon role="img" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font"> light_mode </mat-icon>
-    </span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button>
-    <button (click)="changMode()" *ngIf="this.service.isDarkMode===false" mat-icon-button type="button" class="mat-focus-indicator mat-icon-button mat-button-base" 
-    matTooltip="Switch to dark mode" aria-label="Switch to light mode"><span class="mat-button-wrapper"><mat-icon role="img" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font"> dark_mode </mat-icon></span>
-    <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button>
-    <button *ngIf="!userIsLoggedIn();else showUserName" mat-button (click)="openDialog()">Login / Register</button>
-    <ng-template #showUserName [(ngModel)]="this.currentUserName" ngDefaultControl >
-       <button class="user-name-hello" mat-button disabled="true">Hello {{this.currentUserName}}</button>
-       <button mat-button (click)="logOut()">log out</button>
-    </ng-template>
-    <button disabled="true" mat-button> 
-      <app-search-bar></app-search-bar>
-    </button>
+    <div>
+      <button mat-icon-button (click)="changMode()" *ngIf="this.service.isDarkMode===true" type="button"
+        class="mat-focus-indicator mat-icon-button mat-button-base" matTooltip="Switch to light mode"
+        aria-label="Switch to light mode"><span class="mat-button-wrapper"><mat-icon role="img"
+            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" aria-hidden="true"
+            data-mat-icon-type="font"> light_mode </mat-icon>
+        </span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span
+          class="mat-button-focus-overlay"></span></button>
+      <button (click)="changMode()" *ngIf="this.service.isDarkMode===false" mat-icon-button type="button"
+        class="mat-focus-indicator mat-icon-button mat-button-base" matTooltip="Switch to dark mode"
+        aria-label="Switch to light mode"><span class="mat-button-wrapper"><mat-icon role="img"
+            class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" aria-hidden="true"
+            data-mat-icon-type="font"> dark_mode </mat-icon></span>
+        <span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span
+          class="mat-button-focus-overlay"></span></button>
+      <button *ngIf="!userIsLoggedIn();else showUserName" mat-button (click)="openDialog()">Login / Register</button>
+      <ng-template #showUserName [(ngModel)]="this.currentUserName" ngDefaultControl>
+        <button class="user-name-hello" mat-button disabled="true">Hello {{this.currentUserName}}</button>
+        <button mat-button (click)="logOut()">log out</button>
+      </ng-template>
+      <button disabled="true" mat-button>
+        <app-search-bar></app-search-bar>
+      </button>
     </div>
   </mat-toolbar>
 </div>

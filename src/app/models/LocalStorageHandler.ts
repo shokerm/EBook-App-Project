@@ -1,5 +1,5 @@
 import { LocalStorageKey } from "./enums";
-import { UserResponse } from "./loginUsersModel";
+import { UserResponse } from "../interfaces/loginUsersModel";
 
 export class LocalStorageHandler {
     constructor() { }
@@ -7,7 +7,6 @@ export class LocalStorageHandler {
         localStorage.setItem(LocalStorageKey.id, args.id);
         localStorage.setItem(LocalStorageKey.token, args.token);
         localStorage.setItem(LocalStorageKey.refershToken, args.refreshToken);
-        localStorage.setItem(LocalStorageKey.isLogin, String(true));
         localStorage.setItem(LocalStorageKey.user, JSON.stringify(args));
     }
     static saveToLocalStorage(key: LocalStorageKey, value: any) {

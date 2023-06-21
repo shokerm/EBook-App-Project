@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BASE_URL } from '@models/baseUrl';
-import { SaleItem } from '@models/saleItem';
+import { SaleItem } from '@app/interfaces/saleItem';
 
 
 @Injectable({

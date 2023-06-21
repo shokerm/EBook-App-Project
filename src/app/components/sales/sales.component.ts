@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { JoinedSaleItem } from '@models/saleItem';
+import { JoinedSaleItem } from '@app/interfaces/saleItem';
 import { ItemsApiService } from '@services/items-api.service';
 import { SalesApiService } from '@services/sales-api.service';
 

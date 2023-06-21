@@ -56,6 +56,7 @@ import { SalesApiService } from '@services/sales-api.service';
 import { UsersPageComponent } from '@components/pages/users-page/users-page.component';
 import { SalesPageComponent } from '@components/pages/sales-page/sales-page.component';
 import { SalesComponent } from '@components/sales/sales.component';
+import { CartFooterComponent } from '@components/cart-footer/cart-footer.component';
 
 const COMPONENTS = [
   AppComponent,
@@ -68,6 +69,7 @@ const COMPONENTS = [
   CartComponent,
   CartIsEmptyComponent,
   ContactUsComponent,
+  CartFooterComponent,
   MyBooksComponent,
   HomePageComponent,
   StoreComponent,

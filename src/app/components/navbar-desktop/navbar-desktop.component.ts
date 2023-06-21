@@ -5,6 +5,7 @@ import { DataService } from '@services/data.service';
 import { CartDataService } from '@services/cart-data.service';
 import { LocalStorageHandler } from '@models/localStorageHandler';
 import { AuthService } from '@services/auth.service';
+import { LocalStorageKey } from '@models/enums';
 
 
 
@@ -15,12 +16,13 @@ import { AuthService } from '@services/auth.service';
 })
 export class NavbarDesktopComponent implements OnInit {
 
-  constructor(public service: DataService, public dialog: MatDialog, public cartService: CartDataService, private authService: AuthService) { }
+  constructor(public service: DataService, public dialog: MatDialog, public cartService: CartDataService, public authService: AuthService) { }
 
   ngOnInit(): void {
-  }
-  currentUserName: string | undefined | null;
 
+  }
+
+  currentUserName: any;
 
   changMode(): void {
     this.service.isDarkMode = !this.service.isDarkMode;
@@ -35,14 +37,25 @@ export class NavbarDesktopComponent implements OnInit {
   }
 
   userIsLoggedIn() {
-    this.currentUserName = LocalStorageHandler.getCurrentUserName();
-    return LocalStorageHandler.isUserNameIsExsit();
+    // this.currentUserName = LocalStorageHandler.getCurrentUserName();
+    // return LocalStorageHandler.isUserNameIsExsit();
+
+    if (this.authService.user) {
+      this.currentUserName = this.authService.user.userName;
+      return true;
+    } else {
+      return false;
+    }
+
   }
 
   logOut() {
+    this.authService.user = null;
+    this.authService.isLogin = false;
+    this.authService.loggedInUserChanged.next(null);
     LocalStorageHandler.deleteAllLocalStoreage();
     this.cartService.cart = [];
-    location.reload();
+    // location.reload();
 
   }
 

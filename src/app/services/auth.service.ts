@@ -1,16 +1,30 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BASE_URL } from '@models/baseUrl';
-import { UserLoginForRequset, UserResponse } from '@models/loginUsersModel';
+import { UserLoginForRequset, UserResponse } from '@app/interfaces/loginUsersModel';
+import { Subject } from 'rxjs';
+import { LocalStorageHandler } from '@models/localStorageHandler';
+import { LocalStorageKey } from '@models/enums';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  user: any;
 
   constructor(private http: HttpClient) { }
+
+  user: any;
+  loggedInUserChanged = new Subject();
+  isLogin: boolean = false;
+
+  refreshToken() {
+    return this.http.post(`${BASE_URL}/Auth/refreshtoken`, {
+      token: localStorage.getItem('token'),
+      refreshToken: localStorage.getItem('refreshToken'),
+      id: localStorage.getItem('id')
+    });
+  }
 
   loginService(email: string, password: string) {
     let userDeatilsToLogin: UserLoginForRequset = {
@@ -29,8 +43,8 @@ export class AuthService {
     return this.http.post(`${BASE_URL}/Auth/register`, newUser);
   }
 
-  getUserService(id: string) {
-    return this.http.get(`${BASE_URL}/Auth/getUser/${id}`);
+  getUserService() {
+    return this.http.get(`${BASE_URL}/Auth/getUser/${LocalStorageHandler.getUserIdFromLocalStorage()}`);
   }
 
 

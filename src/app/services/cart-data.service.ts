@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ItemInCartDialogComponent } from '@components/dialogs-components/item-in-cart-dialog-component/item-in-cart-dialog';
 import { LocalStorageHandler } from '@models/localStorageHandler';
 import { LoginIsNotLogInDialogComponent } from '@components/dialogs-components/login-is-not-login-dialog-component/login-is-not-log-in-dialog.component';
-import { SaleItem } from '@models/saleItem';
+import { SaleItem } from '@app/interfaces/saleItem';
 
 @Injectable({
   providedIn: 'root'

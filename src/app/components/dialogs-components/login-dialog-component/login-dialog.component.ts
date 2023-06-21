@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { LocalStorageKey } from '@models/enums';
 import { LocalStorageHandler } from '@models/localStorageHandler';
 import { LoginUserForm } from '@models/loginUserForm';
-import { UserResponse } from '@models/loginUsersModel';
+import { UserResponse } from '@app/interfaces/loginUsersModel';
 import { AuthService } from '@services/auth.service';
 import { ErrorDialogComponent } from '../error-dialog-component/error-dialog-component.component';
 
@@ -35,9 +35,12 @@ export class LoginDialogComponent implements OnInit {
   login(email: string, password: string) {
     this.authService.loginService(email, password).subscribe((res: UserResponse) => {
       LocalStorageHandler.saveUserResToLocalStorage(res);
-      this.authService.getUserService(res.id).subscribe((user: any) => {
-        LocalStorageHandler.saveToLocalStorage(LocalStorageKey.currentUserName, user.name);
-        location.reload();
+      this.authService.getUserService().subscribe((user: any) => {
+        this.authService.isLogin = true;
+        this.authService.user = user;
+        this.authService.loggedInUserChanged.next(user);
+        // LocalStorageHandler.saveToLocalStorage(LocalStorageKey.currentUserName, user.userName);
+        // location.reload();
       })
     }, err => {
       if (err) {
