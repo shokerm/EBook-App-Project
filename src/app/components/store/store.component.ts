@@ -6,6 +6,7 @@ import { ErrorDialogComponent } from '@components/dialogs-components/error-dialo
 import { NewItemDialogComponent } from '@components/dialogs-components/new-item-dialog-component/new-item-dialog-component';
 import { Item } from '@models/item';
 import { LocalStorageHandler } from '@models/localStorageHandler';
+import { AuthService } from '@services/auth.service';
 import { CartDataService } from '@services/cart-data.service';
 import { ItemsApiService } from '@services/items-api.service';
 import { StoredataService } from '@services/store-data.service';
@@ -19,8 +20,10 @@ import { BehaviorSubject, observable } from "rxjs";
 })
 export class StoreComponent implements OnInit {
 
-  constructor(public service: StoredataService, public cartService: CartDataService, public ItemsApiService: ItemsApiService, private dialog: MatDialog) {
-    this.currentUser = LocalStorageHandler.getCurrentUserName();
+  constructor(public service: StoredataService, public cartService: CartDataService, public ItemsApiService: ItemsApiService, private dialog: MatDialog,
+    private authService: AuthService) {
+    this.currentUser = this.authService.user.authLevel;
+
   }
 
 
@@ -31,18 +34,22 @@ export class StoreComponent implements OnInit {
 
   }
 
-  currentUser: string | null | undefined;
+  currentUser: number;
+  isThisUserAuthorisedToEditItems() {
+    if (this.currentUser === 2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   getItems(): void {
     this.ItemsApiService.fetchItem().subscribe((x: object) => {
       this.Items = x;
-      // this.Items.next(x);
     });
   }
 
   Items: any;
-  // Items = new BehaviorSubject<any>([]);
-
   changeLikeToggle(card: Item) {
     this.service.changeLikeToggleService(card);
   }

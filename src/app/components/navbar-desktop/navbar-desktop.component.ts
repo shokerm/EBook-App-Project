@@ -37,9 +37,6 @@ export class NavbarDesktopComponent implements OnInit {
   }
 
   userIsLoggedIn() {
-    // this.currentUserName = LocalStorageHandler.getCurrentUserName();
-    // return LocalStorageHandler.isUserNameIsExsit();
-
     if (this.authService.user) {
       this.currentUserName = this.authService.user.userName;
       return true;
@@ -55,7 +52,6 @@ export class NavbarDesktopComponent implements OnInit {
     this.authService.loggedInUserChanged.next(null);
     LocalStorageHandler.deleteAllLocalStoreage();
     this.cartService.cart = [];
-    // location.reload();
 
   }
 

@@ -5,13 +5,14 @@ import { ItemInCartDialogComponent } from '@components/dialogs-components/item-i
 import { LocalStorageHandler } from '@models/localStorageHandler';
 import { LoginIsNotLogInDialogComponent } from '@components/dialogs-components/login-is-not-login-dialog-component/login-is-not-log-in-dialog.component';
 import { SaleItem } from '@app/interfaces/saleItem';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartDataService {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private authService: AuthService) { }
 
   cart: Item[] = [];
 
@@ -22,7 +23,7 @@ export class CartDataService {
 
   addToCartService(book: Item): void {
 
-    if (LocalStorageHandler.isUserLoggedIn()) {
+    if (this.authService.isLogin) {
       let index = this.cart.findIndex(b => b.id === book.id);
       index > -1 ? this.dialog.open(ItemInCartDialogComponent) : this.cart.push(book);
     } else {
@@ -55,7 +56,7 @@ export class CartDataService {
         product: i.name,
         itemId: i.id,
         userId: LocalStorageHandler.getUserIdFromLocalStorage(),
-        quantity: i.quantity,
+        quantity: i.quantity
       };
       newSaleItemDTO.push(userDTO);
     });

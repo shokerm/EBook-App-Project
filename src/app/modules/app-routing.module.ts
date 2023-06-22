@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from '@components/pages/page-not-found/page-not
 import { AuthGuard } from '@app/guards/auth.guard';
 import { SalesComponent } from '@components/sales/sales.component';
 import { SalesPageComponent } from '@components/pages/sales-page/sales-page.component';
+import { UsersPageComponent } from '@components/pages/users-page/users-page.component';
 
 const routes: Routes = [
   {
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactUsPageComponent },
   { path: 'my-books', component: MyBooksPageComponent, canActivate: [AuthGuard] },
   { path: 'cart', component: CartPageComponent },
-  { path: 'orders', component: SalesPageComponent },
+  { path: 'orders', component: SalesPageComponent, canActivate: [AuthGuard] },
+  { path: 'users', component: UsersPageComponent },
   { path: '**', component: PageNotFoundComponent },
 
 

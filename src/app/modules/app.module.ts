@@ -57,6 +57,7 @@ import { UsersPageComponent } from '@components/pages/users-page/users-page.comp
 import { SalesPageComponent } from '@components/pages/sales-page/sales-page.component';
 import { SalesComponent } from '@components/sales/sales.component';
 import { CartFooterComponent } from '@components/cart-footer/cart-footer.component';
+import { UpdateUserDialogComponent } from '@components/dialogs-components/update-user-dialog-component/update-user-dialog.component';
 
 const COMPONENTS = [
   AppComponent,
@@ -89,6 +90,7 @@ const COMPONENTS = [
   NewItemDialogComponent,
   DeleteItemDialogComponent,
   ErrorDialogComponent,
+  UpdateUserDialogComponent,
   SearchBarComponent,
   PageNotFoundComponent,
   UploadImageComponent,

@@ -1,27 +1,24 @@
-<app-sub-nav 
-subNavHeader="Our Store"
-subNavParagraph="We invite you enjoy our products"
-></app-sub-nav>
-  
+<app-sub-nav subNavHeader="Our Store" subNavParagraph="We invite you enjoy our products"></app-sub-nav>
+
 <!-- books -->
-<div class="add-item-container" *ngIf="this.currentUser">
+<div class="add-item-container" *ngIf="isThisUserAuthorisedToEditItems()">
   <button mat-raised-button matTooltip="Add Item" (click)="addItem()">
     ADD ITEM
-    <mat-icon >add</mat-icon>
+    <mat-icon>add</mat-icon>
   </button>
 </div>
-<div class="cards-container" >
+<div class="cards-container">
 
-<mat-card class="example-card" *ngFor="let book of this.Items">
+  <mat-card class="example-card" *ngFor="let book of this.Items">
     <mat-card-header>
       <div class="edit-container" *ngIf="this.currentUser">
         <button mat-icon-button matTooltip="Edit" (click)="editItem(book.id)">
-            <mat-icon >mode_edit_outline</mat-icon>
-          </button>
-          <button mat-icon-button matTooltip="Delete" (click)="deleteItem(book.id)">
-            <mat-icon>delete_outline</mat-icon>
-          </button>
-        </div>
+          <mat-icon>mode_edit_outline</mat-icon>
+        </button>
+        <button mat-icon-button matTooltip="Delete" (click)="deleteItem(book.id)">
+          <mat-icon>delete_outline</mat-icon>
+        </button>
+      </div>
 
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>EBook</mat-card-title>
@@ -33,11 +30,14 @@ subNavParagraph="We invite you enjoy our products"
       <h5>${{book.price}}</h5>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-icon-button matTooltip="Like" (click)="changeLikeToggle(book)"><mat-icon>{{book.likeToggleStatus}}</mat-icon></button>
+      <button mat-icon-button matTooltip="Like"
+        (click)="changeLikeToggle(book)"><mat-icon>{{book.likeToggleStatus}}</mat-icon></button>
       <button matTooltip="Add To Cart" mat-raised-button (click)="addToCart(book)">ADD TO CART</button>
-      <button mat-icon-button matTooltip="Remove Quantity" (click)="bookQunatityRemove(book)"><mat-icon>remove</mat-icon></button>
+      <button mat-icon-button matTooltip="Remove Quantity"
+        (click)="bookQunatityRemove(book)"><mat-icon>remove</mat-icon></button>
       <span class="quantity">{{book.quantity}}</span>
-      <button mat-icon-button matTooltip="Add Quantity" (click)="bookQunatityAdd(book)"><mat-icon>add</mat-icon></button>
+      <button mat-icon-button matTooltip="Add Quantity"
+        (click)="bookQunatityAdd(book)"><mat-icon>add</mat-icon></button>
     </mat-card-actions>
   </mat-card>
 </div>

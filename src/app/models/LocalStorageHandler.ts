@@ -31,20 +31,12 @@ export class LocalStorageHandler {
         }
     }
 
-    static isUserLoggedIn() {
-        let isUserLoggedIn = LocalStorageHandler.getFromLocalStorage(LocalStorageKey.isLogin);
-        if (isUserLoggedIn) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 
     static deleteAllLocalStoreage() {
         localStorage.removeItem(LocalStorageKey.id);
         localStorage.removeItem(LocalStorageKey.token);
         localStorage.removeItem(LocalStorageKey.refershToken);
         localStorage.removeItem(LocalStorageKey.currentUserName);
-        localStorage.removeItem(LocalStorageKey.isLogin);
+        localStorage.removeItem(LocalStorageKey.user);
     }
 }

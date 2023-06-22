@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { JoinedSaleItem } from '@app/interfaces/saleItem';
+import { AuthService } from '@services/auth.service';
 import { ItemsApiService } from '@services/items-api.service';
 import { SalesApiService } from '@services/sales-api.service';
 
@@ -12,7 +13,9 @@ import { SalesApiService } from '@services/sales-api.service';
   styleUrls: ['./sales.component.scss']
 })
 export class SalesComponent implements OnInit {
-  constructor(private salesApiService: SalesApiService, private itemsApiService: ItemsApiService, private dialog: MatDialog) { }
+  constructor(private salesApiService: SalesApiService, private itemsApiService: ItemsApiService, private dialog: MatDialog,
+    private authService: AuthService
+  ) { }
 
   displayedColumns: string[] = ['id', 'product', 'userId', 'itemId', 'quantity', 'saleDate', 'edit', 'delete'];
   dataSource: any
@@ -20,19 +23,26 @@ export class SalesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSales();
-  }
+    console.log(this.authService.user);
 
-  getSale(id: number): void {
-    var user: any;
-    this.salesApiService.getSale(id).subscribe(async x => {
-      user = x
-      console.log(user);
-    });
+
   }
 
   getSales(): void {
-    this.salesApiService.getAllSales().subscribe((d: any) => {
-      this.dataSource = d;
+    this.salesApiService.getAllSales().subscribe((data: any) => {
+      switch (this.authService.user.authLevel) {
+        case 0:
+          break;
+        case 1:
+          let fillterdDataSourceForUser = data.filter((x: any) => x.userId === this.authService.user.id)
+          this.dataSource = fillterdDataSourceForUser;
+          break;
+        case 2:
+          this.dataSource = data;
+          break;
+        default:
+          console.log("eror");
+      }
     })
   }
 
@@ -54,7 +64,5 @@ export class SalesComponent implements OnInit {
       })
     });
   }
-
-
 
 }

@@ -5,11 +5,15 @@
       <button mat-button routerLink="about" routerLinkActive='active-link'>About</button>
       <button mat-button routerLink="store" routerLinkActive='active-link'><mat-icon>storefront</mat-icon>
         Store</button>
-      <button mat-button routerLink="my-books" routerLinkActive='active-link'>My Books</button>
       <button mat-button routerLink="contact-us" routerLinkActive='active-link'>Contact Us</button>
       <button mat-button routerLink="cart" routerLinkActive='active-link'>
         <mat-icon matBadge=" {{getInCartITems()}}" matBadgeColor="warn"
           matBadgeSize="small">local_grocery_store</mat-icon> Cart</button>
+      <button *ngIf="this.authService.isLogin" mat-button routerLink="my-books" routerLinkActive='active-link'>My
+        Books</button>
+      <button *ngIf="this.authService.isLogin" mat-button routerLink="orders"
+        routerLinkActive='active-link'>Orders</button>
+
     </div>
 
     <div>

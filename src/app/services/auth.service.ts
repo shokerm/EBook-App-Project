@@ -5,6 +5,7 @@ import { UserLoginForRequset, UserResponse } from '@app/interfaces/loginUsersMod
 import { Subject } from 'rxjs';
 import { LocalStorageHandler } from '@models/localStorageHandler';
 import { LocalStorageKey } from '@models/enums';
+import { UserUpdateDTO } from '@models/userUpdateDTO';
 
 
 @Injectable({
@@ -35,7 +36,7 @@ export class AuthService {
   }
 
   registerService(userName: string, email: string, password: string) {
-    let newUser = {
+    let newUser: UserUpdateDTO = {
       userName: userName,
       email: email,
       password: password
@@ -45,6 +46,10 @@ export class AuthService {
 
   getUserService() {
     return this.http.get(`${BASE_URL}/Auth/getUser/${LocalStorageHandler.getUserIdFromLocalStorage()}`);
+  }
+
+  updateUserService(userUpdateDTO: UserUpdateDTO) {
+    return this.http.put(`${BASE_URL}/Auth/updateUser/${LocalStorageHandler.getUserIdFromLocalStorage()}`, userUpdateDTO);
   }
 
 
