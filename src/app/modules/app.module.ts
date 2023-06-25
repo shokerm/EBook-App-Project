@@ -53,11 +53,12 @@ import { HomePageLogoComponent } from '@components/home-page-logo/home-page-logo
 import { AuthGuard } from '@app/guards/auth.guard';
 import { ErrorDialogComponent } from '@components/dialogs-components/error-dialog-component/error-dialog-component.component';
 import { SalesApiService } from '@services/sales-api.service';
-import { UsersPageComponent } from '@components/pages/users-page/users-page.component';
 import { SalesPageComponent } from '@components/pages/sales-page/sales-page.component';
 import { SalesComponent } from '@components/sales/sales.component';
-import { CartFooterComponent } from '@components/cart-footer/cart-footer.component';
+import { AnimatedFooterComponent } from '@components/animated-footer/animated-footer.component';
 import { UpdateUserDialogComponent } from '@components/dialogs-components/update-user-dialog-component/update-user-dialog.component';
+import { UsersComponent } from '@components/users/users.component';
+import { UsersPageComponent } from '@components/pages/users-page/users-page.component';
 
 const COMPONENTS = [
   AppComponent,
@@ -70,7 +71,7 @@ const COMPONENTS = [
   CartComponent,
   CartIsEmptyComponent,
   ContactUsComponent,
-  CartFooterComponent,
+  AnimatedFooterComponent,
   MyBooksComponent,
   HomePageComponent,
   StoreComponent,
@@ -79,8 +80,9 @@ const COMPONENTS = [
   MyBooksPageComponent,
   ContactUsPageComponent,
   StorePageComponent,
-  UsersPageComponent,
   SalesPageComponent,
+  UsersPageComponent,
+  UsersComponent,
   SubNavComponent,
   LoginDialogComponent,
   RegisterDialogComponent,

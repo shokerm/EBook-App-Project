@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'my-books', component: MyBooksPageComponent, canActivate: [AuthGuard] },
   { path: 'cart', component: CartPageComponent },
   { path: 'orders', component: SalesPageComponent, canActivate: [AuthGuard] },
-  { path: 'users', component: UsersPageComponent },
+  { path: 'user-panel', component: UsersPageComponent, canActivate: [AuthGuard] },
   { path: '**', component: PageNotFoundComponent },
 
 

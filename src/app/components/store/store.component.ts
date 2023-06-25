@@ -22,7 +22,10 @@ export class StoreComponent implements OnInit {
 
   constructor(public service: StoredataService, public cartService: CartDataService, public ItemsApiService: ItemsApiService, private dialog: MatDialog,
     private authService: AuthService) {
-    this.currentUser = this.authService.user.authLevel;
+    if (this.authService.user) {
+      this.currentUser = this.authService.user.authLevel
+    }
+
 
   }
 
@@ -34,7 +37,7 @@ export class StoreComponent implements OnInit {
 
   }
 
-  currentUser: number;
+  currentUser: any;
   isThisUserAuthorisedToEditItems() {
     if (this.currentUser === 2) {
       return true;

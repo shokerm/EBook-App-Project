@@ -58,6 +58,11 @@ export class UpdateUserDialogComponent implements OnInit {
     this.afterSubmit = false;
   }
 
+  closeDialog(): void {
+    this.dialog.closeAll();
+
+  }
+
 
 
 }

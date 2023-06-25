@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { LoginDialogComponent } from '@components/dialogs-components/login-dialog-component/login-dialog.component';
 import { DataService } from '@services/data.service';
 import { CartDataService } from '@services/cart-data.service';
+import { AuthService } from '@services/auth.service';
 
 
 
@@ -13,7 +14,7 @@ import { CartDataService } from '@services/cart-data.service';
 })
 export class NavbarPhonesComponent implements OnInit {
 
-  constructor(public service: DataService, public dialog: MatDialog, public cartService: CartDataService) { }
+  constructor(public service: DataService, public dialog: MatDialog, public cartService: CartDataService, public authService: AuthService) { }
 
   ngOnInit(): void {
   }

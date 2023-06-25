@@ -1,44 +1,62 @@
 @mixin dialogFeildWidth {
     width: 250px;
-    } 
-    
-    .mat-dialog-content{
-        max-height: 100vh;
-    }
-    mat-form-field-flex{
+}
+
+.mat-dialog-content {
+    max-height: 100vh;
+}
+
+mat-form-field-flex {
+    @include dialogFeildWidth();
+}
+
+.update-user {
+
+
+    .form-feilds {
         @include dialogFeildWidth();
-    }
-    .register-user{
-    
-     
-       .form-feilds{
-        @include dialogFeildWidth();
-       }
-        mat-icon{
-            font-size: 100px;
-            position: relative;
-            left: 30%;
-        }
-        
-    }
-    mat-form-field{
-        @include dialogFeildWidth();
-    }
-    
-    
-    [class="my-alert-danger"]{
-        color: var(--mdc-theme-error, #f44336);
-        font-size: 12px;
-    
-    }
-    .registerBtn{
-        margin: 20px 0;
-    }
-    .backToLoginButton{
-       position: relative;
-       left: 40%;
     }
 
-.register-dialog{
+    mat-icon {
+        font-size: 100px;
+        position: relative;
+        left: 30%;
+    }
+
+}
+
+mat-form-field {
+    @include dialogFeildWidth();
+}
+
+
+[class="my-alert-danger"] {
+    color: var(--mdc-theme-error, #f44336);
+    font-size: 12px;
+
+}
+
+.registerBtn {
+    margin: 20px 0;
+}
+
+.backToLoginButton {
+    position: relative;
+    left: 40%;
+}
+
+.register-dialog {
     margin: 5px 0;
+}
+
+.close-button {
+    position: relative;
+    left: 90%;
+
+    mat-icon {
+        position: static;
+        font-size: 20px;
+        color: gray;
+
+    }
 }

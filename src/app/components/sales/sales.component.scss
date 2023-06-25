@@ -1,9 +1,15 @@
-table {
-    width: 70%;
-    text-align: center;
-    th.mat-header-cell{
-      text-align: center;
+div {
+  width: 100%;
+  overflow-x: auto;
+}
 
-    }
+table {
+  width: 70%;
+  text-align: center;
+
+  th.mat-header-cell {
+    text-align: center;
 
   }
+
+}

@@ -13,6 +13,8 @@
         Books</button>
       <button *ngIf="this.authService.isLogin" mat-button routerLink="orders"
         routerLinkActive='active-link'>Orders</button>
+      <button *ngIf="this.authService.isLogin" mat-button routerLink="user-panel"
+        routerLinkActive='active-link'>User-panel</button>
 
     </div>
 

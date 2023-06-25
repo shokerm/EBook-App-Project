@@ -57,11 +57,13 @@ export class SalesComponent implements OnInit {
     let user: any;
     this.salesApiService.getSale(element.id).subscribe(x => {
       user = x;
-      let newQuantity: number = Number(prompt("Enter new quantity"));
-      user.quantity = newQuantity;
-      this.salesApiService.editItem(element.id, user).subscribe(x => {
-        this.getSales();
-      })
+      let newQuantity: string | null = prompt("Enter new quantity");
+      if (Number(newQuantity) && newQuantity != null) {
+        user.quantity = Number(newQuantity);
+        this.salesApiService.editItem(element.id, user).subscribe(x => {
+          this.getSales();
+        })
+      }
     });
   }
 

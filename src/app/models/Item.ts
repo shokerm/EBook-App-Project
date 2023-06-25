@@ -10,5 +10,6 @@ export declare type Item = {
 
 export declare type BookType = {
   bookName: string,
-  src: string
+  src: string,
+  itemId: number
 }

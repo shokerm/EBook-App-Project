@@ -47,6 +47,10 @@ export class AuthService {
   getUserService() {
     return this.http.get(`${BASE_URL}/Auth/getUser/${LocalStorageHandler.getUserIdFromLocalStorage()}`);
   }
+  getAllUsersService() {
+    return this.http.get(`${BASE_URL}/Auth/getUsers`);
+
+  }
 
   updateUserService(userUpdateDTO: UserUpdateDTO) {
     return this.http.put(`${BASE_URL}/Auth/updateUser/${LocalStorageHandler.getUserIdFromLocalStorage()}`, userUpdateDTO);

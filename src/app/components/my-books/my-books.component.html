@@ -1,60 +1,60 @@
 <mat-drawer-container backdropClick class="example-container" [hasBackdrop]="false">
   <!-- drawer my book -->
-    <mat-drawer #drawer [mode]="'push'">
-        <div class="drawer-header">My Books</div>
-       <div class="my-books-list">
-        <button #book *ngFor="let book of this.service.books;let i = index" class="single-book" mat-raised-button
-        (click)="choseBookBtn(book)"
-        ><mat-icon>auto_stories</mat-icon>{{book.bookName}}</button>
+  <mat-drawer #drawer [mode]="'push'">
+    <div class="drawer-header">My Books</div>
+    <div class="my-books-list">
+      <button #book *ngFor="let book of this.service.books;let i = index" class="single-book" mat-raised-button
+        (click)="choseBookBtn(book)"><mat-icon>auto_stories</mat-icon>{{book.bookName}}</button>
     </div>
-    </mat-drawer>
+  </mat-drawer>
 
   <!-- drawer mat content - controller top bar-->
-    <mat-drawer-content>
-      <div class="mat-drawer-content-pdf-header">
-    <div class="top-left-buttons-tools">
-      <button mat-raised-button matTooltip="My Books" (click)="drawer.toggle()">My Books</button>
-      <button mat-icon-button matTooltip="Back To First Page" (click)="backToFirstPage()">
-        <mat-icon>first_page</mat-icon>
-      </button>
-      <input class="input-page" #inputPage [value]="this.currentPage" (change)="updatePage(inputPage)">
-      <button mat-icon-button matTooltip="Previous" (click)="PrevPage()">
-        <mat-icon>arrow_back_ios</mat-icon>
-      </button>
-     <span> {{this.currentPage}} / {{this.totalPages}}</span>
-      <button mat-icon-button matTooltip="Next" (click)="nextPage()">
-        <mat-icon>arrow_forward_ios</mat-icon>
-      </button>
-      <section>
-        <button mat-icon-button matTooltip="Rotate Right" (click)="rotationPositionToRight()">
-         <mat-icon>rotate_right</mat-icon>
-       </button>
-       {{this.rotaionPosition}}
-       <button mat-icon-button matTooltip="Rotate Left" (click)="rotationPositionToLeft()">
-         <mat-icon>rotate_left</mat-icon>
-       </button>
-     </section>
-   <section>
-     <button mat-icon-button matTooltip="Zoom In" (click)="zoomOut()">
-       <mat-icon>zoom_out</mat-icon>
-     </button>
-       {{this.zoom | number}}
-       <button mat-icon-button matTooltip="Zoom In" (click)="zoomIn()">
-         <mat-icon>zoom_in</mat-icon>
-       </button>
+  <mat-drawer-content>
+    <div class="mat-drawer-content-pdf-header">
+      <div class="top-left-buttons-tools">
+        <button class="my-book-button" mat-raised-button matTooltip="My Books" (click)="drawer.toggle()">My
+          Books</button>
+        <button mat-icon-button matTooltip="Back To First Page" (click)="backToFirstPage()">
+          <mat-icon>first_page</mat-icon>
+        </button>
+        <input class="input-page" #inputPage [value]="this.currentPage" (change)="updatePage(inputPage)">
+        <button mat-icon-button matTooltip="Previous" (click)="PrevPage()">
+          <mat-icon>arrow_back_ios</mat-icon>
+        </button>
+        <span> {{this.currentPage}} / {{this.totalPages}}</span>
+        <button mat-icon-button matTooltip="Next" (click)="nextPage()">
+          <mat-icon>arrow_forward_ios</mat-icon>
+        </button>
+        <div class="top-middle-buttons-tools">
+          <button mat-icon-button matTooltip="Rotate Right" (click)="rotationPositionToRight()">
+            <mat-icon>rotate_right</mat-icon>
+          </button>
+          {{this.rotaionPosition}}
+          <button mat-icon-button matTooltip="Rotate Left" (click)="rotationPositionToLeft()">
+            <mat-icon>rotate_left</mat-icon>
+          </button>
+        </div>
+        <div class="top-right-buttons-tools">
+          <button mat-icon-button matTooltip="Zoom In" (click)="zoomOut()">
+            <mat-icon>zoom_out</mat-icon>
+          </button>
+          {{this.zoom | number}}
+          <button mat-icon-button matTooltip="Zoom In" (click)="zoomIn()">
+            <mat-icon>zoom_in</mat-icon>
+          </button>
 
-       <button mat-icon-button matTooltip="Reset Settings" 
-       (click)="resetSettings(orginalSizeToggle,showAllPagesToggle,fitToPageToggle,renderTextLayerToggle,showBordersToggle)">
-         <mat-icon>refresh</mat-icon>
-       </button>
-       <button mat-button matTooltip="{{settingsButtonName}}" (click)="settingsBarToggleButton()">{{settingsButtonName}}
-      </button>
+          <button mat-icon-button matTooltip="Reset Settings"
+            (click)="resetSettings(orginalSizeToggle,showAllPagesToggle,fitToPageToggle,renderTextLayerToggle,showBordersToggle)">
+            <mat-icon>refresh</mat-icon>
+          </button>
+          <button mat-button matTooltip="{{settingsButtonName}}"
+            (click)="settingsBarToggleButton()">{{settingsButtonName}}
+          </button>
 
-     </section>
-    </div>
+        </div>
+      </div>
 
       <div [hidden]="this.isSettingsBarIsHidden" class="top-right-buttons-tools">
-
         <mat-form-field appearance="fill">
           <mat-label>Page Options:</mat-label>
           <mat-select [(ngModel)]="pageOptions">
@@ -63,36 +63,25 @@
             </mat-option>
           </mat-select>
         </mat-form-field>
-       <mat-slide-toggle #orginalSizeToggle>Orginal Size</mat-slide-toggle>
-       <mat-slide-toggle #showAllPagesToggle>Show All Pages</mat-slide-toggle>
-       <mat-slide-toggle #fitToPageToggle>Fit To Page</mat-slide-toggle>
-       <mat-slide-toggle #renderTextLayerToggle>Render Text Layer</mat-slide-toggle>
-       <mat-slide-toggle #showBordersToggle>Show Borders</mat-slide-toggle>
+        <mat-slide-toggle #orginalSizeToggle>Orginal Size</mat-slide-toggle>
+        <mat-slide-toggle #showAllPagesToggle>Show All Pages</mat-slide-toggle>
+        <mat-slide-toggle #fitToPageToggle>Fit To Page</mat-slide-toggle>
+        <mat-slide-toggle #renderTextLayerToggle>Render Text Layer</mat-slide-toggle>
+        <mat-slide-toggle #showBordersToggle>Show Borders</mat-slide-toggle>
+      </div>
+
     </div>
-       
-    </div>
 
 
 
 
-        <!-- pdf viewer -->
-        <pdf-viewer (after-load-complete)="afterLoadComplete($event)"
-        [src]="src"
-        [rotation]="this.rotaionPosition"
-        [original-size]="orginalSizeToggle.checked"
-        [show-all]="showAllPagesToggle.checked"
-        [fit-to-page]="fitToPageToggle.checked"
-        [zoom]="this.zoom"
-        [zoom-scale]="this.pageOptions"
-        [render-text]="renderTextLayerToggle.checked"
-        [external-link-target]="'blank'"
-        [autoresize]="false"
-        [show-borders]="showBordersToggle.checked"
-        [(page)]="this.currentPage"
-        style="width:100%; height:100%;">
-      </pdf-viewer>
+    <!-- pdf viewer -->
+    <pdf-viewer (after-load-complete)="afterLoadComplete($event)" [src]="src" [rotation]="this.rotaionPosition"
+      [original-size]="orginalSizeToggle.checked" [show-all]="showAllPagesToggle.checked"
+      [fit-to-page]="fitToPageToggle.checked" [zoom]="this.zoom" [zoom-scale]="this.pageOptions"
+      [render-text]="renderTextLayerToggle.checked" [external-link-target]="'blank'" [autoresize]="false"
+      [show-borders]="showBordersToggle.checked" [(page)]="this.currentPage" style="width:100%; height:100%;">
+    </pdf-viewer>
 
-    </mat-drawer-content>
-  </mat-drawer-container>
-  
-  
+  </mat-drawer-content>
+</mat-drawer-container>
