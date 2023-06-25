@@ -39,7 +39,8 @@ export class AuthService {
     let newUser: UserUpdateDTO = {
       userName: userName,
       email: email,
-      password: password
+      password: password,
+      authLevel: 1
     }
     return this.http.post(`${BASE_URL}/Auth/register`, newUser);
   }
@@ -52,8 +53,8 @@ export class AuthService {
 
   }
 
-  updateUserService(userUpdateDTO: UserUpdateDTO) {
-    return this.http.put(`${BASE_URL}/Auth/updateUser/${LocalStorageHandler.getUserIdFromLocalStorage()}`, userUpdateDTO);
+  updateUserService(id: number, userUpdateDTO: UserUpdateDTO) {
+    return this.http.put(`${BASE_URL}/Auth/updateUser/${id}`, userUpdateDTO);
   }
 
 

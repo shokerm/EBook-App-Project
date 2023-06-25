@@ -23,15 +23,15 @@ export class SearchBarComponent implements OnInit {
 
   toggleSearch: boolean = false;
 
-  isSerchTextNotEmpty() {
+  isSerchTextNotEmpty(): boolean {
     return this.searchText ? true : false;
   }
 
-  openSearch() {
+  openSearch(): void {
     this.toggleSearch = true;
     this.searchbar.nativeElement.focus();
   }
-  searchClose() {
+  searchClose(): void {
     this.searchText = '';
     this.toggleSearch = false;
   }

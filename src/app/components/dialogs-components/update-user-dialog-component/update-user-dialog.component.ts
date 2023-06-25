@@ -11,15 +11,15 @@ import { AuthService } from '@services/auth.service';
 })
 export class UpdateUserDialogComponent implements OnInit {
 
-  constructor(public dialog: MatDialog, private authServics: AuthService, @Inject(MAT_DIALOG_DATA) public data: { user: any }) { }
+  constructor(public dialog: MatDialog, public authServics: AuthService, @Inject(MAT_DIALOG_DATA) public data: { user: any }) { }
 
-  updateUserDTO: UserUpdateDTO = new UserUpdateDTO(this.authServics.user.userName, this.authServics.user.email, '');
+  updateUserDTO: UserUpdateDTO = new UserUpdateDTO(this.data.user.userName, this.data.user.email, '', this.data.user.authLevel);
   submitted: boolean = false;
   afterSubmit: boolean = true;
 
   ngOnInit(): void {
-    this.updateUserDTO.userName = this.data.user.userName;
-    this.updateUserDTO.email = this.data.user.email;
+    // this.updateUserDTO.userName = this.data.user.userName;
+    // this.updateUserDTO.email = this.data.user.email;
 
   }
 
@@ -31,7 +31,8 @@ export class UpdateUserDialogComponent implements OnInit {
       this.users = [{
         "id": d.id,
         "userName": d.userName,
-        "email": d.email
+        "email": d.email,
+        "authLevel": d.authLevel
       }]
       this.dialog.closeAll();
     })
@@ -43,10 +44,13 @@ export class UpdateUserDialogComponent implements OnInit {
       "userName": this.updateUserDTO.userName,
       "email": this.updateUserDTO.email,
       "password": this.updateUserDTO.password,
+      "authLevel": this.updateUserDTO.authLevel
     }
-    this.authServics.updateUserService(upuser).subscribe((x: any) => {
+    this.authServics.updateUserService(this.data.user.id, upuser).subscribe((x: any) => {
       this.authServics.user.userName = upuser.userName;
       this.authServics.user.email = upuser.email;
+      this.authServics.user.password = upuser.password;
+      this.authServics.user.authLevel = upuser.authLevel;
 
       this.getusers();
     })

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { LocalStorageHandler } from '@models/localStorageHandler';
 import { AuthService } from '@services/auth.service';
 import { DataService } from '@services/data.service';
-import { UserResponse } from './interfaces/loginUsersModel';
 
 @Component({
   selector: 'app-root',

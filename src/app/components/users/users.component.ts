@@ -13,7 +13,7 @@ export class UsersComponent implements OnInit {
 
   constructor(private itemsApiService: ItemsApiService, private dialog: MatDialog,
     private authService: AuthService) { }
-  displayedColumns: string[] = ['id', 'userName', 'email', 'edit'];
+  displayedColumns: string[] = ['id', 'userName', 'email', 'authLevel', 'edit'];
   dataSource: any
 
 
@@ -30,7 +30,9 @@ export class UsersComponent implements OnInit {
         this.dataSource = [{
           "id": d.id,
           "userName": d.userName,
-          "email": d.email
+          "email": d.email,
+          "authLevel": d.authLevel
+
         }]
 
       } else {
@@ -45,10 +47,13 @@ export class UsersComponent implements OnInit {
   }
 
 
-  editUser(): void {
+  editUser(element: any): void {
+    console.log(element);
+
     this.dialog.open(UpdateUserDialogComponent, {
       data: {
-        "user": this.authService.user
+        // "user": this.authService.user
+        "user": element
 
       }
     }).afterClosed().subscribe(x => {

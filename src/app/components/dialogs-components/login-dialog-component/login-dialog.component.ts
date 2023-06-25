@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { LocalStorageKey } from '@models/enums';
 import { LocalStorageHandler } from '@models/localStorageHandler';
 import { LoginUserForm } from '@models/loginUserForm';
 import { UserResponse } from '@app/interfaces/loginUsersModel';

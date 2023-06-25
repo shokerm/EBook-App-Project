@@ -17,18 +17,8 @@ export class ItemInCartDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  closeDialog() {
-    this.dialog.closeAll();
-  }
 
-  moveToRegisterDialog(): void {
-    this.isLoginDialogDisplay = false;
-  }
 
-  onSubmit(): void {
-    this.submitted = true;
-    this.afterSubmit = false;
 
-  }
 
 }
