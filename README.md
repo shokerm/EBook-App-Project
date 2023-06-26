@@ -1,4 +1,3 @@
-![capture-4](https://github.com/shokerm/EBook-App-Project/assets/96984377/aa84384c-49e9-4620-b6b6-c95f4cb822c5)
 # EBook
 
 Online book store appliaction and online book and documents reader.
