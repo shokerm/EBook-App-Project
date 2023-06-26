@@ -32,6 +32,8 @@ export class SalesComponent implements OnInit {
     this.salesApiService.getAllSales().subscribe((data: any) => {
       switch (this.authService.user.authLevel) {
         case 0:
+          let filteredDataSourceForVisitor = data.filter((x: any) => x.userId === this.authService.user.id);
+          this.dataSource = filteredDataSourceForVisitor;
           break;
         case 1:
           let fillterdDataSourceForUser = data.filter((x: any) => x.userId === this.authService.user.id)

@@ -9,7 +9,8 @@
       <button mat-button routerLink="cart" routerLinkActive='active-link'>
         <mat-icon matBadge=" {{getInCartITems()}}" matBadgeColor="warn"
           matBadgeSize="small">local_grocery_store</mat-icon> Cart</button>
-      <button *ngIf="this.authService.isLogin" mat-button routerLink="my-books" routerLinkActive='active-link'>My
+      <button *ngIf="this.authService.isLogin && this.authService.user.authLevel != 0" mat-button routerLink="my-books"
+        routerLinkActive='active-link'>My
         Books</button>
       <button *ngIf="this.authService.isLogin" mat-button routerLink="orders"
         routerLinkActive='active-link'>Orders</button>

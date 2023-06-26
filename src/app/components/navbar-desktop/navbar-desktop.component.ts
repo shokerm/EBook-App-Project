@@ -5,7 +5,6 @@ import { DataService } from '@services/data.service';
 import { CartDataService } from '@services/cart-data.service';
 import { LocalStorageHandler } from '@models/localStorageHandler';
 import { AuthService } from '@services/auth.service';
-import { LocalStorageKey } from '@models/enums';
 
 
 
