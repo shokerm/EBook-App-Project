@@ -46,7 +46,6 @@ Install EBook App with npm
 | visitor@email.com | Cc@1324                    | Visitor      |  
 
 ## Interface images
-![20230626_142325](https://github.com/shokerm/EBook-App-Project/assets/96984377/0fb45084-a81b-4c0e-a2bb-2657edf92b74)
 ![capture-1](https://github.com/shokerm/EBook-App-Project/assets/96984377/59ac2399-8972-414b-8313-36e852096059)
 ![capture-2](https://github.com/shokerm/EBook-App-Project/assets/96984377/53194b12-5b58-4e53-ba22-9f30adf66a89)
 ![capture-3](https://github.com/shokerm/EBook-App-Project/assets/96984377/7a984c29-8d04-4ae8-b88e-328778934e87)
