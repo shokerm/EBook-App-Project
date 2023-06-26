@@ -1,5 +1,4 @@
-![20230626_142325](https://github.com/shokerm/EBook-App-Project/assets/96984377/5877add6-aa7d-4b78-b260-be89707ac6c7)# EBook
-
+## EBook App
 Online book store appliaction and online book and documents reader.
 EBook simulates online books store and also reading books online in the application itself.
 The application has the option of adding, editing and deleting products. 3 authorization levels for users with different action options: visitor, user and admin.
