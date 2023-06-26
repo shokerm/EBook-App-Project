@@ -63,3 +63,7 @@ Install EBook App with npm
 ![capture-14](https://github.com/shokerm/EBook-App-Project/assets/96984377/c9d8fc5b-54b2-4732-aaa6-e8533e8126e2)
 ![capture-15](https://github.com/shokerm/EBook-App-Project/assets/96984377/a57d3753-fd41-4d67-8745-31492ac459f5)
 
+## Feedback
+
+On this occasion, we would be happy to recommend the website that enables easy registration and learning of online books in a variety of fields
+[TradePub.com](https://programminglanguage.tradepub.com/).
