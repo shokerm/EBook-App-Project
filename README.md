@@ -9,6 +9,7 @@ Online book store appliaction and online book and documents reader.
 - [Installation](#installation)
 - [API Access](#api-access)- 
 - [Interface images](#interface-images)
+
 ## Features
 
 - Light/dark mode toggle.
@@ -21,7 +22,7 @@ Online book store appliaction and online book and documents reader.
 
 - Backend: C# ASP.NET Core.
 - Frontend: Angular 14.3.0, Angular material.
-- Database: Microsoft SQL server.
+- Database: Microsoft SQL server with Entity Framework.
 - Authentication: JWT & Identity Core.
 
 
