@@ -22,6 +22,7 @@ export class StoreComponent implements OnInit {
 
   constructor(public service: StoredataService, public cartService: CartDataService, public ItemsApiService: ItemsApiService, private dialog: MatDialog,
     private authService: AuthService) {
+
     if (this.authService.user) {
       this.currentUser = this.authService.user.authLevel
     }
@@ -66,6 +67,8 @@ export class StoreComponent implements OnInit {
   }
 
   editItem(id: number) {
+    console.log(this.currentUser);
+
     let dialogRef = this.dialog.open(EditItemDialogComponent, { autoFocus: true, data: { "id": id } });
     dialogRef.afterClosed().subscribe(result => {
       this.getItems();

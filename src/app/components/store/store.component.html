@@ -11,7 +11,7 @@
 
   <mat-card class="example-card" *ngFor="let book of this.Items">
     <mat-card-header>
-      <div class="edit-container" *ngIf="this.currentUser">
+      <div class="edit-container" *ngIf="isThisUserAuthorisedToEditItems()">
         <button mat-icon-button matTooltip="Edit" (click)="editItem(book.id)">
           <mat-icon>mode_edit_outline</mat-icon>
         </button>
