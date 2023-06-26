@@ -11,7 +11,7 @@ The application has the option of adding, editing and deleting products. 3 autho
 - [Installation](#installation)
 - [API Access](#api-access)- 
 - [Interface images](#interface-images)
-- [Feedback](#feedback) 
+- [Feedback](#Feedback) 
 
 ## Features
 
