@@ -1,4 +1,4 @@
-
+![capture-4](https://github.com/shokerm/EBook-App-Project/assets/96984377/aa84384c-49e9-4620-b6b6-c95f4cb822c5)
 # EBook
 
 Online book store appliaction and online book and documents reader.
@@ -48,18 +48,20 @@ Install EBook App with npm
 
 ## Interface images
 
-![capture-1](https://github.com/shokerm/EBook-App-Project/assets/96984377/6fcf2f89-c3b0-463c-b867-7249eccb20d3)
-![capture-2](https://github.com/shokerm/EBook-App-Project/assets/96984377/7a549dea-b4d4-4b1d-a5fd-6cdce0691844)
-![capture-3](https://github.com/shokerm/EBook-App-Project/assets/96984377/183b7ebc-a3bd-4687-8558-ababb636ab85)
-![capture-4](https://github.com/shokerm/EBook-App-Project/assets/96984377/56a3c718-beb2-4b5d-9e40-85cc57cc146f)
-![capture-5](https://github.com/shokerm/EBook-App-Project/assets/96984377/4c070859-62e7-43ae-b17d-15aaa4ab360f)
-![capture-6](https://github.com/shokerm/EBook-App-Project/assets/96984377/29070d6e-6239-4db6-9ca4-84f345a1f6d8)
-![capture-7](https://github.com/shokerm/EBook-App-Project/assets/96984377/9646f18d-4ce6-42d8-ab5d-82d96d4b0cbc)
-![capture-8](https://github.com/shokerm/EBook-App-Project/assets/96984377/8c7ce710-d40c-43c5-8b8e-8195361aadb8)
-![capture-9](https://github.com/shokerm/EBook-App-Project/assets/96984377/ebd3dcd0-2fad-4559-8a9c-e57df38e743b)
-![capture-10](https://github.com/shokerm/EBook-App-Project/assets/96984377/18ddafd6-874b-4e6c-83aa-918f5a7f273d)
-![capture-11](https://github.com/shokerm/EBook-App-Project/assets/96984377/d57fa9e8-e5d0-48dd-b8d5-290cb61fe6f7)
-![capture-12](https://github.com/shokerm/EBook-App-Project/assets/96984377/233b8055-9c41-4549-8b57-715cc34a09d4)
-![capture-13](https://github.com/shokerm/EBook-App-Project/assets/96984377/377db2d4-ca48-48a5-bf20-c22d7a2df666)
-![capture-14](https://github.com/shokerm/EBook-App-Project/assets/96984377/4ec6643d-6e7b-4a2b-b1b4-71b286e2acf1)
-![capture-15](https://github.com/shokerm/EBook-App-Project/assets/96984377/60b427d4-3379-4b39-9dd3-72c6deaa7c6c)
+
+![capture-1](https://github.com/shokerm/EBook-App-Project/assets/96984377/a1bf9c9b-24a3-4567-b717-5084045bd418)
+![capture-2](https://github.com/shokerm/EBook-App-Project/assets/96984377/6de6fd86-3e8a-44fc-8326-a6851af62ddf)
+![capture-3](https://github.com/shokerm/EBook-App-Project/assets/96984377/8b503d96-7130-40b7-a52d-882fc31a4704)
+![capture-4](https://github.com/shokerm/EBook-App-Project/assets/96984377/b6564f0a-36db-447b-9abf-166a6cbd19d4)
+![capture-5](https://github.com/shokerm/EBook-App-Project/assets/96984377/fd5afa57-cd00-4ae6-997b-4d1ec84b7911)
+![capture-6](https://github.com/shokerm/EBook-App-Project/assets/96984377/1a354ea8-5291-4453-9242-b0fce84e8c57)
+![capture-7](https://github.com/shokerm/EBook-App-Project/assets/96984377/ea50e0e4-1416-4249-8273-63e0cc663466)
+![capture-8](https://github.com/shokerm/EBook-App-Project/assets/96984377/07f04c2a-7328-492f-9578-9d9ffa7bc4e9)
+![capture-9](https://github.com/shokerm/EBook-App-Project/assets/96984377/529ecbb3-7fb9-480c-89ec-2a8bd1c2f987)
+![capture-10](https://github.com/shokerm/EBook-App-Project/assets/96984377/004b2e54-c27a-4a63-b849-5728ce43ab8a)
+![capture-11](https://github.com/shokerm/EBook-App-Project/assets/96984377/52a5bd4b-1ecb-43cc-903d-83dca1b75682)
+![capture-12](https://github.com/shokerm/EBook-App-Project/assets/96984377/4308365f-28c4-406e-87ec-1c595aeee75b)
+![capture-13](https://github.com/shokerm/EBook-App-Project/assets/96984377/8b2b6f1a-be1f-4b9c-992b-d20ab327e15a)
+![capture-14](https://github.com/shokerm/EBook-App-Project/assets/96984377/c9d8fc5b-54b2-4732-aaa6-e8533e8126e2)
+![capture-15](https://github.com/shokerm/EBook-App-Project/assets/96984377/a57d3753-fd41-4d67-8745-31492ac459f5)
+
