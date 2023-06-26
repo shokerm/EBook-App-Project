@@ -1,4 +1,4 @@
-# EBook
+![20230626_142325](https://github.com/shokerm/EBook-App-Project/assets/96984377/5877add6-aa7d-4b78-b260-be89707ac6c7)# EBook
 
 Online book store appliaction and online book and documents reader.
 EBook simulates online books store and also reading books online in the application itself.
@@ -47,6 +47,7 @@ Install EBook App with npm
 | visitor@email.com | Cc@1324                    | Visitor      |  
 
 ## Interface images
+![20230626_142325](https://github.com/shokerm/EBook-App-Project/assets/96984377/f0560fc5-f8ee-422e-b028-15612ae0f890)
 ![capture-1](https://github.com/shokerm/EBook-App-Project/assets/96984377/59ac2399-8972-414b-8313-36e852096059)
 ![capture-2](https://github.com/shokerm/EBook-App-Project/assets/96984377/53194b12-5b58-4e53-ba22-9f30adf66a89)
 ![capture-3](https://github.com/shokerm/EBook-App-Project/assets/96984377/7a984c29-8d04-4ae8-b88e-328778934e87)
