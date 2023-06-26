@@ -55,7 +55,7 @@ Install EBook App with npm
 ![capture-6](https://github.com/shokerm/EBook-App-Project/assets/96984377/da5bfea0-f76c-464c-85bc-4937fcbd1edb)
 ![capture-7](https://github.com/shokerm/EBook-App-Project/assets/96984377/aafd6098-8144-42b5-a870-ca553a58da05)
 ![capture-8](https://github.com/shokerm/EBook-App-Project/assets/96984377/a0a64166-b96a-40b4-ad49-c192414616b6)
-![capture-9](https://github.com/shokerm/EBook-App-Project/assets/96984377/1ae71909-52c4-4f84-9a37-ffb1b9a3e831)
+![capture-9](https://github.com/shokerm/EBook-App-Project/assets/96984377/9c7636ed-2296-48bd-855b-81827ee9e763)
 ![capture-10](https://github.com/shokerm/EBook-App-Project/assets/96984377/3eada8fb-c096-47ad-9bee-399a2c15f1b4)
 ![capture-11](https://github.com/shokerm/EBook-App-Project/assets/96984377/556239ec-4498-4107-b95c-bd82917ef1bc)
 ![capture-12](https://github.com/shokerm/EBook-App-Project/assets/96984377/db9fcb07-d9f1-48ee-b1cb-0044209de6ea)
