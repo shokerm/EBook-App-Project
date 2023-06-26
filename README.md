@@ -1,27 +1,52 @@
-# App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
+# EBook
 
-## Development server
+Online book store appliaction and online book and documents reader.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-Stack)
+- [Installation](#installation)
+- [API Access](#api-access)
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Light/dark mode toggle.
+- Document reader (PDF format).
+- Active cart and products API management.
+- User Management panel - manage users and their permissions.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Tech Stack
 
-## Running unit tests
+- Backend: C# ASP.NET Core.
+- Frontend: Angular 14.3.0, Angular material.
+- Database: Microsoft SQL server.
+- Authentication: JWT & Identity Core.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Installation
 
-## Further help
+Install EBook App with npm
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+  npm install
+```
+    
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-Stack)
+- [Installation](#installation)
+- [API Access](#api-access)
+## API Access
+| User              | Password                   | Access       |            
+| :---------------  | :------------------------- | :----------- | 
+| admin@email.com   | Aa@1234                    | Administrator|  
+| user@email.com    | Bb@4321                    | User         |  
+| visitor@email.com | Cc@1324                    | Visitor      |  
+
+## Interface images
+
+
+
