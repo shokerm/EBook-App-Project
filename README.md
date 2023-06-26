@@ -1,6 +1,7 @@
 # EBook
 
 Online book store appliaction and online book and documents reader.
+EBook simulates online books store and also reading books online in the application itself.
 
 
 ## Table of Contents
