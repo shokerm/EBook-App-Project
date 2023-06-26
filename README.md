@@ -1,5 +1,4 @@
-# EBook
-
+## EBook App
 Online book store appliaction and online book and documents reader.
 EBook simulates online books store and also reading books online in the application itself.
 The application has the option of adding, editing and deleting products. 3 authorization levels for users with different action options: visitor, user and admin.
