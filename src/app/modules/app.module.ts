@@ -3,9 +3,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '@modules/material.module';
 import { AppRoutingModule } from '@modules/app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppComponent } from '../app.component';
 import { NavbarComponent } from '@components/navbar/navbar.component';
@@ -41,6 +42,7 @@ import { ItemsApiService } from '@services/items-api.service';
 import { AuthService } from '@services/auth.service';
 import { JwtInterceptor } from '@services/interceptors/jwt.interceptor';
 
+
 import { FilterPipe } from '@pipes/filter.pipe';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
@@ -59,6 +61,7 @@ import { AnimatedFooterComponent } from '@components/animated-footer/animated-fo
 import { UpdateUserDialogComponent } from '@components/dialogs-components/update-user-dialog-component/update-user-dialog.component';
 import { UsersComponent } from '@components/users/users.component';
 import { UsersPageComponent } from '@components/pages/users-page/users-page.component';
+import { LoaderService } from '@services/interceptors/loader.interceptor';
 
 const COMPONENTS = [
   AppComponent,
@@ -108,7 +111,7 @@ const SERVICES = [
   CartDataService,
   ItemsApiService,
   SalesApiService,
-  AuthService,
+  AuthService
 
 
 ];
@@ -126,20 +129,28 @@ const GUARDS = [AuthGuard]
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NoopAnimationsModule,
     MaterialModule,
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
     PdfViewerModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
+
+
+
 
 
 
   ],
   providers: [SERVICES, PIPES, GUARDS,
     AuthService,
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    LoaderService,
+    { provide: HTTP_INTERCEPTORS, useClass: LoaderService, multi: true },
+
+
+
   ],
   bootstrap: [AppComponent]
 })

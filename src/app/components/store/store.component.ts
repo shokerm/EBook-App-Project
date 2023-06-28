@@ -5,12 +5,10 @@ import { EditItemDialogComponent } from '@components/dialogs-components/edit-ite
 import { ErrorDialogComponent } from '@components/dialogs-components/error-dialog-component/error-dialog-component.component';
 import { NewItemDialogComponent } from '@components/dialogs-components/new-item-dialog-component/new-item-dialog-component';
 import { Item } from '@models/item';
-import { LocalStorageHandler } from '@models/localStorageHandler';
 import { AuthService } from '@services/auth.service';
 import { CartDataService } from '@services/cart-data.service';
 import { ItemsApiService } from '@services/items-api.service';
 import { StoredataService } from '@services/store-data.service';
-import { BehaviorSubject, observable } from "rxjs";
 
 
 @Component({
@@ -67,8 +65,6 @@ export class StoreComponent implements OnInit {
   }
 
   editItem(id: number) {
-    console.log(this.currentUser);
-
     let dialogRef = this.dialog.open(EditItemDialogComponent, { autoFocus: true, data: { "id": id } });
     dialogRef.afterClosed().subscribe(result => {
       this.getItems();

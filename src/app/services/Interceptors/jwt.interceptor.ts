@@ -6,25 +6,29 @@ import {
     HttpInterceptor,
     HttpErrorResponse,
 } from '@angular/common/http';
-import { catchError, map } from 'rxjs/operators';
+import { catchError, finalize, map } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { LocalStorageKey } from '@models/enums';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
+    constructor() { }
     intercept(request: HttpRequest<any>, next: HttpHandler) {
         let token = localStorage.getItem(LocalStorageKey.token);
         if (token) {
             let clonedReq = this.addToken(request, token);
             return next.handle(clonedReq).pipe(
                 map((event: HttpEvent<any>) => {
+
                     return event;
                 }),
                 catchError((error: HttpErrorResponse) => {
+
                     return throwError(() => new Error(error.error));
                 })
             );
         } else {
+
             return next.handle(request);
         }
 

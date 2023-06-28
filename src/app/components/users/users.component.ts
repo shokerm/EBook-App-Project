@@ -19,9 +19,6 @@ export class UsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.getusers();
-    console.log(this.authService.user);
-
-
   }
 
   getusers(): void {
@@ -37,7 +34,6 @@ export class UsersComponent implements OnInit {
 
       } else {
         this.authService.getAllUsersService().subscribe((d: any) => {
-          console.log(d);
           this.dataSource = d
         })
       }
@@ -48,11 +44,9 @@ export class UsersComponent implements OnInit {
 
 
   editUser(element: any): void {
-    console.log(element);
 
     this.dialog.open(UpdateUserDialogComponent, {
       data: {
-        // "user": this.authService.user
         "user": element
 
       }

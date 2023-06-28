@@ -23,7 +23,6 @@ export class SalesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSales();
-    console.log(this.authService.user);
 
 
   }

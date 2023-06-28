@@ -1,19 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef, AfterContentChecked } from '@angular/core';
 import { LocalStorageHandler } from '@models/localStorageHandler';
 import { AuthService } from '@services/auth.service';
 import { DataService } from '@services/data.service';
+import { LoaderService } from '@services/interceptors/loader.interceptor';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  constructor(public service: DataService, private authService: AuthService) {
+export class AppComponent implements AfterContentChecked {
+  constructor(public service: DataService, private authService: AuthService, public loader: LoaderService, public dataService: DataService,
+    private cdref: ChangeDetectorRef) {
     if (LocalStorageHandler.getUserIdFromLocalStorage()) {
       this.refreshToken();
     }
   }
+  ngAfterContentChecked(): void {
+    this.cdref.detectChanges();
+  }
+
+
+
 
   isDarkTheme: boolean = this.service.isDarkMode;
 

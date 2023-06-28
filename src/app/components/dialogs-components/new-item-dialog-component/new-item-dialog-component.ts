@@ -3,8 +3,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { NewEditedItem } from '@models/newEdittedItem';
 import { ItemsApiService } from '@services/items-api.service';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { LoginIsNotLogInDialogComponent } from '../login-is-not-login-dialog-component/login-is-not-log-in-dialog.component';
-import { StoredataService } from '@services/store-data.service';
 import { ErrorDialogComponent } from '../error-dialog-component/error-dialog-component.component';
 
 
@@ -24,7 +22,7 @@ export class NewItemDialogComponent implements OnInit {
   itemId: any;
 
   ngOnInit(): void {
-    this.itemId = this.data.id;
+
   }
 
   onSubmit(): void {
