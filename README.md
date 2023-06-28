@@ -23,6 +23,7 @@ The application has the option of adding, editing and deleting products. 3 autho
 ## Tech Stack
 - Backend: C# ASP.NET Core.
 - Frontend: Angular 14.3.0, Angular material.
+- Hosting: Azure.
 - Database: Microsoft SQL server with Entity Framework.
 - Authentication: JWT & Identity Core.
 
