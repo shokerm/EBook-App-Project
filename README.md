@@ -21,7 +21,6 @@ The application has the option of adding, editing and deleting products. 3 autho
 
 
 ## Tech Stack
-
 - Backend: C# ASP.NET Core.
 - Frontend: Angular 14.3.0, Angular material.
 - Database: Microsoft SQL server with Entity Framework.
@@ -39,11 +38,11 @@ Install EBook App with npm
     
 
 ## API Access
-| User              | Password                   | Access       |            
-| :---------------  | :------------------------- | :----------- | 
-| admin@email.com   | Aa@1234                    | Administrator|  
-| user@email.com    | Bb@4321                    | User         |  
-| visitor@email.com | Cc@1324                    | Visitor      |  
+| User              | Password                   | Access       |  Abilities           |        
+| :---------------  | :------------------------- | :----------- | :-----------
+| admin@email.com   | Aa@1234                    | Administrator|  Full access to any page in the app and observe <strong>every users</strong> details.<br> Add/Edit/Delete products,all user's orders and theirself accounts <br> Change the permission levels of all users.|
+| user@email.com    | Bb@4321                    | User         |Full access to any page in the app and observe <strong>its own</strong> user details.<br> Add/Edit/Delete its own orders.<br> Modify its own account username/email/password.<br> |
+| visitor@email.com | Cc@1324                    | Visitor      |Limited access: Purchase products. <br> Observe <strong>its own</strong> user details.<br><strong>Not authorized</strong> to see "my book" page.  Add/Edit/Delete its own orders.<br> Modify its own account username/email/password.<br> |
 
 ## Interface images
 ![capture-1](https://github.com/shokerm/EBook-App-Project/assets/96984377/59ac2399-8972-414b-8313-36e852096059)
