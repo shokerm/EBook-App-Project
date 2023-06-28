@@ -9,7 +9,7 @@
         <div class="form-group">
           <mat-form-field>
             <mat-label>Email</mat-label>
-            <input matInput type="email" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required
+            <input matInput type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required
               [(ngModel)]="loginUserForm.email" name="Email" #Email="ngModel" placeholder="Ex. pat@example.com">
           </mat-form-field>
           <div [hidden]="Email.valid || Email.pristine" class="my-alert-danger">
@@ -20,7 +20,7 @@
         <div class="form-group">
           <mat-form-field>
             <mat-label>Password</mat-label>
-            <input matInput type="password" id="lastName" required [(ngModel)]="loginUserForm.password" name="lastName"
+            <input matInput type="password" id="password" required [(ngModel)]="loginUserForm.password" name="password"
               #password="ngModel">
           </mat-form-field>
           <div [hidden]="password.valid || password.pristine" class="my-alert-danger">

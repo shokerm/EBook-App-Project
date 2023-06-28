@@ -4,6 +4,9 @@ import { LoginDialogComponent } from '@components/dialogs-components/login-dialo
 import { DataService } from '@services/data.service';
 import { CartDataService } from '@services/cart-data.service';
 import { AuthService } from '@services/auth.service';
+import { Router } from '@angular/router';
+import { LocalStorageHandler } from '@models/localStorageHandler';
+
 
 
 
@@ -14,11 +17,14 @@ import { AuthService } from '@services/auth.service';
 })
 export class NavbarPhonesComponent implements OnInit {
 
-  constructor(public service: DataService, public dialog: MatDialog, public cartService: CartDataService, public authService: AuthService) { }
+  constructor(public service: DataService, public dialog: MatDialog, public cartService: CartDataService, public authService: AuthService,
+    private route: Router) { }
 
   ngOnInit(): void {
   }
 
+
+  currentUserName: any;
 
   changMode(): void {
     this.service.isDarkMode = !this.service.isDarkMode;
@@ -30,6 +36,26 @@ export class NavbarPhonesComponent implements OnInit {
 
   getInCartITems() {
     return this.cartService.cart.length ? this.cartService.cart.length : null;
+  }
+
+  userIsLoggedIn() {
+    if (this.authService.user) {
+      this.currentUserName = this.authService.user.userName;
+      return true;
+    } else {
+      return false;
+    }
+
+  }
+
+  logOut() {
+    this.authService.user = null;
+    this.authService.isLogin = false;
+    this.authService.loggedInUserChanged.next(null);
+    LocalStorageHandler.deleteAllLocalStoreage();
+    this.cartService.cart = [];
+    this.route.navigate(["/home"]);
+
   }
 
 }

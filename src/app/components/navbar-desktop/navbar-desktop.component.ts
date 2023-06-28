@@ -5,6 +5,7 @@ import { DataService } from '@services/data.service';
 import { CartDataService } from '@services/cart-data.service';
 import { LocalStorageHandler } from '@models/localStorageHandler';
 import { AuthService } from '@services/auth.service';
+import { Router } from '@angular/router';
 
 
 
@@ -15,7 +16,8 @@ import { AuthService } from '@services/auth.service';
 })
 export class NavbarDesktopComponent implements OnInit {
 
-  constructor(public service: DataService, public dialog: MatDialog, public cartService: CartDataService, public authService: AuthService) { }
+  constructor(public service: DataService, public dialog: MatDialog, public cartService: CartDataService, public authService: AuthService,
+    private route: Router) { }
 
   ngOnInit(): void {
 
@@ -51,6 +53,7 @@ export class NavbarDesktopComponent implements OnInit {
     this.authService.loggedInUserChanged.next(null);
     LocalStorageHandler.deleteAllLocalStoreage();
     this.cartService.cart = [];
+    this.route.navigate(["/home"]);
 
   }
 

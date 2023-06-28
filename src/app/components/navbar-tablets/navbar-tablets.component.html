@@ -6,6 +6,15 @@
 
       <button mat-button matTooltip="Open Menu" [matMenuTriggerFor]="menu2"><mat-icon>menu</mat-icon></button>
       <mat-menu #menu2="matMenu">
+        <div mat-menu-item *ngIf="!userIsLoggedIn();else showUserName" mat-button (click)="openDialog()">
+          Login / Register
+        </div>
+        <ng-template #showUserName [(ngModel)]="this.currentUserName" ngDefaultControl>
+          <span class="user-name-hello" mat-button>Hello {{this.currentUserName}}</span>
+          <button mat-button (click)="logOut()">Log out</button>
+        </ng-template>
+
+
         <button mat-menu-item routerLink="about"><mat-icon>info</mat-icon>About</button>
         <button mat-menu-item routerLink="my-books"><mat-icon>import_contacts</mat-icon>My Books</button>
         <button mat-menu-item *ngIf="this.authService.isLogin"
@@ -13,7 +22,7 @@
         <button mat-menu-item *ngIf="this.authService.isLogin"
           routerLink="user-panel"><mat-icon>admin_panel_settings_outline</mat-icon>User-panel</button>
         <button mat-menu-item routerLink="contact-us"><mat-icon>contact_support</mat-icon>Contact Us</button>
-        <button mat-menu-item (click)="openDialog()"><mat-icon>account_circle</mat-icon> Login / Register</button>
+
 
       </mat-menu>
 

@@ -47,10 +47,15 @@ export class UpdateUserDialogComponent implements OnInit {
       "authLevel": this.updateUserDTO.authLevel
     }
     this.authServics.updateUserService(this.data.user.id, upuser).subscribe((x: any) => {
-      this.authServics.user.userName = upuser.userName;
-      this.authServics.user.email = upuser.email;
-      this.authServics.user.password = upuser.password;
-      this.authServics.user.authLevel = upuser.authLevel;
+
+      if (this.data.user.id === this.authServics.user.id) {
+
+        this.authServics.user.userName = upuser.userName;
+        this.authServics.user.email = upuser.email;
+        this.authServics.user.password = upuser.password;
+        this.authServics.user.authLevel = upuser.authLevel;
+      }
+
 
       this.getusers();
     })

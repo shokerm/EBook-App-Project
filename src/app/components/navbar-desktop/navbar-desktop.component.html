@@ -37,7 +37,7 @@
       <button *ngIf="!userIsLoggedIn();else showUserName" mat-button (click)="openDialog()">Login / Register</button>
       <ng-template #showUserName [(ngModel)]="this.currentUserName" ngDefaultControl>
         <button class="user-name-hello" mat-button disabled="true">Hello {{this.currentUserName}}</button>
-        <button mat-button (click)="logOut()">log out</button>
+        <button mat-button (click)="logOut()">Log out</button>
       </ng-template>
       <button disabled="true" mat-button>
         <app-search-bar></app-search-bar>

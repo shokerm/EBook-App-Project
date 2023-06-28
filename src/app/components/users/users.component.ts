@@ -44,12 +44,12 @@ export class UsersComponent implements OnInit {
 
 
   editUser(element: any): void {
-
     this.dialog.open(UpdateUserDialogComponent, {
       data: {
         "user": element
 
       }
+
     }).afterClosed().subscribe(x => {
       this.getusers();
     })
