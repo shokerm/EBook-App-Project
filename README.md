@@ -40,9 +40,9 @@ Install EBook App with npm
 ## API Access
 | User              | Password                   | Access       |  Abilities           |        
 | :---------------  | :------------------------- | :----------- | :-----------
-| admin@email.com   | Aa@1234                    | Administrator|  Full access to any page in the app and observe <strong>every users</strong> details.<br> Add/Edit/Delete products,all user's orders and theirself accounts <br> Change the permission levels of all users.|
-| user@email.com    | Bb@4321                    | User         |Full access to any page in the app and observe <strong>its own</strong> user details.<br> Add/Edit/Delete its own orders.<br> Modify its own account username/email/password.<br> |
-| visitor@email.com | Cc@1324                    | Visitor      |Limited access: Purchase products. <br> Observe <strong>its own</strong> user details.<br><strong>Not authorized</strong> to see "my book" page.  Add/Edit/Delete its own orders.<br> Modify its own account username/email/password.<br> |
+| admin@email.com   | Aa@1234                    | Administrator|  Full access to any page in the app and observe <strong>any user & order</strong> details.<br> Purchase products.<br>Add/Edit/Delete products, any user's orders and accounts <br> Modify <strong>any user's</strong> account details: username/email/password.<br> Can Change the permission levels of <strong>all users</strong>.<br>The only one who can see the buttons for adding, editing and deleting products.|
+| user@email.com    | Bb@4321                    | User         |Full access to any page in the app and observe <strong>its own</strong> user details.<br> Purchase products.<br>Observe <strong>its own</strong> user details.<br>Add/Edit/Delete <strong>its own</strong> orders.<br> Modify <strong>its own</strong> account's details:  username/email/password. |
+| visitor@email.com | Cc@1324                    | Visitor      |Limited access.<br> Purchase products. <br> Observe <strong>its own</strong> user details.<br>Add/Edit/Delete <strong>its own</strong> orders.<br> Modify <strong>its own</strong> account's details: username/email/password.<br><strong>Not authorized</strong> to see "my book" page. |
 
 ## Interface images
 ![capture-1](https://github.com/shokerm/EBook-App-Project/assets/96984377/59ac2399-8972-414b-8313-36e852096059)
