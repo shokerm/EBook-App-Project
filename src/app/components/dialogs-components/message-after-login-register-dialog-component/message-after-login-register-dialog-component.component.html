@@ -1,6 +1,8 @@
 <div class="header">
   <mat-icon>{{this.icon}}</mat-icon>
-  <h1 [ngClass]="[this.isLoginButtonShow? 'red-alert':'green-alert']" mat-dialog-title>{{this.header}}</h1>
+  <h1 [ngClass]="[(this.isLoginButtonShow && this.alertColor ==='undefind')? 'red-alert':'green-alert']"
+    mat-dialog-title>
+    {{this.header}}</h1>
 </div>
 <div mat-dialog-content>{{this.firstDialogLine}}</div>
 <div mat-dialog-content>{{this.secondDialogLine}}</div>

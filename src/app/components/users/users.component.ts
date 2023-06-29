@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { UpdateUserDialogComponent } from '@components/dialogs-components/update-user-dialog-component/update-user-dialog.component';
+import { LocalStorageHandler } from '@models/localStorageHandler';
 import { AuthService } from '@services/auth.service';
 import { ItemsApiService } from '@services/items-api.service';
 
@@ -12,7 +14,7 @@ import { ItemsApiService } from '@services/items-api.service';
 export class UsersComponent implements OnInit {
 
   constructor(private itemsApiService: ItemsApiService, private dialog: MatDialog,
-    private authService: AuthService) { }
+    private authService: AuthService, private rotuer: Router) { }
   displayedColumns: string[] = ['id', 'userName', 'email', 'authLevel', 'edit', 'delete'];
   dataSource: any
 
@@ -58,8 +60,18 @@ export class UsersComponent implements OnInit {
 
   deleteUser(element: any): void {
     this.authService.deleteUserService(element.id).subscribe(x => {
+      if (this.authService.user.id === element.id) {
+        this.authService.user = null;
+        this.authService.isLogin = false;
+        this.authService.loggedInUserChanged.next(null);
+        LocalStorageHandler.deleteAllLocalStoreage();
+        this.rotuer.navigate(["/home"]);
 
-      this.getusers();
+      } else {
+
+        this.getusers();
+      }
+
     });
 
   }

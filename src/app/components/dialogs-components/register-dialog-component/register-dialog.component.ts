@@ -25,6 +25,19 @@ export class RegisterDialogComponent implements OnInit {
   register(): void {
     this.authServics.registerService(this.registerUserForm.firstName, this.registerUserForm.email, this.registerUserForm.password)
       .subscribe((res: any) => {
+        this.dialog.open(MessageAfterLoginRegisterDialogComponent,
+          {
+            data: {
+              "icon": "check",
+              "header": "You have successfully registerd!",
+              "firstDialogLine": "We invite you to also enjoy our variety of products in the store.",
+              "secondDialogLine": "Now just log in to your account.",
+              "isLoginButtonShow": true,
+              "alertColor": 'green'
+
+            }
+          }
+        )
 
       }, err => {
         this.dialog.open(MessageAfterLoginRegisterDialogComponent,

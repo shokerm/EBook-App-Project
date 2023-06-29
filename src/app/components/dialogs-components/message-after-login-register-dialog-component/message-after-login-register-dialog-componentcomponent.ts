@@ -35,5 +35,6 @@ export class MessageAfterLoginRegisterDialogComponent implements OnInit {
   firstDialogLine: string | undefined;
   secondDialogLine: string | undefined;
   isLoginButtonShow: boolean = false;
+  alertColor: string | undefined;
 
 }
