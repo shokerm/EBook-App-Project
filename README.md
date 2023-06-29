@@ -8,6 +8,7 @@ The application has the option of adding, editing and deleting products. 3 autho
 - [Features](#features)
 - [Tech Stack](#tech-Stack)
 - [Installation](#installation)
+- [Connenting To Backend Api](#connenting-to-backend-api)
 - [API Access](#api-access)
 - [Interface images](#interface-images)
 - [Feedbacks](#feedbacks) 
@@ -36,7 +37,19 @@ Install EBook App with npm
 ```bash
   npm install
 ```
-    
+
+## Connenting To Backend Api
+By default the client side is connecting to this Azure's backend.
+To connenct the client side to localhost backend just follow the next steps:
+```bash
+Go to src/app/models/baseUrl.ts :
+
+1   // For contecting to the Azure put line 5 on comment & uncomment line 4.
+2   // For contecting to the localhost put line 4 on comment & uncomment line 5.
+3
+4     export const BASE_URL = "https://ebookapi20230627230225.azurewebsites.net/api";
+5  // export const BASE_URL = "https://localhost:7254/api";
+```
 
 ## API Access
 | User              | Password                   | Access       |  Access & Abilities           |        
