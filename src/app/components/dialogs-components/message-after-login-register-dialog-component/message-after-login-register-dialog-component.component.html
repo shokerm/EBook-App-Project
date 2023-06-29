@@ -1,0 +1,16 @@
+<div class="header">
+  <mat-icon>{{this.icon}}</mat-icon>
+  <h1 [ngClass]="[this.isLoginButtonShow? 'red-alert':'green-alert']" mat-dialog-title>{{this.header}}</h1>
+</div>
+<div mat-dialog-content>{{this.firstDialogLine}}</div>
+<div mat-dialog-content>{{this.secondDialogLine}}</div>
+
+
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+  <button mat-stroked-button color="primary" mat-dialog-close *ngIf="this.isLoginButtonShow"
+    (click)="openLoginDialog()">Log in</button>
+
+
+
+</div>

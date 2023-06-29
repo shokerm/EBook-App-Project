@@ -13,7 +13,7 @@ export class UsersComponent implements OnInit {
 
   constructor(private itemsApiService: ItemsApiService, private dialog: MatDialog,
     private authService: AuthService) { }
-  displayedColumns: string[] = ['id', 'userName', 'email', 'authLevel', 'edit'];
+  displayedColumns: string[] = ['id', 'userName', 'email', 'authLevel', 'edit', 'delete'];
   dataSource: any
 
 
@@ -53,6 +53,14 @@ export class UsersComponent implements OnInit {
     }).afterClosed().subscribe(x => {
       this.getusers();
     })
+
+  }
+
+  deleteUser(element: any): void {
+    this.authService.deleteUserService(element.id).subscribe(x => {
+
+      this.getusers();
+    });
 
   }
 

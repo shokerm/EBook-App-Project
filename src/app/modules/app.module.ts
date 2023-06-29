@@ -62,6 +62,7 @@ import { UpdateUserDialogComponent } from '@components/dialogs-components/update
 import { UsersComponent } from '@components/users/users.component';
 import { UsersPageComponent } from '@components/pages/users-page/users-page.component';
 import { LoaderService } from '@services/interceptors/loader.interceptor';
+import { MessageAfterLoginRegisterDialogComponent } from '@components/dialogs-components/message-after-login-register-dialog-component/message-after-login-register-dialog-componentcomponent';
 
 const COMPONENTS = [
   AppComponent,
@@ -96,6 +97,7 @@ const COMPONENTS = [
   DeleteItemDialogComponent,
   ErrorDialogComponent,
   UpdateUserDialogComponent,
+  MessageAfterLoginRegisterDialogComponent,
   SearchBarComponent,
   PageNotFoundComponent,
   UploadImageComponent,

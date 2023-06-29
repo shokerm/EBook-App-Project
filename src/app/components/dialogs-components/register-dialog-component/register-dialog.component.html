@@ -1,70 +1,63 @@
 <div mat-dialog-content class="register-user">
-<h1 mat-dialog-title>REGISTER</h1>
+  <h1 mat-dialog-title>REGISTER</h1>
   <mat-icon>account_circle</mat-icon>
-    <div class="form-feilds" [hidden]="submitted">
-      <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+  <div class="form-feilds" [hidden]="submitted">
+    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
 
-        <div class="form-group">
-          <mat-form-field>
-            <mat-label>First Name</mat-label>
-            <input matInput type="text" id="firstName"
-                 required
-                 [(ngModel)]="registerUserForm.firstName" name="firstName"
-                 #FirstName="ngModel">
-          </mat-form-field>
-          <div [hidden]="FirstName.valid || FirstName.pristine" class="my-alert-danger">
-            First Name is <strong>required</strong>
-          </div>
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input matInput type="text" id="firstName" required [(ngModel)]="registerUserForm.firstName" name="firstName"
+            #FirstName="ngModel">
+        </mat-form-field>
+        <div [hidden]="FirstName.valid || FirstName.pristine" class="my-alert-danger">
+          First Name is <strong>required</strong>
         </div>
-
-        <div class="form-group">
-          <mat-form-field>
-            <mat-label>Last Name</mat-label>
-            <input matInput type="text" id="lastName"
-                 required
-                 [(ngModel)]="registerUserForm.lastName" name="lastName"
-                 #LastName="ngModel">
-          </mat-form-field>
-          <div [hidden]="LastName.valid || LastName.pristine" class="my-alert-danger">
-            Last Name is <strong>required</strong>
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <mat-form-field >
-          <mat-label>Email</mat-label>
-          <input matInput type="email" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                 required
-                 [(ngModel)]="registerUserForm.email" name="Email"
-                 #Email="ngModel" placeholder="Ex. pat@example.com">
-          </mat-form-field>
-          <div [hidden]="Email.valid || Email.pristine"
-               class="my-alert-danger">
-               Email is <strong>required</strong> or <strong>invalid!</strong>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <mat-form-field>
-            <mat-label>Password</mat-label>
-            <input matInput type="password" id="password"
-                 required
-                 [(ngModel)]="registerUserForm.password" name="password"
-                 #password="ngModel">
-          </mat-form-field>
-          <div [hidden]="password.valid || password.pristine" class="my-alert-danger">
-               Password is <strong>required</strong>
-          </div>
-        </div>
-
-        <div class="register-dialog">
-        <button mat-raised-button type="submit" (click)="register()" [disabled]="!registerForm.form.valid">SIGN UP</button>
-        <button matTooltip="Login" class="backToLoginButton" mat-button color="primary" (click)="backToLoginDialog()">Login</button>
       </div>
-      </form>
 
-    </div>
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Last Name</mat-label>
+          <input matInput type="text" id="lastName" required [(ngModel)]="registerUserForm.lastName" name="lastName"
+            #LastName="ngModel">
+        </mat-form-field>
+        <div [hidden]="LastName.valid || LastName.pristine" class="my-alert-danger">
+          Last Name is <strong>required</strong>
+        </div>
+      </div>
 
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput type="email" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required
+            [(ngModel)]="registerUserForm.email" name="Email" #Email="ngModel" placeholder="Ex. pat@example.com">
+        </mat-form-field>
+        <div [hidden]="Email.valid || Email.pristine" class="my-alert-danger">
+          Email is <strong>required</strong> or <strong>invalid!</strong>
+        </div>
+      </div>
 
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput type="password" id="password"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{7,12}$" required
+            [(ngModel)]="registerUserForm.password" name="password" #password="ngModel">
+        </mat-form-field>
+        <div [hidden]="password.value !='' || password.untouched" class="my-alert-danger">
+          Password is <strong>required</strong>
+        </div>
+        <div [hidden]="password.pristine || password.valid" class="my-alert-danger">
+          Password must be at the fotrmat: <strong>Bb!12345</strong>
+        </div>
+      </div>
 
-  
+      <div class="register-dialog">
+        <button mat-raised-button type="submit" (click)="register()" [disabled]="!registerForm.form.valid">SIGN
+          UP</button>
+        <button matTooltip="Login" class="backToLoginButton" mat-button color="primary"
+          (click)="backToLoginDialog()">Login</button>
+      </div>
+    </form>
+
+  </div>

@@ -5,6 +5,7 @@ import { LoginUserForm } from '@models/loginUserForm';
 import { UserResponse } from '@app/interfaces/loginUsersModel';
 import { AuthService } from '@services/auth.service';
 import { ErrorDialogComponent } from '../error-dialog-component/error-dialog-component.component';
+import { MessageAfterLoginRegisterDialogComponent } from '../message-after-login-register-dialog-component/message-after-login-register-dialog-componentcomponent';
 
 
 
@@ -30,7 +31,7 @@ export class LoginDialogComponent implements OnInit {
     this.dialog.closeAll();
 
   }
-  //#region deprecated way
+
   login(email: string, password: string) {
     this.authService.loginService(email, password).subscribe((res: UserResponse) => {
       LocalStorageHandler.saveUserResToLocalStorage(res);
@@ -38,8 +39,19 @@ export class LoginDialogComponent implements OnInit {
         this.authService.isLogin = true;
         this.authService.user = user;
         this.authService.loggedInUserChanged.next(user);
-        // LocalStorageHandler.saveToLocalStorage(LocalStorageKey.currentUserName, user.userName);
-        // location.reload();
+        this.dialog.open(MessageAfterLoginRegisterDialogComponent,
+          {
+            data: {
+              "icon": "check",
+              "header": "You have successfully logged into your account!",
+              "firstDialogLine": "We invite you to also enjoy our variety of products in the store.",
+              "secondDialogLine": "Have fun surfing",
+              "isLoginButtonShow": false
+
+            }
+          }
+
+        )
       })
     }, err => {
       if (err) {
@@ -57,32 +69,7 @@ export class LoginDialogComponent implements OnInit {
     })
     this.dialog.closeAll();
   }
-  //#endregion
 
-  //#region new way
-  // login(email: string, password: string) {
-  //   var self = this;
-  //   this.authService.loginService(email, password).subscribe({
-  //     next(res: UserResponse) {
-  //       LocalStorageHandler.saveUserResToLocalStorage(res);
-  //       alert("user logged in!");
-  //       self.authService.getUserService(res.id).subscribe({
-  //         next(value: any) {
-  //           console.log(value);
-  //           LocalStorageHandler.saveToLocalStorage(LocalStorageKey.currentUserName, value.name);
-  //         }, error() {
-  //           alert("Wrong user name!")
-  //         }
-  //       })
-  //     },
-  //     error() {
-  //       alert("Wrong user entry!")
-  //     }
-  //   });
-
-  //   this.dialog.closeAll();
-  // }
-  //#endregion
   moveToRegisterDialog(): void {
     this.isLoginDialogDisplay = false;
 

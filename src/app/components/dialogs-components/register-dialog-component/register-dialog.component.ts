@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { RegisterUserForm } from '@models/registerUserForm';
 import { AuthService } from '@services/auth.service';
+import { MessageAfterLoginRegisterDialogComponent } from '../message-after-login-register-dialog-component/message-after-login-register-dialog-componentcomponent';
 
 
 @Component({
@@ -25,6 +26,19 @@ export class RegisterDialogComponent implements OnInit {
     this.authServics.registerService(this.registerUserForm.firstName, this.registerUserForm.email, this.registerUserForm.password)
       .subscribe((res: any) => {
 
+      }, err => {
+        this.dialog.open(MessageAfterLoginRegisterDialogComponent,
+          {
+            data: {
+              "icon": "report_gmailerrorred",
+              "header": "The User you tried to register already exists in the system",
+              "firstDialogLine": "Please log in to your account and enter the login information for the user.",
+              "secondDialogLine": "If you want to open another account please type new user data.",
+              "isLoginButtonShow": true
+
+            }
+          }
+        )
       })
     this.dialog.ngOnDestroy();
   }

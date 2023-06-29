@@ -4,7 +4,6 @@ import { BASE_URL } from '@models/baseUrl';
 import { UserLoginForRequset, UserResponse } from '@app/interfaces/loginUsersModel';
 import { Subject } from 'rxjs';
 import { LocalStorageHandler } from '@models/localStorageHandler';
-import { LocalStorageKey } from '@models/enums';
 import { UserUpdateDTO } from '@models/userUpdateDTO';
 
 
@@ -56,10 +55,14 @@ export class AuthService {
   updateUserService(id: number, userUpdateDTO: UserUpdateDTO) {
     return this.http.put(`${BASE_URL}/Auth/updateUser/${id}`, userUpdateDTO);
   }
-
-
-
-
+  deleteUserService(id: string) {
+    return this.http.delete(`${BASE_URL}/Auth/deleteUser?id=${id}`);
+  }
 }
+
+
+
+
+
 
 
