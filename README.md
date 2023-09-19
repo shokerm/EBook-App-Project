@@ -25,6 +25,8 @@ The application has the option of adding, editing and deleting products. 3 autho
 ## Tech Stack
 - Backend: C# ASP.NET Core - [backend repository](https://github.com/shokerm/EBook.APP-Web-API).
 -  <a href="https://github.com/shokerm/EBook.APP-Web-API" target="_blank">backend rep<a/>
+<a href="http://stackoverflow.com" target="_blank">Go</a>
+
 - Frontend: Angular 14.3.0, Angular material.
 - Hosting backend: Azure - [EBook-Azure-Api](https://ebookapi20230627230225.azurewebsites.net/swagger) - <em><strong> temporarily disabled </strong></em>.
 - Database: Microsoft SQL server with Entity Framework.
