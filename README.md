@@ -6,7 +6,7 @@ The application has the option of adding, editing and deleting products. 3 autho
 
 ## Table of Contents
 - [Features](#features)
-- [Tech Stack](#tech-Stack)
+- [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Connenting To Backend Api](#connenting-to-backend-api)
 - [API Access](#api-access)
@@ -24,7 +24,7 @@ The application has the option of adding, editing and deleting products. 3 autho
 ## Tech Stack
 - Backend: C# ASP.NET Core.
 - Frontend: Angular 14.3.0, Angular material.
-- Hosting backend: Azure - [EBook-Azure-Api](https://ebookapi20230627230225.azurewebsites.net/swagger).
+- Hosting backend: Azure - [EBook-Azure-Api](https://ebookapi20230627230225.azurewebsites.net/swagger) - <em><strong> temporarily disabled </strong></em>.
 - Database: Microsoft SQL server with Entity Framework.
 - Authentication: JWT & Identity Core.
 
@@ -47,8 +47,8 @@ Go to src/app/models/baseUrl.ts :
 1   // For contecting to the Azure put line 5 on comment & uncomment line 4.
 2   // For contecting to the localhost put line 4 on comment & uncomment line 5.
 3
-4     export const BASE_URL = "https://ebookapi20230627230225.azurewebsites.net/api";
-5  // export const BASE_URL = "https://localhost:7254/api";
+4   //  export const BASE_URL = "https://ebookapi20230627230225.azurewebsites.net/api"; 
+5   export const BASE_URL = "https://localhost:7254/api";
 ```
 
 ## API Access
