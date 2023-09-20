@@ -1,4 +1,4 @@
-## ![favicon-32x32](https://github.com/shokerm/EBook-App-Project/assets/96984377/656085e9-1a4c-4e2c-9c48-a438e160630b) EBook App
+## ![favicon-32x32](https://github.com/shokerm/EBook-App-Project/assets/96984377/656085e9-1a4c-4e2c-9c48-a438e160630b) EBook App - Client Side
 
 Online book store appliaction and online book and documents reader.
 EBook simulates online books store and also reading books online in the application itself.
