@@ -9,7 +9,7 @@ The application has the option of adding, editing and deleting products. 3 autho
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
-- [Connenting To Backend Api](#connenting-to-backend-api)
+- [Connenting To Backend API](#connenting-to-backend-api)
 - [API Access](#api-access)
 - [Interface images](#interface-images)
 - [Feedbacks](#feedbacks) 
@@ -25,7 +25,7 @@ The application has the option of adding, editing and deleting products. 3 autho
 ## Tech Stack
 - Backend: C# ASP.NET Core - [backend repository](https://github.com/shokerm/EBook.APP-Web-API).
 - Frontend: Angular 14.3.0, Angular material.
-- Hosting backend: Azure - [EBook-Azure-Api](https://ebookapi20230627230225.azurewebsites.net/swagger) - <em><strong> temporarily disabled </strong></em>.
+- Hosting backend: Azure - [EBook-Azure-API](https://ebookapi20230627230225.azurewebsites.net/swagger) - <em><strong> temporarily disabled </strong></em>.
 - Database: Microsoft SQL server with Entity Framework.
 - Authentication: JWT & Identity Core.
 
@@ -39,7 +39,7 @@ Install EBook App with npm
   npm install
 ```
 
-## Connenting To Backend Api
+## Connenting To Backend API
 By default the client side is connecting to this Azure's backend.
 To connenct the client side to localhost backend just follow the next steps:
 ```bash
